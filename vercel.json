@@ -1,0 +1,1 @@
+{"buildCommand":"npm run build && rm -rf public && mv out public","outputDirectory":"public","framework":null}
