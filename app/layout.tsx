@@ -13,7 +13,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="site-header">
           <div className="shell header-inner">
             <a className="brand" href="/">AI Product Observatory</a>
-            <nav><a href="/weekly/2026-W33">周报</a><a href="/#trends">趋势</a><a href="/#products">产品</a></nav>
+            <nav><a href="/weekly/2026-W34">周报</a><a href="/#trends">趋势</a><a href="/#products">产品</a></nav>
           </div>
         </header>
         {children}
