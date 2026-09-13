@@ -1,17 +1,17 @@
 const trends=[
-['Agent Learning Loop 首次成簇','Reflexio 与 Blume.codes 同周把 corrections、failures、successes 转成可测试、可逆的 behavior、rules、skills。'],
-['Control Plane 下沉到执行路径','Doberman 与 Aegisora 2.0 都在 action 真正发生前执行 policy，而不是只做观测和 Dashboard。'],
-['Assurance → Evidence-native Requirement','Airtop、HyperProbe、Basedash 把真实验证、生产 evidence、query receipts 直接放进主工作流。'],
-['Agent-native SDLC 继续升温','GitWarren、HyperProbe、Blume 将焦点推进到 review、production debugging、session learning。'],
-['MCP 产品类别降温','协议继续扩散，但支持 MCP 本身不再是差异；Monid 把价值上移到 capability routing 与 economics。'],
-['FinOps / Demonstration 暂缓','FinOps 缺第二个强样本；Teach-by-demonstration 本周也没有第二个直接实现。']
+['Agentic Software Factory','Mastra Factory 把 issue、persistent agents、repo workspaces、review、release 和 production monitoring 收进同一长期工作系统。'],
+['Control Plane → Per-action Authority','Harden、Relaticle、StareBrain 把授权推进到 side effect 真正发生的那一刻。'],
+['Evidence Spine','EasySpecs、PR Lens、Replay、QApilot、OpenObserve 让证据贯穿 Spec、Review、Test、Security、Production。'],
+['Persistent Spec 重新升温','Spec 开始同时承担 context、intent、acceptance criteria 与 regression contract。'],
+['Shared Data Plane 继续扩展','Thousand 强化 ACL；Mireye 把 Agent Data Plane 首次明显延伸到 physical world。'],
+['FinOps / Behavior Learning 降温','成本更可能被 Observability 吸收；Behavior Learning 本周缺第三个直接样本。']
 ];
 const products=[
-['Reflexio','Agent Behavioral Learning','把真实运行反馈转成可复用行为。'],
-['Doberman','Runtime Authorization','在 coding agent 的 tool execution 前执行本地 policy。'],
-['Agent Builder by Airtop','Self-healing Automation','自动修复后用真实 test run 验证。'],
-['Monid','Agent Tool Router','一个 key 连接 1,800+ APIs，runtime discover/run/pay。'],
-['HyperProbe','Production Debugging','无需 redeploy 获取运行中服务的只读 evidence。'],
-['Blume.codes','Coding Agent Learning','从重复 correction 维护 rules 与 skills。']
+['Mastra Factory','Agentic Software Factory','从 issue 到 production 的 persistent-agent 软件交付环境。'],
+['Harden','Runtime Security','tool call 执行前做本地风险判断。'],
+['easyspecs.ai','Spec / Verification','把 codebase spec 与 validators、Oracles、Rubrics 绑定。'],
+['PR Lens','Architecture Review','用 architecture/data-flow 图解释 codebase 与 PR 变化。'],
+['OpenObserve AI Observability','Agent Observability','把 trace、cost、quality、failure 与 online eval 放在一起。'],
+['Replay QA Security Scan','Executable Verification','对 AI-built app 运行真实 penetration test 并保留 evidence。']
 ];
-export default function Home(){return <main><section className="hero"><div className="shell"><div className="eyebrow">Weekly product observation</div><h1>AI Product Observatory</h1><p>每周对照历史记录，识别连续出现、同类爆发、首次形成、升温、降温和判断变化。</p></div></section><section className="section"><div className="shell"><div className="section-head"><h2>2026-W36</h2><div className="section-note">8 月 31 日—9 月 6 日</div></div><div className="signal-box"><strong>本周核心变化</strong><p>Agent Learning Loop 首次形成产品簇；Control Plane 下沉到 execution-path enforcement；Independent Assurance 正从独立工具变成高风险 Agent 的 Evidence-native 产品要求。</p><a href="/weekly/2026-W36">阅读完整周报 →</a></div></div></section><section className="section" id="trends"><div className="shell"><div className="section-head"><h2>本周趋势变化</h2></div><div className="grid">{trends.map(t=><article className="card trend" key={t[0]}><h3>{t[0]}</h3><p>{t[1]}</p></article>)}</div></div></section><section className="section" id="products"><div className="shell"><div className="section-head"><h2>本周代表产品</h2></div><div className="grid">{products.map(p=><article className="card product" key={p[0]}><div className="meta">{p[1]}</div><h3>{p[0]}</h3><p>{p[2]}</p><a href="/weekly/2026-W36">查看周报 →</a></article>)}</div></div></section></main>}
+export default function Home(){return <main><section className="hero"><div className="shell"><div className="eyebrow">Weekly product observation</div><h1>AI Product Observatory</h1><p>每周对照历史记录，识别连续出现、同类爆发、首次形成、升温、降温和判断变化。</p></div></section><section className="section"><div className="shell"><div className="section-head"><h2>2026-W37</h2><div className="section-note">9 月 7—13 日</div></div><div className="signal-box"><strong>本周核心变化</strong><p>Agent-native SDLC 升级成 Agentic Software Factory；Control Plane 进入 per-action authority；Evidence-native requirement 开始形成贯穿完整生命周期的 Evidence Spine。</p><a href="/weekly/2026-W37">阅读完整周报 →</a></div></div></section><section className="section" id="trends"><div className="shell"><div className="section-head"><h2>本周趋势变化</h2></div><div className="grid">{trends.map(t=><article className="card trend" key={t[0]}><h3>{t[0]}</h3><p>{t[1]}</p></article>)}</div></div></section><section className="section" id="products"><div className="shell"><div className="section-head"><h2>本周代表产品</h2></div><div className="grid">{products.map(p=><article className="card product" key={p[0]}><div className="meta">{p[1]}</div><h3>{p[0]}</h3><p>{p[2]}</p><a href="/weekly/2026-W37">查看周报 →</a></article>)}</div></div></section></main>}
