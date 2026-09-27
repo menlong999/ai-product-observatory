@@ -1,17 +1,17 @@
 const trends=[
-['Capability Router 正式升级','Weave Router 2.0 补出第二个强样本；成本、quota、cache 与 confidence 开始成为 Runtime routing policy。'],
-['Specialist Decision Model 首次出现','CUA-S1 与 Cactus Needle 3 同周把小模型放进狭窄动作决策层，但真实可靠性仍需验证。'],
-['Evidence → Agent Interface Assurance','TryCase、NovaSynth、MCPJam、Ax-check 把验证对象扩到 change、agent behavior、tool interface 与 product onboarding。'],
-['Software Factory → Stateful Workspace','Bitrise RDE 与 Kilo mobile 补齐独立 workspace、resume 和异步 human supervision / takeover。'],
-['Context 拆成 Assembly + Source/Data','Twigg 管 raw history 的动态组装；Nimble 管外部来源、检索 procedure 与 source trust。'],
-['Control Plane 进入 consolidation','PassControl 延续 identity/scope/budget/kill switch，但本周没有超过 per-action authority 的新强信号。']
+['Typed Decision Plane 正式升级','Jev + AgentRun 让“专用小模型”升级成 Runtime Decision Plane：开放式规划与受限概率判断开始拆开。'],
+['Control Plane 重新升温','Arcjet + Drop 把执行治理拆成动作前 Policy 与独立 Execution Boundary 两层。'],
+['Agent-owned Compute 成形','Solid、Sai 延续 OpenComputer/Bitrise：长期 Agent 开始拥有持续机器、账号、预算与 fleet。'],
+['Mobile Operator Surface 升级','Superset Mobile 独立重复 W38 Kilo 的模式，手机 review/approval/takeover 不再只是附属功能。'],
+['Context 继续分层','NOAN 是 Authoritative Facts，Hemory 是 Episodic Memory；再加 Source/Provenance 与 Assembly Policy。'],
+['Eval → Production Health','AgentScore 延续 OpenObserve：Eval 正并入 production health / SLO，而不是消失。']
 ];
 const products=[
-['Weave Router 2.0','Capability Router','按复杂度、quota 和 cache 成本路由 coding-agent 模型。'],
-['CUA-S1','Specialist Decision Model','2.8MB 的 computer-use 专用动作决策模型。'],
-['Bitrise RDE','Agent Workspace','给 Agent 独立、可恢复的云端 Mac/Linux workspace。'],
-['TryCase','Executable Verification','PR 真实运行测试 + 视频/verdict evidence。'],
-['NovaSynth','Voice Assurance','用真实 caller 条件批量压测 voice agent。'],
-['Ax-check','Agent Experience','直接测试 Agent 能不能理解并自主接入一个产品。']
+['Jev','Typed Decision Plane','结构化概率判断进入 Runtime。'],
+['Arcjet','Runtime Governance','动作执行前的策略与授权。'],
+['Solid','Agent-owned Compute','Agent 拥有机器、账号与预算。'],
+['Superset Mobile','Agent Operator','手机管理 coding agents 与 workspace。'],
+['NOAN','Fact Layer','verified/versioned company facts。'],
+['AgentScore','Production Health','持续观察生产 Agent 的多维质量。']
 ];
-export default function Home(){return <main><section className="hero"><div className="shell"><div className="eyebrow">Weekly product observation</div><h1>AI Product Observatory</h1><p>每周对照历史记录，识别连续出现、同类爆发、首次形成、升温、降温和判断变化。</p></div></section><section className="section"><div className="shell"><div className="section-head"><h2>2026-W38</h2><div className="section-note">9 月 14—20 日</div></div><div className="signal-box"><strong>本周核心变化</strong><p>Capability Router 从 watchlist 正式升级；Evidence Spine 扩展成 Agent Interface Assurance；Agentic Software Factory 开始补齐 stateful workspace 与异步 human takeover。</p><a href="/weekly/2026-W38">阅读完整周报 →</a></div></div></section><section className="section" id="trends"><div className="shell"><div className="section-head"><h2>本周趋势变化</h2></div><div className="grid">{trends.map(t=><article className="card trend" key={t[0]}><h3>{t[0]}</h3><p>{t[1]}</p></article>)}</div></div></section><section className="section" id="products"><div className="shell"><div className="section-head"><h2>本周代表产品</h2></div><div className="grid">{products.map(p=><article className="card product" key={p[0]}><div className="meta">{p[1]}</div><h3>{p[0]}</h3><p>{p[2]}</p><a href="/weekly/2026-W38">查看周报 →</a></article>)}</div></div></section></main>}
+export default function Home(){return <main><section className="hero"><div className="shell"><div className="eyebrow">Weekly product observation</div><h1>AI Product Observatory</h1><p>每周对照历史记录，识别连续出现、同类爆发、首次形成、升温、降温和判断变化。</p></div></section><section className="section"><div className="shell"><div className="section-head"><h2>2026-W39</h2><div className="section-note">9 月 21—27 日</div></div><div className="signal-box"><strong>本周核心变化</strong><p>Typed Decision Plane 正式升级；Control Plane 拆成 Policy + Execution Boundary 并重新升温；Agent-owned Compute 与 Mobile Operator Surface 连续形成。</p><a href="/weekly/2026-W39">阅读完整周报 →</a></div></div></section><section className="section" id="trends"><div className="shell"><div className="section-head"><h2>本周趋势变化</h2></div><div className="grid">{trends.map(t=><article className="card trend" key={t[0]}><h3>{t[0]}</h3><p>{t[1]}</p></article>)}</div></div></section><section className="section" id="products"><div className="shell"><div className="section-head"><h2>本周代表产品</h2></div><div className="grid">{products.map(p=><article className="card product" key={p[0]}><div className="meta">{p[1]}</div><h3>{p[0]}</h3><p>{p[2]}</p><a href="/weekly/2026-W39">查看周报 →</a></article>)}</div></div></section></main>}
