@@ -1,0 +1,45 @@
+{
+  "id": "databench",
+  "name": "Databench by Alkera",
+  "category": "Data Workflow / Agent Workspace",
+  "date": "2026-10-07（PH）",
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/alkera"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/7"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/AlkeraAI/Databench"
+    },
+    {
+      "platform": "官网",
+      "url": "https://www.alkera.ai/"
+    }
+  ],
+  "description": "人和agent共同编辑运行的SQL/Python notebook工作区，可把计算放在本机Docker或SSH可达服务器。",
+  "signals": "PH日榜第4，289 points；GitHub累计9 stars、1 fork，无增长基线。Apache-2.0，是商业Alkera的开源子集。",
+  "facts": "仓库采用marimo兼容Python笔记本，默认opencode harness、Claude Agent SDK仍WIP。agent通过自有provider key调用模型网关；自托管不等于全本地推理。",
+  "why": "让数据、代码和产物一起可见，给W33以来的可验证执行增加数据团队场景。不是把一张聊天框放到仓库前面。",
+  "creator": "Rick Gao、Andrew Tran、Tony Li讲述跨团队数据工作、notebook协作不同步、远程GPU计算与难追踪数据过程的困扰；均为创始人自述。",
+  "learn": "把可复现产物和计算位置纳入交互设计；不要把生成结论当作分析完成。",
+  "limits": "开放版本与商业版功能不等同；本次没有跑部署或复现样例。不能凭低stars否定产品，也不能凭PH热度断言成熟采用。中文能力未查到。",
+  "worth": "Yes",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-07（PH）",
+      "signal": "PH日榜第4，289 points；GitHub累计9 stars、1 fork，无增长基线。Apache-2.0，是商业Alkera的开源子集。"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "pine-computer",
+  "name": "Pine Computer",
+  "category": "Agent Runtime / Computer Use",
+  "date": "2026-10-05（官方发布）；2026-10-09（PH）",
+  "sources": [
+    {
+      "platform": "官方发布",
+      "url": "https://pinecomputer.io/blog/introducing-pine-computer/"
+    },
+    {
+      "platform": "官网",
+      "url": "https://pinecomputer.io/"
+    },
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/pine-computer"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/9"
+    }
+  ],
+  "description": "给产品开发者提供agent专用云电脑，把结构化状态、变化通知、虚拟屏幕与人工接管组成运行环境。",
+  "signals": "PH日榜第12，96 points，产品页51 followers；仍为邀请制beta。SaaS-Bench v1.1共106任务/23应用，以下性能为vendor-reported整套系统对比。",
+  "facts": "官方表：Pine+GPT-5.6 Luna checkpoint78.3%、resolved27.4%；Codex+Sol分别71.1%/29.2%；Claude Code+Opus5为74.3%/31.1%。Pine $1.02为平均模型token成本，不含基础设施。",
+  "why": "W35 OpenComputer至W40 Dots/Pi pod之后，环境优化出现更明确实现论据，但“中间进度更高”与“任务完成更多”方向不一致。",
+  "creator": "Dylan Wang 自述从Pine AI真实任务轨迹与此前Agora网络基础设施经验出发，尝试改变计算机对agent的反馈方式。任务规模为厂商说法。",
+  "learn": "把checkpoint、端到端完成率、token成本和总成本分列；用事件驱动反馈减少重复感知，不能仅靠截图轮询。",
+  "limits": "没有独立复测，预算和模型不同，不能隔离归因于环境；官网FAQ说BYOM/API key仍coming，不能依据PH“bring your own model”描述写成已普遍可用。不能本机运行。",
+  "worth": "Yes",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-05（官方发布）；2026-10-09（PH）",
+      "signal": "PH日榜第12，96 points，产品页51 followers；仍为邀请制beta。SaaS-Bench v1.1共106任务/23应用，以下性能为vendor-reported整套系统对比。"
+    }
+  ]
+}

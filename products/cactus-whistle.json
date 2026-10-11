@@ -1,0 +1,41 @@
+{
+  "id": "cactus-whistle",
+  "name": "Cactus Whistle",
+  "category": "On-device Speech / Small Model",
+  "date": "2026-10-02（官方）；2026-10-05（Reddit）；2026-10-08（HN日期页）",
+  "sources": [
+    {
+      "platform": "官方发布",
+      "url": "https://cactuscompute.com/blog/whistle"
+    },
+    {
+      "platform": "Reddit原帖",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wyemcb/whistle_speech_to_text_in_a_169mb_file/"
+    },
+    {
+      "platform": "HN原帖",
+      "url": "https://news.ycombinator.com/item?id=50008427"
+    }
+  ],
+  "description": "16.9MB文件的端侧ASR，面向低资源设备，在CPU运行，并能输出字词时间戳及语音embedding。",
+  "signals": "HN946 points/181 comments；Reddit10月5日原帖189 votes。官方发布在前一周；新增的是跨社区讨论、具体使用反馈与限制。",
+  "facts": "官方页面列七种欧洲语言，不含中文；单次最多30秒。厂商给出LibriSpeech clean4.31/other10.49 WER等指标。本次未独立复测。",
+  "why": "为“端侧”补充窄而小的功能产品，区别于全面ambient采集。硬件资源限制与任务限定可能比一味增加通用性更重要。",
+  "creator": "团队在Reddit解释目标是预算手机、wearables等被忽视的设备，而非追求大模型规模。",
+  "learn": "看目标设备和失败样本：Reddit有法语误识别反馈；HN用户称170条带口音口令原始仅70条正确，改成有限模板后164条，属于个人自报，不是通用ASR benchmark。",
+  "limits": "Reddit作者称realtime更新将发包，但本次未验证对应版本落地，仍保留官网30秒边界。不能据英文数据承诺中文/长录音，也不能将受限口令表现外推自由转写。",
+  "worth": "Maybe",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-02（官方）；2026-10-05（Reddit）；2026-10-08（HN日期页）",
+      "signal": "HN946 points/181 comments；Reddit10月5日原帖189 votes。官方发布在前一周；新增的是跨社区讨论、具体使用反馈与限制。"
+    }
+  ]
+}

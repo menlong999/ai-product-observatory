@@ -1,0 +1,45 @@
+{
+  "id": "busabase",
+  "name": "Busabase",
+  "category": "Agent Context / Shared Data / Review",
+  "date": "2026-10-09（PH日榜）",
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/busabase"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/9"
+    },
+    {
+      "platform": "官方文档",
+      "url": "https://busabase.com/docs/mcp"
+    },
+    {
+      "platform": "官方文档",
+      "url": "https://busabase.com/docs/agent-playbooks"
+    }
+  ],
+  "description": "把业务记录、文档、Skill 和应用放在同一个共享工作区，让不同人和不同 agent 读取同一份经维护的上下文。",
+  "signals": "PH 10月9日日榜第1，355 points；产品页约1.1K followers。均为本次页面快照，不是用户数或收入。",
+  "facts": "官方文档把 read、changeRequest、write、manage 分开；changeRequest 可以读取及提交提案，不能自己合并。Playbook 是工作方法，不会扩大权限。支持 Cloud、Personal Desktop 和自托管。",
+  "why": "W39 NOAN、W40 Monospace之后，共享事实与写入审批继续成为独立产品能力；重点从“多记住一些”转为“谁能把哪些内容变为正式记录”。",
+  "creator": "Kelly Chan 在首发讨论中称，客户换项目或 agent 后反复重建上下文，因此选择共享底座而非自动吸收每段聊天。属于 maker 自述，未披露可核验客户规模。",
+  "learn": "把草稿、待审变更、已批准记录分开；权限上限应由服务端执行，不能仅依赖提示词。",
+  "limits": "本次读到官网、权限与Playbook文档，主仓库完整正文请求超时；不声称完成代码安全审计。数据本地存储不代表所连接agent也在本地推理。许可证未完成原文核验。",
+  "worth": "Yes",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-09（PH日榜）",
+      "signal": "PH 10月9日日榜第1，355 points；产品页约1.1K followers。均为本次页面快照，不是用户数或收入。"
+    }
+  ]
+}

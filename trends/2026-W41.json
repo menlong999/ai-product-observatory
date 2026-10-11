@@ -1,0 +1,127 @@
+[
+  {
+    "id": "execution-governance",
+    "weeks": [
+      "2026-W33",
+      "2026-W35",
+      "2026-W36",
+      "2026-W37",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41"
+    ],
+    "change": "补充跨入口和恢复路径不变量，不声称普遍解决",
+    "products": [
+      "busabase",
+      "docker-agent",
+      "rill-browser"
+    ],
+    "evidence": [
+      "https://busabase.com/docs/mcp",
+      "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+      "https://rill.love/privacy"
+    ]
+  },
+  {
+    "id": "typed-decision-plane",
+    "weeks": [
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41"
+    ],
+    "change": "增加公开架构与可替换evaluator实现；仍是窄任务",
+    "products": [
+      "strands-decider",
+      "docker-agent"
+    ],
+    "evidence": [
+      "https://strandsagents.com/blog/introducing-strands-decider/",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0"
+    ]
+  },
+  {
+    "id": "agent-owned-compute",
+    "weeks": [
+      "2026-W35",
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41"
+    ],
+    "change": "区分checkpoint与resolved，运行环境优化不等于完成率领先",
+    "products": [
+      "pine-computer"
+    ],
+    "evidence": [
+      "https://pinecomputer.io/blog/introducing-pine-computer/"
+    ]
+  },
+  {
+    "id": "shared-data-plane",
+    "weeks": [
+      "2026-W34",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41"
+    ],
+    "change": "共享事实+审批、可复现数据产物；与情景记忆分开",
+    "products": [
+      "busabase",
+      "databench"
+    ],
+    "evidence": [
+      "https://busabase.com/docs/mcp",
+      "https://github.com/AlkeraAI/Databench"
+    ]
+  },
+  {
+    "id": "human-attention-router",
+    "weeks": [
+      "2026-W39",
+      "2026-W40",
+      "2026-W41"
+    ],
+    "change": "新增浏览器和桌面流程入口；交回人不等于硬权限",
+    "products": [
+      "rill-browser",
+      "irisgo"
+    ],
+    "evidence": [
+      "https://rill.love/privacy",
+      "https://www.producthunt.com/products/irisgo-public-beta"
+    ]
+  },
+  {
+    "id": "agent-finops",
+    "weeks": [
+      "2026-W33",
+      "2026-W35",
+      "2026-W38",
+      "2026-W40",
+      "2026-W41"
+    ],
+    "change": "维持非一级；AUDR是跨层归因契约新增证据，不代表独立FinOps商业验证",
+    "products": [
+      "audr"
+    ],
+    "evidence": [
+      "https://github.com/openaudr/audr"
+    ]
+  },
+  {
+    "id": "teach-by-demonstration",
+    "weeks": [
+      "2026-W35",
+      "2026-W37",
+      "2026-W41"
+    ],
+    "change": "W37退出重点后回到候选，不升级",
+    "products": [
+      "irisgo"
+    ],
+    "evidence": [
+      "https://www.producthunt.com/products/irisgo-public-beta"
+    ]
+  }
+]

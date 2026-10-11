@@ -1,0 +1,37 @@
+{
+  "id": "bigwords-page",
+  "name": "Bigwords.page",
+  "category": "Independent Utility / Consumer Productivity",
+  "date": "2026-10-07（Show HN日期页）",
+  "sources": [
+    {
+      "platform": "Show HN",
+      "url": "https://news.ycombinator.com/item?id=49994443"
+    },
+    {
+      "platform": "官网",
+      "url": "https://bigwords.page/"
+    }
+  ],
+  "description": "把手机、平板或电视变为大字招牌，内容由URL fragment配置，带简单倒计时、幻灯片等功能。",
+  "signals": "Show HN718 points、163 comments。没有经核验的收入、用户数或留存数据；非AI产品仍因强产品信号入选。",
+  "facts": "作者说明无后端、无存储，fragment不会随HTTP请求发给服务器；官网提供直接编辑入口。不能据此推断设备、历史或截图不会泄露内容。",
+  "why": "给本周大量agent基础设施提供反例：足够具体、立即能用、无需账号的单一功能仍能取得高讨论度。",
+  "creator": "SpeakingOfBrad说起因是能远程管理一台平板，却不能物理触碰它，于是让URL自身承载要显示的信息。",
+  "learn": "把一个真实场景的最后一步做简单，也能形成有辨识度的产品；不必给所有工具加agent。",
+  "limits": "HN热度不是商业验证；免费工具的付费空间未知。未做跨设备、中文排版或无障碍测试，许可证未查到。",
+  "worth": "Maybe",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-07（Show HN日期页）",
+      "signal": "Show HN718 points、163 comments。没有经核验的收入、用户数或留存数据；非AI产品仍因强产品信号入选。"
+    }
+  ]
+}

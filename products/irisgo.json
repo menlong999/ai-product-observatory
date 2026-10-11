@@ -1,0 +1,41 @@
+{
+  "id": "irisgo",
+  "name": "IrisGo for Solopreneurs",
+  "category": "Workflow / Desktop Automation",
+  "date": "2026-10-07（PH）",
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/irisgo-public-beta"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/7"
+    },
+    {
+      "platform": "官网",
+      "url": "https://irisgo.ai/solopreneur"
+    }
+  ],
+  "description": "面向独立经营者的桌面agent应用：收拢邮件待办、简报、录制工作流程，再调度重放。",
+  "signals": "PH日榜第1，537 points；免费beta。团队说早期用户自报每天节省1–2小时，但仍收集正式数据，不作为已验证效率收益。",
+  "facts": "官方支持Windows11 64位、Apple Silicon Mac。团队解释录制、快照、转写与记忆本地保存，执行AI步骤所需的文字/UI上下文发往LLM API。不是替代OS的内核。",
+  "why": "W35 Caddi之后，演示捕获重新有产品样本；同时继承W40只把真正需要人的事交回来的注意力分配路线。",
+  "creator": "Jeffrey Lai、Yuan Sun在PH解释把个体经营者重复行政事务作为入口；随着团队增长，录制流程变为共享playbook属于其产品愿景。",
+  "learn": "录制转流程要连着审批、调度、日志和可修改规则看，不能把一次成功回放叫持续学习。",
+  "limits": "UI变化适应能力仍是maker说法；无独立失败率/长期稳定性数据。确认发送或外部变更前有人批准是团队说明，未审计执行边界。中文能力未查到依据。",
+  "worth": "Maybe",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-07（PH）",
+      "signal": "PH日榜第1，537 points；免费beta。团队说早期用户自报每天节省1–2小时，但仍收集正式数据，不作为已验证效率收益。"
+    }
+  ]
+}

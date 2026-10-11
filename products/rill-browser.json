@@ -1,0 +1,45 @@
+{
+  "id": "rill-browser",
+  "name": "Rill Browser",
+  "category": "Developer Workflow / Browser / Attention",
+  "date": "2026-10-06（PH首发；隐私页生效日）",
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/rill-3"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/6"
+    },
+    {
+      "platform": "官网",
+      "url": "https://rill.love/"
+    },
+    {
+      "platform": "隐私说明",
+      "url": "https://rill.love/privacy"
+    }
+  ],
+  "description": "在浏览网页时直接把上下文和任务交给已有的 Claude Code 或 Codex，再把需要人回应的事项带回浏览器。",
+  "signals": "PH 10月6日日榜第1，501 points；产品页949 followers。页面快照。",
+  "facts": "Apple Silicon、macOS14+，免费beta，使用已有agent订阅。浏览历史在Mac保存；AI功能会将所需内容发给OpenAI或Anthropic。项目agent的浏览标签不带个人登录，普通网页任务可以使用登录状态。",
+  "why": "产品增量是输入入口、上下文路由和注意力分配，而非另造coding模型。给W40 Attention Router提供桌面浏览器样本。",
+  "creator": "Maker William 说灵感常出现在浏览而非编码时，切到agent、找项目、重讲背景会打断思路。此为创作动机，不等于生产率测量。",
+  "learn": "降低从浏览到任务派发的切换成本，同时明确哪些上下文会出设备。",
+  "limits": "官方明确：支付、发布、删除等前停下是给agent的指令，不是硬锁；prompt injection只降低风险未解决。未实测。不能写成完全本地AI或已解决安全浏览。",
+  "worth": "Yes",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-06（PH首发；隐私页生效日）",
+      "signal": "PH 10月6日日榜第1，501 points；产品页949 followers。页面快照。"
+    }
+  ]
+}

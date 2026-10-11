@@ -1,0 +1,41 @@
+{
+  "id": "audr",
+  "name": "AUDR by Chargebee",
+  "category": "Agent Cost / Open Specification",
+  "date": "2026-10-06（PH）",
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/chargebee"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/6"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/openaudr/audr"
+    }
+  ],
+  "description": "Agent Usage Detail Record：让harness、router、provider的用量记录能按同一执行任务归集的开放JSON规范。",
+  "signals": "PH日榜第3，335 points；GitHub累计12 stars、4 forks，无周增长基线。规范1.0.0、Apache-2.0，仓库列出Python/TS SDK、多个adapter及Chargebee/Lago sink。",
+  "facts": "用record_id去重，用run_id+span_id关联不同组件记录；定价、开票仍由下游系统负责。Chargebee发起维护，尚不是已独立运作的行业基金会。",
+  "why": "补充W33 Paritok、W35 Navigara、W38/W40 Weave的成本归因路径；价值在跨层数据契约，不是又一张token仪表盘。",
+  "creator": "团队说明灵感来自电信Call Detail Record，因各层分别知道客户、模型、用量或结果，却难联合回答某客户整次任务成本。",
+  "learn": "先统一归因标识、字段归属及冲突合并规则，再做成本分析。adapter存在不等于获得大规模生产采用。",
+  "limits": "12 stars不能当弱或强商业验证；未查到有统计口径的生产采用/收入。不能把开源记录规范写成新的计费平台或成熟行业标准。",
+  "worth": "Yes",
+  "observed_at": "2026-10-11T08:24:00+08:00",
+  "first_seen": "2026-W41",
+  "last_seen": "2026-W41",
+  "weeks": [
+    "2026-W41"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-06（PH）",
+      "signal": "PH日榜第3，335 points；GitHub累计12 stars、4 forks，无周增长基线。规范1.0.0、Apache-2.0，仓库列出Python/TS SDK、多个adapter及Chargebee/Lago sink。"
+    }
+  ]
+}
