@@ -2,7 +2,7 @@
   "id": "strands-decider",
   "name": "Strands Decider 2B",
   "category": "Decision Model / Typed Decisions",
-  "date": "2026-10-01（官方）；2026-10-07（HN日期页）",
+  "date": "2026-10-12—16（UTC；main合并，未核验新发布包）",
   "sources": [
     {
       "platform": "官方博客",
@@ -15,27 +15,54 @@
     {
       "platform": "GitHub",
       "url": "https://github.com/strands-labs/strands-decider"
+    },
+    {
+      "platform": "GitHub并发修复",
+      "url": "https://github.com/strands-labs/strands-decider/pull/18"
+    },
+    {
+      "platform": "评测与服务路径",
+      "url": "https://github.com/strands-labs/strands-decider/pull/79"
+    },
+    {
+      "platform": "训练配方与缺失项",
+      "url": "https://github.com/strands-labs/strands-decider/pull/81"
+    },
+    {
+      "platform": "PyPI发布状态",
+      "url": "https://pypi.org/project/strands-decider/"
     }
   ],
-  "description": "在给定选项中选择或打分的2B决策模型；去掉Qwen3.5-2B的文本生成头，换pointer head并用LoRA调整。",
-  "signals": "本周HN讨论285 points、77 comments。官方已在10月1日发布；本观察W41首次收录，不伪装本周首发。",
-  "facts": "官方提供代码、权重、训练数据与脚本；本地CPU/GPU可运行。厂商报告RTX3090中位约115ms、M3小任务约153ms，不是手机能耗或全任务时延实测。",
-  "why": "W38 specialist候选→W39 Jev→W40 Clef之后，新增公开架构与训练材料的独立样本，继续支持有类型决策这一窄方向。",
-  "creator": "Marc Brooker、Mike Chambers、Fabio Nonato de Paula说明目标是便于普通硬件实验；不具备通用文本生成能力。",
-  "learn": "在确定选项的路由/筛选环节比较准确率、置信度校准和延迟，而不是和聊天模型比能否写文章。",
-  "limits": "仍要业务域评测；置信度不等于真实授权。公开benchmark与供应商测试不直接证明生产优势。不能推论小模型将替代通用agent。",
+  "description": "在调用者给定选项中选择或打分的窄决策模型。沿用W41产品身份，本周关注并发正确性、评测路径与训练可复现边界。",
+  "signals": "10月12—16日main修复MPS重叠调用和并发offset串扰，统一eval/calibrate与serve路径，并补入5组v1训练配置；不计为新产品首发或用户增长。",
+  "facts": "PR18将候选位置offset改为请求私有，避免并发读到其他请求的数据。PR79统一CPU/MPS推理准备过程；MLX因缺logit路径而拒绝校准。PR81披露所有Gemma配置缺仓库外code_v27数据，Qwen缺4个mix文件与teacher文件，实际训练使用开发代码。 发布权重由seed 0/1/2合并后校准，单seed配置不等同发布权重；可见配方增加不构成完整训练复现。",
+  "why": "W38 specialist候选→W39 Jev/AgentRun→W40 Clef→W41 Strands，本周形成Strands同一产品的工程延续。有类型输出仍依赖服务并发和评测正确性。",
+  "creator": "Marc Brooker、Mike Chambers、Fabio Nonato de Paula说明目标是便于普通硬件实验；不具备通用文本生成能力。 本周新增是公开维护过程，并非新的商业故事。",
+  "learn": "串行与并发输出应一致；评测和线上使用同一设备路径。公开权重、公开配置和完整可复现应分别验收。",
+  "limits": "作者测试未独立复现，没有中文业务域校准或商业增长证据。训练缺失文件与代码差异意味着不能完整重跑发布权重。GitHub releases为空、PyPI最近发布仍为10月1日；本周变化只确认merged main。概率不是权限。",
   "worth": "Yes",
-  "observed_at": "2026-10-11T08:24:00+08:00",
+  "observed_at": "2026-10-18T08:42:15+08:00",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W41",
+  "last_seen": "2026-W42",
   "weeks": [
-    "2026-W41"
+    "2026-W41",
+    "2026-W42"
   ],
   "timeline": [
     {
       "week": "2026-W41",
       "event": "2026-10-01（官方）；2026-10-07（HN日期页）",
       "signal": "本周HN讨论285 points、77 comments。官方已在10月1日发布；本观察W41首次收录，不伪装本周首发。"
+    },
+    {
+      "week": "2026-W42",
+      "event": "2026-10-12—16（UTC；main合并，未核验新发布包）",
+      "signal": "10月12—16日main修复MPS重叠调用和并发offset串扰，统一eval/calibrate与serve路径，并补入5组v1训练配置；不计为新产品首发或用户增长。"
     }
-  ]
+  ],
+  "featured_weeks": [
+    "2026-W41",
+    "2026-W42"
+  ],
+  "selection": "main"
 }

@@ -1,0 +1,110 @@
+{
+  "id": "guilds",
+  "name": "guilds.run",
+  "category": "持续多 Agent 团队／共享记忆／运行审计",
+  "date": "2026-10-12（PH 发布 10/12；安全登记有 10/13–17 新记录）",
+  "description": "为长期工作的 agent 团队配置角色、模型、工具、共享笔记与记录；让操作者检查 prompt、工具调用和记忆变化，再审核 Studio 提出的修正。",
+  "facts": "Studio提出的变更需要发布才生效。安全登记SEC-24明确同一共享机器/容器内的agents以root运行，可读取彼此home、token、Chrome会话；边界是该机器/容器，不是guild角色，这并非指物理宿主机root。SEC-28记载coding harness关闭自身审批，提示词“不要push”不构成强制隔离；10月16日日志脱敏仅覆盖已登记secrets。尚无编号release。",
+  "signals": "PH 202 分，日榜第 4（平台公开计数；非商业采用证据；观测2026-10-18）；GitHub 快照 60 stars、8 forks；AGPL-3.0 core（平台公开计数；非商业采用证据；观测2026-10-18）；10/13 修复跨私有 guild 放置 agent 的权限问题；同机共享 root 边界仍明确接受（维护者安全登记；未独立审计；观测2026-10-18）",
+  "why": "延续W34共享上下文、W36受控规则发布、W40可检查工作流。它让共享错误与修正更可见，同时证明共享记忆、可观察性与凭证隔离是不同问题。",
+  "creator": "Emmanuel C、Vincent J、Adel 在 PH 讨论的真实困难是错误假设进入共享笔记，再被下一个 agent 当事实沿用；他们将团队运行过程做成可检查记录。（创作者自述）",
+  "learn": "共享记忆应记录是谁、哪次运行写入以及如何纠错；公开风险登记比“可信 agent”口号更有信息量。Studio 草案经发布才生效，是明确的人审边界。",
+  "limits": "安全登记 SEC-24：同一机器的 agent 都以 root 运行，可读彼此 home、token、Chrome 会话；机器才是边界，guild 不是。 SEC-28：coding harness 关闭自身审批；提示词“不要 push”并非强制控制。 10/16 日志脱敏只覆盖 agent 已登记 secrets；其他凭证可能仍出现在日志。 changelog 写明尚无编号 release；研究基于 main 文档，不声称稳定版交付。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
+  "first_seen": "2026-W42",
+  "last_seen": "2026-W42",
+  "weeks": [
+    "2026-W42"
+  ],
+  "sources": [
+    {
+      "platform": "PH 发布与讨论",
+      "url": "https://www.producthunt.com/products/guilds-run"
+    },
+    {
+      "platform": "PH 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12"
+    },
+    {
+      "platform": "原始仓库 README",
+      "url": "https://github.com/CigaleAI/guilds"
+    },
+    {
+      "platform": "安全登记",
+      "url": "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md"
+    },
+    {
+      "platform": "版本说明",
+      "url": "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-12（PH 发布 10/12；安全登记有 10/13–17 新记录）",
+      "signal": "产品发布之外，原始安全登记主动暴露机器级信任边界与未解决风险，适合写“可观察”与“隔离”是两项不同能力。"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42"
+  ],
+  "selection": "main",
+  "source_details": [
+    {
+      "label": "PH 发布与讨论",
+      "url": "https://www.producthunt.com/products/guilds-run",
+      "source_date": "2026-10-12",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "PH 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12",
+      "source_date": "2026-10-12",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "原始仓库 README",
+      "url": "https://github.com/CigaleAI/guilds",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "安全登记",
+      "url": "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "source_date": "2026-10-13/17",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "版本说明",
+      "url": "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    }
+  ],
+  "signal_details": [
+    {
+      "text": "PH 202 分，日榜第 4",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/12",
+      "classification": "平台公开计数；非商业采用证据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "GitHub 快照 60 stars、8 forks；AGPL-3.0 core",
+      "url": "https://github.com/CigaleAI/guilds",
+      "classification": "平台公开计数；非商业采用证据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "10/13 修复跨私有 guild 放置 agent 的权限问题；同机共享 root 边界仍明确接受",
+      "url": "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "classification": "维护者安全登记；未独立审计",
+      "observed_at": "2026-10-18"
+    }
+  ]
+}

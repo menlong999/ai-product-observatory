@@ -6,6 +6,7 @@ export type Product = {
   facts: string; signals: string; why: string; creator: string; learn: string;
   limits: string; worth: string; observed_at: string; first_seen: string; last_seen: string;
   weeks: string[]; sources: { platform: string; url: string }[];
+  source_details?: { label: string; url: string; source_date: string | null; kind: string; observed_on: string }[];
   timeline: { week: string; event: string; signal: string }[];
 };
 export function getProducts(): Product[] {

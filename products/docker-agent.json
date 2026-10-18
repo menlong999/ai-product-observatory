@@ -2,7 +2,7 @@
   "id": "docker-agent",
   "name": "Docker Agent",
   "category": "Agent Harness / Evaluation / Runtime",
-  "date": "2026-10-07（v1.149.0）；2026-10-09（v1.150.0）",
+  "date": "2026-10-15（UTC；main合并，未核验新release）",
   "sources": [
     {
       "platform": "GitHub发布",
@@ -19,27 +19,49 @@
     {
       "platform": "HN日期页",
       "url": "https://news.ycombinator.com/front?day=2026-10-07"
+    },
+    {
+      "platform": "确认竞态修复",
+      "url": "https://github.com/docker/docker-agent/pull/4589"
+    },
+    {
+      "platform": "实际服务成本归因",
+      "url": "https://github.com/docker/docker-agent/pull/4579"
+    },
+    {
+      "platform": "官方releases",
+      "url": "https://github.com/docker/docker-agent/releases"
     }
   ],
   "description": "用YAML定义、运行、共享agent的Docker CLI插件与运行时。",
-  "signals": "本周有明确版本增量；10月7日HN日期页记录303 points、145 comments（原帖获取失败，保留日期页证据，不补造帖ID）。Apache-2.0。未记录stars增长。",
-  "facts": "v1.149加入专用evaluator backend、OpenAI Decisions评估入口；v1.150暴露执行capabilities并修复API server创建native runtime时budget未生效、A2A恢复时limits丢失。",
-  "why": "W39/40讨论的治理与判断层进入真实运行时接口；修复项又说明“已配置限制”不保证跨入口、恢复路径始终执行。",
+  "signals": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。",
+  "facts": "PR4589用单决定缓冲避免接收方等待前答复丢失，并在新提示前清理旧值；请求仍未keyed，多交互会话和极晚旧回复不是本次完整解决范围。PR4579不再依赖router可变的上次选择，按实际服务provider/tier/endpoint/cache计算。",
+  "why": "承接W41跨runtime预算和A2A恢复限制修复，W42进一步说明确认需要时序/会话正确性，成本记录需要对应真正执行方。品牌本身不是新信号。",
   "creator": "Docker Engineering持续维护；本期未查到独立创业故事或收入数据，不以品牌作为入选理由。",
-  "learn": "给预算、权限、会话恢复写端到端不变量测试；把judge作为可替换组件，不与主模型绑死。",
-  "limits": "release说明证明发布了修复，不证明所有执行路径都已安全；没有本地跑测试。v1.150不是新产品首发。",
+  "learn": "验证快速答复、旧回复延迟、多会话、取消与恢复；审批应绑定请求和会话。按每次实际served provider计价，而非router当前状态。",
+  "limits": "本周仅确认merged main，不宣称已发布新安装包。作者使用本地fake-provider和受控测试，未独立复验，也没有真实账单或全部授权路径的安全保证。",
   "worth": "Yes",
-  "observed_at": "2026-10-11T08:24:00+08:00",
+  "observed_at": "2026-10-18T08:42:15+08:00",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W41",
+  "last_seen": "2026-W42",
   "weeks": [
-    "2026-W41"
+    "2026-W41",
+    "2026-W42"
   ],
   "timeline": [
     {
       "week": "2026-W41",
       "event": "2026-10-07（v1.149.0）；2026-10-09（v1.150.0）",
       "signal": "本周有明确版本增量；10月7日HN日期页记录303 points、145 comments（原帖获取失败，保留日期页证据，不补造帖ID）。Apache-2.0。未记录stars增长。"
+    },
+    {
+      "week": "2026-W42",
+      "event": "2026-10-15（UTC；main合并，未核验新release）",
+      "signal": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。"
     }
-  ]
+  ],
+  "featured_weeks": [
+    "2026-W41"
+  ],
+  "selection": "continuity_sidebar"
 }

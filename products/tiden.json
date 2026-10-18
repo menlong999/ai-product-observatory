@@ -1,0 +1,93 @@
+{
+  "id": "tiden",
+  "name": "Tiden",
+  "category": "Coding agent 意图验证／质量门禁",
+  "date": "2026-10-14（PH 当日发布；官方 10/12–14 changelog 有实质改动）",
+  "description": "把需求、分支变更和测试证据关联起来，给 coding agent 会话提供可检查的结束条件；合并仍由人决定。",
+  "facts": "官方10月12日修正progress显示通过、close却拒绝的状态矛盾，并在CLI 0.31.0加入JUnit导入；10月14日处理大规格/测试集超时与限流。10月13日requirement→spec工具名迁移会影响MCP allowlist和脚本。门禁可检查需求满足度，不能证明原需求正确。",
+  "signals": "PH 210 分，日榜第 4（平台公开计数；非商业采用证据；观测2026-10-18）；10/12–14 官方列出 close/progress 一致性、JUnit 导入、大规模门禁修复（官方变更记录；未独立复现；观测2026-10-18）",
+  "why": "延续W34 Checksum/Replay QA→W35独立验证→W40 iFixAi/GitBot。W42更具体的问题是“谁接受这次变更，以及门禁自己会不会假绿”，不是验证产品数量变多。",
+  "creator": "Nikita Fedorov 在 PH 自述来自 Qase 团队，做 Qase 九年、Tiden 一年。动机是 agent 同时写代码与测试时，测试可能只认同自己生成的实现。（创作者自述，不等于外部验证）",
+  "learn": "值得学的是证据归属与失败关闭：别把其他 run 的绿灯算到本次变更；未知需求变更需要明确风险接受。需求是否正确仍不是工具能替人决定的。",
+  "limits": "没有独立交付效率或质量改善试验。 10/13 requirement→spec 工具名迁移可能影响已有 MCP allowlist／脚本。 验证需求被满足，不代表需求本身正确。 10月1日CLI说明仍要求发出的自由文本为英文，非拉丁文字会在联网前拒绝；本周未取得该限制已取消的证据。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
+  "first_seen": "2026-W42",
+  "last_seen": "2026-W42",
+  "weeks": [
+    "2026-W42"
+  ],
+  "sources": [
+    {
+      "platform": "PH 创作者发布与讨论",
+      "url": "https://www.producthunt.com/products/tiden"
+    },
+    {
+      "platform": "PH 10/14 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/14"
+    },
+    {
+      "platform": "官方 changelog",
+      "url": "https://tiden.ai/changelog"
+    },
+    {
+      "platform": "官网产品机制",
+      "url": "https://tiden.ai/"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-14（PH 当日发布；官方 10/12–14 changelog 有实质改动）",
+      "signal": "10/12 修正 progress 报通过而 close 实际拒绝的矛盾；10/14 修复大规格／大测试集的超时与限流。可写“验证系统本身也需要防假绿”。"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42"
+  ],
+  "selection": "main",
+  "source_details": [
+    {
+      "label": "PH 创作者发布与讨论",
+      "url": "https://www.producthunt.com/products/tiden",
+      "source_date": "2026-10-14",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "PH 10/14 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/14",
+      "source_date": "2026-10-14",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "官方 changelog",
+      "url": "https://tiden.ai/changelog",
+      "source_date": "2026-10-12/14",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "官网产品机制",
+      "url": "https://tiden.ai/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    }
+  ],
+  "signal_details": [
+    {
+      "text": "PH 210 分，日榜第 4",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/14",
+      "classification": "平台公开计数；非商业采用证据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "10/12–14 官方列出 close/progress 一致性、JUnit 导入、大规模门禁修复",
+      "url": "https://tiden.ai/changelog",
+      "classification": "官方变更记录；未独立复现",
+      "observed_at": "2026-10-18"
+    }
+  ]
+}

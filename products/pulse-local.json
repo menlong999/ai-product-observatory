@@ -1,0 +1,99 @@
+{
+  "id": "pulse-local",
+  "name": "Pulse Local",
+  "category": "本地个人财务／小模型结构化查询／拒答评测",
+  "date": "2026-10-14 07:13:23 北京时间（Show HN；原始UTC 10月13日23:13:23）；方法文章10月4日、10月6日更新",
+  "description": "Apple Silicon Mac 本地记账与账本问答。结构化理解交给小模型，数值交给确定性代码；可选第二读法，不一致则拒答。",
+  "facts": "小模型理解结构化问句，确定性代码计算数值；可选第二读法不一致则拒答。三轮自测494问合计232正确、5错误、205不确定、52拒绝/追问；232/494约47%，已展示237个数字中5个错误约2.1%，不能说99%准确。494来自160+168+166题：第9轮在旧输出回放预写规则，第10/11轮才是冻结app后的新家庭完整运行。开启Better understanding的M4/24GB作者测试约12–14秒，关闭约0.1秒。CSV模式本地；可选美国Plaid Sync Pass经服务器内存，不能把所有模式称为零外传。当前英文。",
+  "signals": "HN 121 分、71 条评论（HN 官方 API 实时计数；非安装/付费；观测2026-10-18T00:29:51Z）；作者在 HN 回复欧洲 CSV、IBAN 截断和内存压力，称已发布 0.4.1；≤16GB 内存默认关闭重检查（作者自报版本与反馈处理；没有独立运行验证；观测2026-10-18）；三轮自测共494问：232正确、5错误、205不确定，其余52为拒绝/追问；展示237个数字中5错（作者合成数据自测；不是第三方评测；观测2026-10-18）",
+  "why": "为W38起的专用小模型、W39有类型判断及W40置信度升级补一个应用层反例：少报错可能以更多拒答和延迟为代价。是本周新收录，方法文章10月4/6日已发布。",
+  "creator": "Niz（HN niztk）自述自己的测试接近满分后，朋友一试七问全错，迫使他改为新作者、新合成家庭、单独答案程序与冻结 app 的评测流程。（创作者自述）",
+  "learn": "应同时报告错误暴露率、回答覆盖率与耗时。5/494≈1%错不等于99%准确；232/494≈47%整体正确，5/237≈2.1%已展示数字错误。不同方法交叉检查只能过滤，不能证明正确。",
+  "limits": "494=第9/10/11轮160+168+166，正确率分别54%/44%/43%；并非494题单轮。第9轮为事先写规则后套到既有结果；第10/11轮才是冻结后的新家庭完整运行。 九个 AI 合成家庭、一台 Mac，不是用户真实财务数据、不是独立评测。 检查开启时 M4/24GB 约12–14秒，未开启约0.1秒；结论只适用 Better understanding 开启。 CSV 模式本地，但可选美国 Plaid Sync Pass 为 $29/年并经过服务器内存；不能将全部模式写成零外传。 目前英文，不能假定中文可用。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
+  "first_seen": "2026-W42",
+  "last_seen": "2026-W42",
+  "weeks": [
+    "2026-W42"
+  ],
+  "sources": [
+    {
+      "platform": "Show HN 作者原帖与讨论",
+      "url": "https://news.ycombinator.com/item?id=50080275"
+    },
+    {
+      "platform": "HN 官方 API",
+      "url": "https://hacker-news.firebaseio.com/v0/item/50080275.json"
+    },
+    {
+      "platform": "方法、原始分母与限制",
+      "url": "https://pulseos.finance/pulse-local/writing/agree-or-not-sure"
+    },
+    {
+      "platform": "隐私说明",
+      "url": "https://pulseos.finance/privacy"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-14 07:13:23 北京时间（Show HN；原始UTC 10月13日23:13:23）；方法文章10月4日、10月6日更新",
+      "signal": "HN 发布得到实际 CSV/内存等反馈，作者称随即发 0.4.1 修正。更值得写的是清楚披露拒答率、分母与延迟的可靠性取舍。"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42"
+  ],
+  "selection": "main",
+  "source_details": [
+    {
+      "label": "Show HN 作者原帖与讨论",
+      "url": "https://news.ycombinator.com/item?id=50080275",
+      "source_date": "2026-10-13",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "HN 官方 API",
+      "url": "https://hacker-news.firebaseio.com/v0/item/50080275.json",
+      "source_date": "2026-10-13T23:13:23Z",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "方法、原始分母与限制",
+      "url": "https://pulseos.finance/pulse-local/writing/agree-or-not-sure",
+      "source_date": "2026-10-04；更新2026-10-06",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "隐私说明",
+      "url": "https://pulseos.finance/privacy",
+      "source_date": "2026-10-06",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    }
+  ],
+  "signal_details": [
+    {
+      "text": "HN 121 分、71 条评论",
+      "url": "https://news.ycombinator.com/item?id=50080275",
+      "classification": "HN 官方 API 实时计数；非安装/付费",
+      "observed_at": "2026-10-18T00:29:51Z"
+    },
+    {
+      "text": "作者在 HN 回复欧洲 CSV、IBAN 截断和内存压力，称已发布 0.4.1；≤16GB 内存默认关闭重检查",
+      "url": "https://news.ycombinator.com/item?id=50080275",
+      "classification": "作者自报版本与反馈处理；没有独立运行验证",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "三轮自测共494问：232正确、5错误、205不确定，其余52为拒绝/追问；展示237个数字中5错",
+      "url": "https://pulseos.finance/pulse-local/writing/agree-or-not-sure",
+      "classification": "作者合成数据自测；不是第三方评测",
+      "observed_at": "2026-10-18"
+    }
+  ]
+}

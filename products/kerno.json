@@ -1,0 +1,93 @@
+{
+  "id": "kerno",
+  "name": "Kerno 1.0",
+  "category": "后端 Runtime QA／回归／安全测试",
+  "date": "2026-10-14（官方 v1 文章 10/14；PH 10/15）",
+  "description": "连接真实后端、鉴权与种子数据，发现 API/MCP/队列任务路径，先给测试计划供人批准，再运行完整流程并把测试保留在仓库。",
+  "facts": "v1面向后端API、MCP、队列及AWS serverless运行路径，依赖真实环境、认证和种子数据；测试计划先由人批准，结果和可复跑测试留在仓库，可输出JUnit接CI。创作者明确不覆盖登出后的前端状态等UI问题。",
+  "signals": "PH 92 分，日榜第 13（平台公开计数；非商业采用证据；观测2026-10-18）；官方 v1 文列出 auth/seed data、计划审批、受影响流程重跑、JUnit CI（官方发布说明；未独立实测；观测2026-10-18）",
+  "why": "接续W34 QA产品簇、W37 Evidence Spine与W40运行证据。新增价值在真实后端路径和可复跑测试，不能把源码评论或厂商效果数字当运行验收。",
+  "creator": "Karim Traiaia 在官方发布文解释，AI 写代码更快后，团队仍需确认复杂后端行为；因此围绕实际应用环境、鉴权和跨步骤流程构建 QA。未核实独立创业收入故事。（官方作者说明；非客户独立访谈）",
+  "learn": "把可重复运行的测试留在用户仓库，减少平台锁定；人工确认计划与行为基线，能区分预期变更和回归。",
+  "limits": "当前重点后端；创作者明确不覆盖登出后前端状态等 UI 问题。 接入需要真实环境、认证和种子数据；官方预计 30–60 分钟、Docker/Node 18+/git。 效果数字无独立复现；免费层 1 repo/1 user/30 runs/月，Pro $50/开发者/月为观察时官网报价。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
+  "first_seen": "2026-W42",
+  "last_seen": "2026-W42",
+  "weeks": [
+    "2026-W42"
+  ],
+  "sources": [
+    {
+      "platform": "官方 v1 发布文",
+      "url": "https://kerno.io/blog/kerno-v1/"
+    },
+    {
+      "platform": "PH 发布与创作者边界说明",
+      "url": "https://www.producthunt.com/products/kerno"
+    },
+    {
+      "platform": "PH 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/15"
+    },
+    {
+      "platform": "官网",
+      "url": "https://kerno.io/"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-14（官方 v1 文章 10/14；PH 10/15）",
+      "signal": "v1 增加跨多步真实流程、行为变化基线、可复用仓库规则、队列/MCP/AWS serverless 测试；价值在运行时行为，而不是又一层代码评论。"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42"
+  ],
+  "selection": "main",
+  "source_details": [
+    {
+      "label": "官方 v1 发布文",
+      "url": "https://kerno.io/blog/kerno-v1/",
+      "source_date": "2026-10-14",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "PH 发布与创作者边界说明",
+      "url": "https://www.producthunt.com/products/kerno",
+      "source_date": "2026-10-15",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "PH 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/15",
+      "source_date": "2026-10-15",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "官网",
+      "url": "https://kerno.io/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    }
+  ],
+  "signal_details": [
+    {
+      "text": "PH 92 分，日榜第 13",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/15",
+      "classification": "平台公开计数；非商业采用证据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "官方 v1 文列出 auth/seed data、计划审批、受影响流程重跑、JUnit CI",
+      "url": "https://kerno.io/blog/kerno-v1/",
+      "classification": "官方发布说明；未独立实测",
+      "observed_at": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "navige",
+  "name": "Navige",
+  "category": "Agent 执行成本／路由／预算控制",
+  "date": "2026-10-15（PH 当日发布）",
+  "description": "接在 agent 与模型之间，先观测，再启用降档路由、重复读取缓存、上下文裁剪及任务预算／审批／停止开关。",
+  "facts": "Watchtower为只读观测模式；启用后可做降档路由、重复读取缓存、上下文裁剪和任务预算。官方称保留未修改任务作为对照并检查结果，但未公开客户原始实验。官网计算器是基于假设的机会估算；不能当实际节省。",
+  "signals": "PH 252 分，日榜第 2（平台公开计数；非商业采用证据；观测2026-10-18）；官方宣称 Watchtower 只观测；启用优化后保留未修改任务作为对照并核查结果（官方机制描述；没有取得客户原始对照数据；观测2026-10-18）；创作者称按已测节省收 20%，最低 $9/月，免费观测（自述定价；非已实现收入；观测2026-10-18）",
+  "why": "延续W35 Navigara、W38/W40 Weave的执行经济性，与W41/W42 AUDR归因契约互补。Navige不是历史Navigara；新增样本不代表独立FinOps市场回暖。",
+  "creator": "Soji Joseph 在 PH 解释，团队比较 token、请求、run、支出比例和节省分成等收费方式，最终选择与可测节省挂钩；这提供了定价迭代线索，但没有公开转化率。（创作者自述）",
+  "learn": "先只读观测可降低接入阻力；降价必须同时检查任务结果，否则只是把失败做便宜。原模型作为上限，不确定时保留，工具调用失败再回原模型的边界比“智能路由”口号有用。",
+  "limits": "官网计算器明确是基于假设的机会估算，不是实际节省。 尚无独立质量守恒／节省实验或公开付费客户证据。 代理层改变调用路径，需核验头信息、工具调用、缓存失效及 provider 差异。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
+  "first_seen": "2026-W42",
+  "last_seen": "2026-W42",
+  "weeks": [
+    "2026-W42"
+  ],
+  "sources": [
+    {
+      "platform": "PH 创作者发布与讨论",
+      "url": "https://www.producthunt.com/products/navige"
+    },
+    {
+      "platform": "PH 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/15"
+    },
+    {
+      "platform": "官网机制及机会估算说明",
+      "url": "https://navige.ai/"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-15（PH 当日发布）",
+      "signal": "把成本控制放进执行过程，并分开估算机会与已测节省。适合写执行约束延续，而不凭单一发布宣称整个 AI FinOps 再次升温。"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42"
+  ],
+  "selection": "main",
+  "source_details": [
+    {
+      "label": "PH 创作者发布与讨论",
+      "url": "https://www.producthunt.com/products/navige",
+      "source_date": "2026-10-15",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "PH 日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/15",
+      "source_date": "2026-10-15",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "官网机制及机会估算说明",
+      "url": "https://navige.ai/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    }
+  ],
+  "signal_details": [
+    {
+      "text": "PH 252 分，日榜第 2",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/15",
+      "classification": "平台公开计数；非商业采用证据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "官方宣称 Watchtower 只观测；启用优化后保留未修改任务作为对照并核查结果",
+      "url": "https://navige.ai/",
+      "classification": "官方机制描述；没有取得客户原始对照数据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "创作者称按已测节省收 20%，最低 $9/月，免费观测",
+      "url": "https://www.producthunt.com/products/navige",
+      "classification": "自述定价；非已实现收入",
+      "observed_at": "2026-10-18"
+    }
+  ]
+}

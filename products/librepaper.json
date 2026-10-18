@@ -1,0 +1,107 @@
+{
+  "id": "librepaper",
+  "name": "LibrePaper",
+  "category": "协作写作／科研生产力／自带 Agent",
+  "date": "2026-10-14（Vincent Arel-Bundock 原始 Bluesky 发布帖）",
+  "description": "免费开源的 Markdown/HTML/Typst/LaTeX/Quarto 协作写作工具；人和自带 agent 共享批注、建议修改与版本记录，agent 经 MCP 接入。",
+  "facts": "支持Markdown、HTML、Typst、LaTeX和Quarto，人和自带agent共用读/评论/编辑权限、批注和建议修订。MIT许可；Quarto通过本地companion及既有运行环境执行，以用户身份运行且无沙箱，可访问文件和网络。项目源文件在服务器，读者也能读；本地渲染输出不上传，不能称所有数据不离机。公共站观察时限额50MB/用户、30次上传/小时。 Run code每次打开文档会重置为关闭，启用后才执行；此默认值降低误开风险，但不提供沙箱。",
+  "signals": "Bluesky 索引快照 232 likes、83 reposts、10 quotes、78 saves（平台索引快照（抓取约2天前）；非实时/用户数；观测2026-10-18）；GitHub 页面快照 24 stars、1 fork，MIT（平台公开计数；非商业采用证据；观测2026-10-18）；用户视频报告 Windows 问题，作者称复现 0.0.40 并修复于 0.0.41（原始讨论/作者自报修复；未独立安装验证；观测2026-10-18）",
+  "why": "接续W34 Huzzah、W37 EasySpecs、W39 Whiteboard的人机共同工件，但定位是可修订协作文档，不把它自动升级为持久规格或新的模型类别。",
+  "creator": "Vincent Arel-Bundock 在原帖征求反馈。一个潜在用户想让非技术客户编辑 Quarto 报告；作者明确回答：真正执行 Quarto 仍要本地 companion 与已有运行环境。（公开创作者与用户对话；不是付费采用证明）",
+  "learn": "把读、评论、编辑权限及可接受/拒绝的修改留给人，比另开一个 AI 写作聊天框更贴合协作。普通文件导出和本地备份有助于建立信任。",
+  "limits": "AI 并非独立核心模型，是自带 agent 的协作文档界面；适合作为生产力对照案例。 Quarto 代码在本地以用户身份运行，无沙箱，可访问文件和网络；只有可信编辑者的文档才应开启 Run code。 项目源文件在服务器，读者也能读；本地渲染输出不上传。不能笼统称所有数据不离机。 公共站限额50MB/用户、30次上传/小时；没验证商业采用或高并发可靠性。 公共托管站提醒不要存储私人或高度敏感数据；文档未端到端加密，服务器管理员可以读取文件。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
+  "first_seen": "2026-W42",
+  "last_seen": "2026-W42",
+  "weeks": [
+    "2026-W42"
+  ],
+  "sources": [
+    {
+      "platform": "创作者 Bluesky 原帖与反馈",
+      "url": "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e"
+    },
+    {
+      "platform": "原始仓库",
+      "url": "https://github.com/LibrePaper/librepaper"
+    },
+    {
+      "platform": "官方功能文档",
+      "url": "https://librepaper.org/what.html"
+    },
+    {
+      "platform": "Quarto 执行与权限限制",
+      "url": "https://librepaper.org/notebooks/quarto.html"
+    },
+    {
+      "platform": "Quarto文档源码",
+      "url": "https://github.com/LibrePaper/librepaper/blob/main/docs/notebooks/quarto.md"
+    },
+    {
+      "platform": "官方隐私说明",
+      "url": "https://github.com/LibrePaper/librepaper/blob/main/docs/privacy.md"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-14（Vincent Arel-Bundock 原始 Bluesky 发布帖）",
+      "signal": "产品把 AI 放进已有文档权限与修订工作流；原帖还有用户提交 Windows bug、作者复现并发 0.0.41 的具体反馈闭环。"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42"
+  ],
+  "selection": "main",
+  "source_details": [
+    {
+      "label": "创作者 Bluesky 原帖与反馈",
+      "url": "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "source_date": "2026-10-14",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "原始仓库",
+      "url": "https://github.com/LibrePaper/librepaper",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "官方功能文档",
+      "url": "https://librepaper.org/what.html",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "Quarto 执行与权限限制",
+      "url": "https://librepaper.org/notebooks/quarto.html",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    }
+  ],
+  "signal_details": [
+    {
+      "text": "Bluesky 索引快照 232 likes、83 reposts、10 quotes、78 saves",
+      "url": "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "classification": "平台索引快照（抓取约2天前）；非实时/用户数",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "GitHub 页面快照 24 stars、1 fork，MIT",
+      "url": "https://github.com/LibrePaper/librepaper",
+      "classification": "平台公开计数；非商业采用证据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "用户视频报告 Windows 问题，作者称复现 0.0.40 并修复于 0.0.41",
+      "url": "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "classification": "原始讨论/作者自报修复；未独立安装验证",
+      "observed_at": "2026-10-18"
+    }
+  ]
+}

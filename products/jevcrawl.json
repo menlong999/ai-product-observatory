@@ -1,0 +1,99 @@
+{
+  "id": "jevcrawl",
+  "name": "Jevcrawl",
+  "category": "窄任务决策模型／Agent 爬取工具／成本界限",
+  "date": "2026-10-14 07:35:20 北京时间（Show HN；原始UTC 10月13日23:35:20）；PyPI 0.1.1为10月14日",
+  "description": "MCP server/CLI 用小型 decision model 选择链接与相关段落，不在逐页链接选择中反复调用通用 LLM；输出来源与文本片段，设置页数、时间、费用和返回长度界限。",
+  "facts": "“crawl loop无LLM”指逐页选择不反复调用通用生成模型，仍使用TypeSafe Jev decision API，并非离线、无模型或免费。设置页数、时间、费用和输出长度上限；不支持JavaScript渲染、登录、付费墙或CAPTCHA。作者50题WebWalkerQA自测40%正确，对照Claude选链接30%，每题$0.025对$0.194；另一个20题Crawl4AI比较不能合并为同一评测。",
+  "signals": "HN 21 分、3 条评论（HN 官方 API 实时计数；非采用；观测2026-10-18T00:29:51Z）；GitHub 页面快照 48 stars、4 forks（平台公开计数；非商业采用证据；观测2026-10-18）；作者 README 的50题 WebWalkerQA：正确率40% vs Claude选链接30%；每题$0.025 vs $0.194（作者自测、小样本、未独立复现；观测2026-10-18）",
+  "why": "把W39 Jev以来的有限选项决策用于实际抓取任务；Jevcrawl是使用Jev服务的不同产品，不计作Jev同产品回归。",
+  "creator": "Rayen Mlayeh 以作者身份发 Show HN，公开实现与评测设置。未找到可核实收入或更长的创业故事，不补写。（作者署名可核对；其他背景未知）",
+  "learn": "把高频、有限选项的决策从通用 agent 循环拆出，可以用更便宜且更容易限额的组件；需把回答模型与抓取效果的贡献分开看。",
+  "limits": "“crawl loop 无 LLM”不等于离线、无模型、免费：仍调用 TypeSafe Jev decision API。 不支持 JavaScript 渲染、登录、付费墙、CAPTCHA；不能当通用浏览器 agent。 50题与另一个20题 Crawl4AI 比较是不同小样本，不能合并或概括成全面领先。 “prompt injection safe”是作者主张，本次不予安全认证。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
+  "first_seen": "2026-W42",
+  "last_seen": "2026-W42",
+  "weeks": [
+    "2026-W42"
+  ],
+  "sources": [
+    {
+      "platform": "原始仓库及基准设置",
+      "url": "https://github.com/RayenMlayeh/jevcrawl"
+    },
+    {
+      "platform": "Show HN",
+      "url": "https://news.ycombinator.com/item?id=50080450"
+    },
+    {
+      "platform": "HN 官方 API",
+      "url": "https://hacker-news.firebaseio.com/v0/item/50080450.json"
+    },
+    {
+      "platform": "PyPI 原始发布记录",
+      "url": "https://pypi.org/project/jevcrawl/"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-14 07:35:20 北京时间（Show HN；原始UTC 10月13日23:35:20）；PyPI 0.1.1为10月14日",
+      "signal": "给 typed decision 趋势一个可读代码、可看成本分母的小案例；付费决策 API 依赖与爬取限制也写得具体。"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42"
+  ],
+  "selection": "main",
+  "source_details": [
+    {
+      "label": "原始仓库及基准设置",
+      "url": "https://github.com/RayenMlayeh/jevcrawl",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "Show HN",
+      "url": "https://news.ycombinator.com/item?id=50080450",
+      "source_date": "2026-10-13",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "HN 官方 API",
+      "url": "https://hacker-news.firebaseio.com/v0/item/50080450.json",
+      "source_date": "2026-10-13T23:35:20Z",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    },
+    {
+      "label": "PyPI 原始发布记录",
+      "url": "https://pypi.org/project/jevcrawl/",
+      "source_date": "2026-10-14",
+      "kind": "一手公开来源",
+      "observed_on": "2026-10-18"
+    }
+  ],
+  "signal_details": [
+    {
+      "text": "HN 21 分、3 条评论",
+      "url": "https://news.ycombinator.com/item?id=50080450",
+      "classification": "HN 官方 API 实时计数；非采用",
+      "observed_at": "2026-10-18T00:29:51Z"
+    },
+    {
+      "text": "GitHub 页面快照 48 stars、4 forks",
+      "url": "https://github.com/RayenMlayeh/jevcrawl",
+      "classification": "平台公开计数；非商业采用证据",
+      "observed_at": "2026-10-18"
+    },
+    {
+      "text": "作者 README 的50题 WebWalkerQA：正确率40% vs Claude选链接30%；每题$0.025 vs $0.194",
+      "url": "https://github.com/RayenMlayeh/jevcrawl",
+      "classification": "作者自测、小样本、未独立复现",
+      "observed_at": "2026-10-18"
+    }
+  ]
+}

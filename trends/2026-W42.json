@@ -1,0 +1,549 @@
+[
+  {
+    "id": "execution-governance",
+    "weeks": [
+      "2026-W33",
+      "2026-W35",
+      "2026-W36",
+      "2026-W37",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W39 policy/boundary→W40数据与动作权限→W41入口/恢复不变量→W42默认批准、旧直连旁路与确认时序。新增失败边界，未证明治理已普遍解决。",
+    "products": [
+      "withhuman",
+      "guilds",
+      "librepaper",
+      "docker-agent"
+    ],
+    "evidence": [
+      "https://busabase.com/docs/mcp",
+      "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+      "https://rill.love/privacy",
+      "https://www.producthunt.com/products/withhuman",
+      "https://github.com/withHumanAI/withHuman",
+      "https://withhuman.ai/changelog",
+      "https://withhuman.ai/docs/getting-started/set-up-mcp-gateway",
+      "https://github.com/withHumanAI/withHuman/blob/main/LICENSE",
+      "https://www.producthunt.com/products/guilds-run",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md",
+      "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "https://github.com/LibrePaper/librepaper",
+      "https://librepaper.org/what.html",
+      "https://librepaper.org/notebooks/quarto.html",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/notebooks/quarto.md",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/privacy.md",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://github.com/docker/docker-agent",
+      "https://news.ycombinator.com/front?day=2026-10-07",
+      "https://github.com/docker/docker-agent/pull/4589",
+      "https://github.com/docker/docker-agent/pull/4579",
+      "https://github.com/docker/docker-agent/releases"
+    ],
+    "name": "执行治理",
+    "status": "深化",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "补充跨入口和恢复路径不变量，不声称普遍解决",
+        "products": [
+          "busabase",
+          "docker-agent",
+          "rill-browser"
+        ],
+        "evidence": [
+          "https://busabase.com/docs/mcp",
+          "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+          "https://rill.love/privacy"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W39 policy/boundary→W40数据与动作权限→W41入口/恢复不变量→W42默认批准、旧直连旁路与确认时序。新增失败边界，未证明治理已普遍解决。",
+        "status": "深化",
+        "products": [
+          "withhuman",
+          "guilds",
+          "librepaper",
+          "docker-agent"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "typed-decision-plane",
+    "weeks": [
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W38候选→W39 Jev/AgentRun→W40 Clef→W41 Strands→W42 Strands并发/校准与Jevcrawl应用。Pulse补充拒答和覆盖率代价；仍限定在可枚举/可验证任务。",
+    "products": [
+      "strands-decider",
+      "jevcrawl",
+      "pulse-local"
+    ],
+    "evidence": [
+      "https://strandsagents.com/blog/introducing-strands-decider/",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://news.ycombinator.com/item?id=49987076",
+      "https://github.com/strands-labs/strands-decider",
+      "https://github.com/strands-labs/strands-decider/pull/18",
+      "https://github.com/strands-labs/strands-decider/pull/79",
+      "https://github.com/strands-labs/strands-decider/pull/81",
+      "https://pypi.org/project/strands-decider/",
+      "https://github.com/RayenMlayeh/jevcrawl",
+      "https://news.ycombinator.com/item?id=50080450",
+      "https://hacker-news.firebaseio.com/v0/item/50080450.json",
+      "https://pypi.org/project/jevcrawl/",
+      "https://news.ycombinator.com/item?id=50080275",
+      "https://hacker-news.firebaseio.com/v0/item/50080275.json",
+      "https://pulseos.finance/pulse-local/writing/agree-or-not-sure",
+      "https://pulseos.finance/privacy"
+    ],
+    "name": "有类型的判断",
+    "status": "深化",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "增加公开架构与可替换evaluator实现；仍是窄任务",
+        "products": [
+          "strands-decider",
+          "docker-agent"
+        ],
+        "evidence": [
+          "https://strandsagents.com/blog/introducing-strands-decider/",
+          "https://github.com/docker/docker-agent/releases/tag/v1.149.0"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W38候选→W39 Jev/AgentRun→W40 Clef→W41 Strands→W42 Strands并发/校准与Jevcrawl应用。Pulse补充拒答和覆盖率代价；仍限定在可枚举/可验证任务。",
+        "status": "深化",
+        "products": [
+          "strands-decider",
+          "jevcrawl",
+          "pulse-local"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "agent-owned-compute",
+    "weeks": [
+      "2026-W35",
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W35 OpenComputer→W38 Bitrise→W39 Solid/Sai→W40 Dots→W41 Pine。W42没有取得能升级端到端完成率判断的新对照；guilds共享机器边界是邻近证据，不算Pine等产品增长。",
+    "products": [
+      "guilds"
+    ],
+    "evidence": [
+      "https://pinecomputer.io/blog/introducing-pine-computer/",
+      "https://www.producthunt.com/products/guilds-run",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md"
+    ],
+    "name": "长期代理计算环境",
+    "status": "维持观察",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "区分checkpoint与resolved，运行环境优化不等于完成率领先",
+        "products": [
+          "pine-computer"
+        ],
+        "evidence": [
+          "https://pinecomputer.io/blog/introducing-pine-computer/"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W35 OpenComputer→W38 Bitrise→W39 Solid/Sai→W40 Dots→W41 Pine。W42没有取得能升级端到端完成率判断的新对照；guilds共享机器边界是邻近证据，不算Pine等产品增长。",
+        "status": "维持观察",
+        "products": [
+          "guilds"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shared-data-plane",
+    "weeks": [
+      "2026-W34",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W34共享上下文→W39权威事实/情景记忆→W40动作权限→W41提案与写入分离；W42 guilds显示共享错误传播，LibrePaper保留文档审阅权限。协作笔记不自动成为权威事实。",
+    "products": [
+      "guilds",
+      "librepaper"
+    ],
+    "evidence": [
+      "https://busabase.com/docs/mcp",
+      "https://github.com/AlkeraAI/Databench",
+      "https://www.producthunt.com/products/guilds-run",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md",
+      "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "https://github.com/LibrePaper/librepaper",
+      "https://librepaper.org/what.html",
+      "https://librepaper.org/notebooks/quarto.html",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/notebooks/quarto.md",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/privacy.md"
+    ],
+    "name": "共享事实与上下文",
+    "status": "维持并细分",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "共享事实+审批、可复现数据产物；与情景记忆分开",
+        "products": [
+          "busabase",
+          "databench"
+        ],
+        "evidence": [
+          "https://busabase.com/docs/mcp",
+          "https://github.com/AlkeraAI/Databench"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W34共享上下文→W39权威事实/情景记忆→W40动作权限→W41提案与写入分离；W42 guilds显示共享错误传播，LibrePaper保留文档审阅权限。协作笔记不自动成为权威事实。",
+        "status": "维持并细分",
+        "products": [
+          "guilds",
+          "librepaper"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "human-attention-router",
+    "weeks": [
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W38移动接管→W39 Superset→W40异步注意力→W41浏览器/桌面入口；W42 withHuman增加审核路由，Docker暴露快速答复丢失与会话绑定缺口。UI交回人仍不等于正确消费批准。",
+    "products": [
+      "withhuman",
+      "docker-agent"
+    ],
+    "evidence": [
+      "https://rill.love/privacy",
+      "https://www.producthunt.com/products/irisgo-public-beta",
+      "https://www.producthunt.com/products/withhuman",
+      "https://github.com/withHumanAI/withHuman",
+      "https://withhuman.ai/changelog",
+      "https://withhuman.ai/docs/getting-started/set-up-mcp-gateway",
+      "https://github.com/withHumanAI/withHuman/blob/main/LICENSE",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+      "https://github.com/docker/docker-agent",
+      "https://news.ycombinator.com/front?day=2026-10-07",
+      "https://github.com/docker/docker-agent/pull/4589",
+      "https://github.com/docker/docker-agent/pull/4579",
+      "https://github.com/docker/docker-agent/releases"
+    ],
+    "name": "人的注意力与审批",
+    "status": "深化",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "新增浏览器和桌面流程入口；交回人不等于硬权限",
+        "products": [
+          "rill-browser",
+          "irisgo"
+        ],
+        "evidence": [
+          "https://rill.love/privacy",
+          "https://www.producthunt.com/products/irisgo-public-beta"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W38移动接管→W39 Superset→W40异步注意力→W41浏览器/桌面入口；W42 withHuman增加审核路由，Docker暴露快速答复丢失与会话绑定缺口。UI交回人仍不等于正确消费批准。",
+        "status": "深化",
+        "products": [
+          "withhuman",
+          "docker-agent"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "agent-finops",
+    "weeks": [
+      "2026-W33",
+      "2026-W35",
+      "2026-W38",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W35 Navigara→W38/W40 Weave→W41 AUDR→W42 Navige优化与AUDR feature/tool归因、Docker实际serving归因。执行链内证据增加，仍无足够独立生产采用与对账结果重开Standalone FinOps。",
+    "products": [
+      "navige",
+      "audr",
+      "docker-agent"
+    ],
+    "evidence": [
+      "https://github.com/openaudr/audr",
+      "https://www.producthunt.com/products/navige",
+      "https://navige.ai/",
+      "https://www.producthunt.com/products/chargebee",
+      "https://github.com/openaudr/audr/releases/tag/spec/v1.1.0",
+      "https://openaudr.dev/spec/v1.1.0/",
+      "https://github.com/openaudr/audr/pull/51",
+      "https://github.com/openaudr/audr/blob/main/adapters/openrouter/typescript/CHANGELOG.md",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+      "https://github.com/docker/docker-agent",
+      "https://news.ycombinator.com/front?day=2026-10-07",
+      "https://github.com/docker/docker-agent/pull/4589",
+      "https://github.com/docker/docker-agent/pull/4579",
+      "https://github.com/docker/docker-agent/releases"
+    ],
+    "name": "执行经济性与成本归因",
+    "status": "维持非独立一级",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "维持非一级；AUDR是跨层归因契约新增证据，不代表独立FinOps商业验证",
+        "products": [
+          "audr"
+        ],
+        "evidence": [
+          "https://github.com/openaudr/audr"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W35 Navigara→W38/W40 Weave→W41 AUDR→W42 Navige优化与AUDR feature/tool归因、Docker实际serving归因。执行链内证据增加，仍无足够独立生产采用与对账结果重开Standalone FinOps。",
+        "status": "维持非独立一级",
+        "products": [
+          "navige",
+          "audr",
+          "docker-agent"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "teach-by-demonstration",
+    "weeks": [
+      "2026-W35",
+      "2026-W37",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W35 Caddi→W37退出重点→W41 IrisGo回到候选；W42没有足以升级的独立稳定性证据。Whistle离线微调不是演示学流程，也不是使用中的自动学习。",
+    "products": [],
+    "evidence": [
+      "https://www.producthunt.com/products/irisgo-public-beta"
+    ],
+    "name": "演示捕获",
+    "status": "候选，不升级",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "W37退出重点后回到候选，不升级",
+        "products": [
+          "irisgo"
+        ],
+        "evidence": [
+          "https://www.producthunt.com/products/irisgo-public-beta"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W35 Caddi→W37退出重点→W41 IrisGo回到候选；W42没有足以升级的独立稳定性证据。Whistle离线微调不是演示学流程，也不是使用中的自动学习。",
+        "status": "候选，不升级",
+        "products": []
+      }
+    ]
+  },
+  {
+    "id": "independent-assurance",
+    "name": "独立验收与运行时证据",
+    "status": "升温（实现证据）",
+    "weeks": [
+      "2026-W34",
+      "2026-W35",
+      "2026-W36",
+      "2026-W37",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W34可执行验证→W35独立验收→W37 Evidence Spine→W40门禁→W42 Tiden状态一致性与Kerno真实后端回归。升温指可检查机制增多，不指市场增长。",
+    "products": [
+      "tiden",
+      "kerno"
+    ],
+    "evidence": [
+      "https://www.producthunt.com/products/tiden",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/14",
+      "https://tiden.ai/changelog",
+      "https://tiden.ai/",
+      "https://kerno.io/blog/kerno-v1/",
+      "https://www.producthunt.com/products/kerno",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/15",
+      "https://kerno.io/"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "W34可执行验证→W35独立验收→W37 Evidence Spine→W40门禁→W42 Tiden状态一致性与Kerno真实后端回归。升温指可检查机制增多，不指市场增长。",
+        "status": "升温（实现证据）",
+        "products": [
+          "tiden",
+          "kerno"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "behavior-configuration-supply-chain",
+    "name": "规则与配置变更",
+    "status": "观察，不升级",
+    "weeks": [
+      "2026-W36",
+      "2026-W37",
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W36经验→候选→测试→发布/回滚；W42 guilds Studio保留提案发布边界，Whistle提供离线适配。不能把共享笔记、一次回放或本地训练统一叫自动持续学习。",
+    "products": [
+      "guilds",
+      "cactus-whistle"
+    ],
+    "evidence": [
+      "https://www.producthunt.com/products/guilds-run",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/12",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md",
+      "https://cactuscompute.com/blog/whistle",
+      "https://www.reddit.com/r/LocalLLaMA/comments/1wyemcb/whistle_speech_to_text_in_a_169mb_file/",
+      "https://news.ycombinator.com/item?id=50008427",
+      "https://github.com/cactus-compute/needle/commit/482361d8d9f94d161dae27317162e5ccc717af74",
+      "https://github.com/cactus-compute/needle/commit/bf69a0ad55a22c74b707af5f5565e3cd301e47be",
+      "https://pypi.org/project/cactus-needle/3.2.4/",
+      "https://github.com/cactus-compute/needle/pull/168",
+      "https://github.com/cactus-compute/needle/blob/main/README.md"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "W36经验→候选→测试→发布/回滚；W42 guilds Studio保留提案发布边界，Whistle提供离线适配。不能把共享笔记、一次回放或本地训练统一叫自动持续学习。",
+        "status": "观察，不升级",
+        "products": [
+          "guilds",
+          "cactus-whistle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persistent-specification",
+    "name": "持久规格与审阅工件",
+    "status": "降低优先级，维持候选",
+    "weeks": [
+      "2026-W34",
+      "2026-W35",
+      "2026-W37",
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "Huzzah W34→EasySpecs W37→Whiteboard W39→W40/W41观察。W42 Tiden和LibrePaper支持验收/修订工件，尚不足以证明独立持久规格品类；不是由搜索缺席推断需求下降。",
+    "products": [
+      "tiden",
+      "librepaper"
+    ],
+    "evidence": [
+      "https://www.producthunt.com/products/tiden",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/14",
+      "https://tiden.ai/changelog",
+      "https://tiden.ai/",
+      "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "https://github.com/LibrePaper/librepaper",
+      "https://librepaper.org/what.html",
+      "https://librepaper.org/notebooks/quarto.html",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/notebooks/quarto.md",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/privacy.md"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "Huzzah W34→EasySpecs W37→Whiteboard W39→W40/W41观察。W42 Tiden和LibrePaper支持验收/修订工件，尚不足以证明独立持久规格品类；不是由搜索缺席推断需求下降。",
+        "status": "降低优先级，维持候选",
+        "products": [
+          "tiden",
+          "librepaper"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "local-model-reliability",
+    "name": "本地小模型的可靠性边界",
+    "status": "首次单列观察",
+    "weeks": [
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W41 Whistle小体积与语言边界→W42已发布微调路径；Pulse补充拒答、覆盖率、延迟及数据路径。两类任务不能合并性能指标，不升级为通用端侧AI优越性。",
+    "products": [
+      "pulse-local",
+      "cactus-whistle"
+    ],
+    "evidence": [
+      "https://news.ycombinator.com/item?id=50080275",
+      "https://hacker-news.firebaseio.com/v0/item/50080275.json",
+      "https://pulseos.finance/pulse-local/writing/agree-or-not-sure",
+      "https://pulseos.finance/privacy",
+      "https://cactuscompute.com/blog/whistle",
+      "https://www.reddit.com/r/LocalLLaMA/comments/1wyemcb/whistle_speech_to_text_in_a_169mb_file/",
+      "https://news.ycombinator.com/item?id=50008427",
+      "https://github.com/cactus-compute/needle/commit/482361d8d9f94d161dae27317162e5ccc717af74",
+      "https://github.com/cactus-compute/needle/commit/bf69a0ad55a22c74b707af5f5565e3cd301e47be",
+      "https://pypi.org/project/cactus-needle/3.2.4/",
+      "https://github.com/cactus-compute/needle/pull/168",
+      "https://github.com/cactus-compute/needle/blob/main/README.md"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "W41 Whistle小体积与语言边界→W42已发布微调路径；Pulse补充拒答、覆盖率、延迟及数据路径。两类任务不能合并性能指标，不升级为通用端侧AI优越性。",
+        "status": "首次单列观察",
+        "products": [
+          "pulse-local",
+          "cactus-whistle"
+        ]
+      }
+    ]
+  }
+]

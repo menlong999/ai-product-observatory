@@ -2,7 +2,7 @@
   "id": "cactus-whistle",
   "name": "Cactus Whistle",
   "category": "On-device Speech / Small Model",
-  "date": "2026-10-02（官方）；2026-10-05（Reddit）；2026-10-08（HN日期页）",
+  "date": "2026-10-15—16（GitHub原始UTC实现日期）；3.2.4发布attestation为北京时间10月16日22:55:37",
   "sources": [
     {
       "platform": "官方发布",
@@ -15,27 +15,58 @@
     {
       "platform": "HN原帖",
       "url": "https://news.ycombinator.com/item?id=50008427"
+    },
+    {
+      "platform": "微调新增提交",
+      "url": "https://github.com/cactus-compute/needle/commit/482361d8d9f94d161dae27317162e5ccc717af74"
+    },
+    {
+      "platform": "微调增强提交",
+      "url": "https://github.com/cactus-compute/needle/commit/bf69a0ad55a22c74b707af5f5565e3cd301e47be"
+    },
+    {
+      "platform": "PyPI3.2.4及provenance",
+      "url": "https://pypi.org/project/cactus-needle/3.2.4/"
+    },
+    {
+      "platform": "实时历史PR",
+      "url": "https://github.com/cactus-compute/needle/pull/168"
+    },
+    {
+      "platform": "README",
+      "url": "https://github.com/cactus-compute/needle/blob/main/README.md"
     }
   ],
-  "description": "16.9MB文件的端侧ASR，面向低资源设备，在CPU运行，并能输出字词时间戳及语音embedding。",
-  "signals": "HN946 points/181 comments；Reddit10月5日原帖189 votes。官方发布在前一周；新增的是跨社区讨论、具体使用反馈与限制。",
-  "facts": "官方页面列七种欧洲语言，不含中文；单次最多30秒。厂商给出LibriSpeech clean4.31/other10.49 WER等指标。本次未独立复测。",
-  "why": "为“端侧”补充窄而小的功能产品，区别于全面ambient采集。硬件资源限制与任务限定可能比一味增加通用性更重要。",
-  "creator": "团队在Reddit解释目标是预算手机、wearables等被忽视的设备，而非追求大模型规模。",
-  "learn": "看目标设备和失败样本：Reddit有法语误识别反馈；HN用户称170条带口音口令原始仅70条正确，改成有限模板后164条，属于个人自报，不是通用ASR benchmark。",
-  "limits": "Reddit作者称realtime更新将发包，但本次未验证对应版本落地，仍保留官网30秒边界。不能据英文数据承诺中文/长录音，也不能将受限口令表现外推自由转写。",
-  "worth": "Maybe",
-  "observed_at": "2026-10-11T08:24:00+08:00",
+  "description": "默认预训练文件16.9MB的端侧ASR；当前支持分窗长音频与流式接口，本周增加本地LoRA微调、扩词和合并导出。",
+  "signals": "10月15—16日加入本地微调及测试，已对应PyPI cactus-needle 3.2.4的发布attestation。补核发现streaming在10月5日、长音频3.2.0在10月10日已有，纠正W41证据缺口，不作为W42首发。",
+  "facts": "基础模型冻结、attention投影LoRA训练，合并后4-bit导出；JSONL含audio/text/language，可扩language tag与词表。默认预训练仍只有en/de/fr/es/it/nl/pl，无中文。推理30秒以内单次、以上分窗；训练loader仍要求片段不超过30秒。",
+  "why": "W41→W42同产品从轻量预训练推理走向开发者可拥有的离线适配产物。不同于W38 Cactus Needle 3，也不属于使用时自动online learning。",
+  "creator": "团队在Reddit解释目标是预算手机、wearables等被忽视的设备，而非追求大模型规模。 本周没有新的已核验收入故事。",
+  "learn": "区分预训练支持与可训练入口、有限口令与自由转写、流式可调用与长录音完整性。用户应拥有数据、验证集和导出产物。",
+  "limits": "未运行发布包或独立复测。中文token测试只验证词表路径，不证明中文ASR质量；默认16.9MB不能外推扩词产物大小。未取得中文、长录音或能耗验证。音乐等非语音仍可能幻觉，官方建议常开麦加VAD/wake word。 当前Needle分发说明列有默认开启、可退出的binary telemetry；可本地推理不等于零遥测。本次未做隐私审计。",
+  "worth": "Yes",
+  "observed_at": "2026-10-18T08:42:15+08:00",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W41",
+  "last_seen": "2026-W42",
   "weeks": [
-    "2026-W41"
+    "2026-W41",
+    "2026-W42"
   ],
   "timeline": [
     {
       "week": "2026-W41",
       "event": "2026-10-02（官方）；2026-10-05（Reddit）；2026-10-08（HN日期页）",
       "signal": "HN946 points/181 comments；Reddit10月5日原帖189 votes。官方发布在前一周；新增的是跨社区讨论、具体使用反馈与限制。"
+    },
+    {
+      "week": "2026-W42",
+      "event": "2026-10-15—16（GitHub原始UTC实现日期）；3.2.4发布attestation为北京时间10月16日22:55:37",
+      "signal": "10月15—16日加入本地微调及测试，已对应PyPI cactus-needle 3.2.4的发布attestation。补核发现streaming在10月5日、长音频3.2.0在10月10日已有，纠正W41证据缺口，不作为W42首发。"
     }
-  ]
+  ],
+  "featured_weeks": [
+    "2026-W41",
+    "2026-W42"
+  ],
+  "selection": "main"
 }

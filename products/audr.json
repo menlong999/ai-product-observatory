@@ -2,7 +2,7 @@
   "id": "audr",
   "name": "AUDR by Chargebee",
   "category": "Agent Cost / Open Specification",
-  "date": "2026-10-06（PH）",
+  "date": "2026-10-13 02:31:44 北京时间（spec/v1.1.0正式发布；原始UTC 10月12日18:31:44）；OpenRouter adapter于GitHub原始UTC 10月12日合并",
   "sources": [
     {
       "platform": "Product Hunt",
@@ -15,27 +15,54 @@
     {
       "platform": "GitHub",
       "url": "https://github.com/openaudr/audr"
+    },
+    {
+      "platform": "spec/v1.1.0 release",
+      "url": "https://github.com/openaudr/audr/releases/tag/spec/v1.1.0"
+    },
+    {
+      "platform": "1.1.0规范",
+      "url": "https://openaudr.dev/spec/v1.1.0/"
+    },
+    {
+      "platform": "OpenRouter adapter合并",
+      "url": "https://github.com/openaudr/audr/pull/51"
+    },
+    {
+      "platform": "adapter最终changelog",
+      "url": "https://github.com/openaudr/audr/blob/main/adapters/openrouter/typescript/CHANGELOG.md"
     }
   ],
-  "description": "Agent Usage Detail Record：让harness、router、provider的用量记录能按同一执行任务归集的开放JSON规范。",
-  "signals": "PH日榜第3，335 points；GitHub累计12 stars、4 forks，无周增长基线。规范1.0.0、Apache-2.0，仓库列出Python/TS SDK、多个adapter及Chargebee/Lago sink。",
-  "facts": "用record_id去重，用run_id+span_id关联不同组件记录；定价、开票仍由下游系统负责。Chargebee发起维护，尚不是已独立运作的行业基金会。",
-  "why": "补充W33 Paritok、W35 Navigara、W38/W40 Weave的成本归因路径；价值在跨层数据契约，不是又一张token仪表盘。",
+  "description": "Agent Usage Detail Record开放JSON记录规范，让harness、router、provider对一次执行的用量与归因信息能够关联；定价和开票仍在下游。",
+  "signals": "10月12日spec/v1.1.0正式发布，增加feature_id与工具namespace；同日OpenRouter adapter 0.1.0实现合并。规范实现延续，不代表标准已被产业普遍采用。",
+  "facts": "1.1.0向后兼容1.0记录；新字段需1.1。feature_id用于宿主选择产品功能的meter/metric/price，namespace只用于工具来源。conformance套件42例。OpenRouter adapter对未知vendor回退并告警；BYOK provider成本不明时留空。集成测试使用fake fetch/local stand-in，未调用live API。 namespace不是URL、地址或凭据；OpenRouter合并后changelog声明不读取prompt、completion、tool payload、请求metadata和错误正文。",
+  "why": "延续W35 Navigara、W38/W40 Weave到W41 AUDR的成本归因研究，新增证据是费用对应哪个产品功能、哪个工具来源。保留独立FinOps不升回一级趋势。",
   "creator": "团队说明灵感来自电信Call Detail Record，因各层分别知道客户、模型、用量或结果，却难联合回答某客户整次任务成本。",
-  "learn": "先统一归因标识、字段归属及冲突合并规则，再做成本分析。adapter存在不等于获得大规模生产采用。",
-  "limits": "12 stars不能当弱或强商业验证；未查到有统计口径的生产采用/收入。不能把开源记录规范写成新的计费平台或成熟行业标准。",
+  "learn": "先统一run/span/record、缺失和合并语义，再做成本分析。adapter、兼容测试、生产采用与产业标准化是不同证据等级。",
+  "limits": "未核验非发起方生产规模、真实账单对账误差、收入或留存。42个fixture不是42家客户。spec release不等于所有SDK新版本已经发布，本次不作这一断言。",
   "worth": "Yes",
-  "observed_at": "2026-10-11T08:24:00+08:00",
+  "observed_at": "2026-10-18T08:42:15+08:00",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W41",
+  "last_seen": "2026-W42",
   "weeks": [
-    "2026-W41"
+    "2026-W41",
+    "2026-W42"
   ],
   "timeline": [
     {
       "week": "2026-W41",
       "event": "2026-10-06（PH）",
       "signal": "PH日榜第3，335 points；GitHub累计12 stars、4 forks，无周增长基线。规范1.0.0、Apache-2.0，仓库列出Python/TS SDK、多个adapter及Chargebee/Lago sink。"
+    },
+    {
+      "week": "2026-W42",
+      "event": "2026-10-13 02:31:44 北京时间（spec/v1.1.0正式发布；原始UTC 10月12日18:31:44）；OpenRouter adapter于GitHub原始UTC 10月12日合并",
+      "signal": "10月12日spec/v1.1.0正式发布，增加feature_id与工具namespace；同日OpenRouter adapter 0.1.0实现合并。规范实现延续，不代表标准已被产业普遍采用。"
     }
-  ]
+  ],
+  "featured_weeks": [
+    "2026-W41",
+    "2026-W42"
+  ],
+  "selection": "main"
 }
