@@ -1,0 +1,153 @@
+{
+  "id": "onkey",
+  "name": "OnKey",
+  "category": "端侧 AI / 音频学习 / 消费者 Mac 工具。",
+  "date": "2026-10-22",
+  "event_type": "first_public_release",
+  "description": "让 Mac 听一遍用户正在播放的原唱，再以本地音高轨与逐句评分帮助用户练歌。",
+  "facts": "Apple Silicon + macOS 14.2 起；听 Spotify、Apple Music 或浏览器 YouTube 的声音；第一次播放结束后学习旋律；使用人声分离、CREPE 音高与 GAME 音符模型；练唱录音与学到的旋律留在本机。不会保存或上传所听歌曲，但识别指纹、歌词查询和更新检查有对外请求，不能写“零网络请求”。",
+  "signals": "Hacker News 228 票；Hacker News 91 评；GitHub 281 累计 stars；GitHub 14 累计 forks（2026-10-25 读取快照，非周增长）",
+  "why": "切口不是泛音乐生成，而是让用户现有订阅与曲库变成练习材料；端侧推理同时减轻持续推理成本和隐私顾虑。",
+  "creator": "Daniel 原本使用的练歌 app 越来越多非原唱曲目，于是用 Claude Code 试做实时音高识别；实时提取原唱不可靠，转成“先听一遍，再练”的流程。这是用可接受的等待规避技术短板，而不是承诺实时魔法。",
+  "learn": [
+    "用两阶段产品流程化解模型能力边界；公开每类外传数据有助于建立信任；无需自建曲库的体验值得研究，但不等于已证明没有版权风险。"
+  ],
+  "limits": [
+    "嘈杂伴奏、八度识别仍可能错；评分偏初学者；不是完整声乐教学；手机系统不能直接照搬跨 app 音频捕获。未独立实测准确率。"
+  ],
+  "worth": "Yes",
+  "revenue": null,
+  "revenue_note": "未查到可靠公开收入数据，不推断MRR",
+  "sources": [
+    {
+      "platform": "Official",
+      "url": "https://singonkey.app/"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/dsmurrell/onkey"
+    },
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50195488"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/dsmurrell/onkey/releases/tag/v0.1.0"
+    }
+  ],
+  "source_details": [
+    {
+      "url": "https://news.ycombinator.com/item?id=50195488",
+      "date": "2026-10-22T14:04:44Z",
+      "date_type": "show_hn",
+      "verification": "HN主帖原始HTML title时间戳",
+      "source_date": "2026-10-22T14:04:44Z",
+      "observed_on": "2026-10-25",
+      "kind": "show_hn",
+      "label": "Hacker News"
+    },
+    {
+      "url": "https://github.com/dsmurrell/onkey/releases/tag/v0.1.0",
+      "date": "2026-10-22",
+      "date_type": "first_public_release",
+      "verification": "v0.1.0标注22 Oct 13:33及The first public release",
+      "source_date": "2026-10-22",
+      "observed_on": "2026-10-25",
+      "kind": "first_public_release",
+      "label": "GitHub"
+    }
+  ],
+  "metrics_note": "票数、评论、stars为抓取快照，非周增长。性能、用户与准确率声明未经独立实测。",
+  "observed_at": "2026-10-25",
+  "signal_details": [
+    {
+      "platform": "Hacker News",
+      "metric": "points",
+      "value": 228,
+      "source_url": "https://news.ycombinator.com/item?id=50195488",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "Hacker News",
+      "metric": "comments",
+      "value": 91,
+      "source_url": "https://news.ycombinator.com/item?id=50195488",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "GitHub",
+      "metric": "stars",
+      "value": 281,
+      "source_url": "https://github.com/dsmurrell/onkey",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "GitHub",
+      "metric": "forks",
+      "value": 14,
+      "source_url": "https://github.com/dsmurrell/onkey",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    }
+  ],
+  "first_seen": "2026-W43",
+  "last_seen": "2026-W43",
+  "weeks": [
+    "2026-W43"
+  ],
+  "featured_weeks": [
+    "2026-W43"
+  ],
+  "selection": "main",
+  "timeline": [
+    {
+      "week": "2026-W43",
+      "event": "2026-10-22",
+      "signal": "让 Mac 听一遍用户正在播放的原唱，再以本地音高轨与逐句评分帮助用户练歌。 Hacker News 228 票；Hacker News 91 评；GitHub 281 累计 stars；GitHub 14 累计 forks（2026-10-25 读取快照，非周增长）"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W43",
+      "signals": [
+        {
+          "platform": "Hacker News",
+          "metric": "points",
+          "value": 228,
+          "source_url": "https://news.ycombinator.com/item?id=50195488",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "Hacker News",
+          "metric": "comments",
+          "value": 91,
+          "source_url": "https://news.ycombinator.com/item?id=50195488",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "GitHub",
+          "metric": "stars",
+          "value": 281,
+          "source_url": "https://github.com/dsmurrell/onkey",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "GitHub",
+          "metric": "forks",
+          "value": 14,
+          "source_url": "https://github.com/dsmurrell/onkey",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        }
+      ],
+      "observed_at": "2026-10-25"
+    }
+  ]
+}

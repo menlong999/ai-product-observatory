@@ -1,0 +1,129 @@
+{
+  "id": "heal-dev",
+  "name": "heal.dev",
+  "category": "AI QA / 运行时验证 / 开发工具。",
+  "date": "2026-10-22",
+  "event_type": "product_hunt_launch",
+  "description": "为应用构造接近生产的沙箱，探索行为、性能与安全问题，只报告能够复现并附失败测试的缺陷。",
+  "facts": "外部依赖 mock/stub/emulate；将缺陷复现和失败测试交给开发者或编码 agent；MCP 支持修复后复测。PH maker Malo Marrec 和 Pierre Oucif 解释重点是用户实际会遇到的运行时故障，不是更多静态审查评论。",
+  "signals": "Product Hunt 254 票；Product Hunt 826 累计关注者（2026-10-25 读取快照，非周增长）",
+  "why": "和 Sphinx 的“人是否理解”、Alter 的“是否获权”不同，Heal 解决的是“真实行为是否坏掉”；结果证据可直接进入修复闭环。",
+  "creator": "PH maker Malo Marrec 与 Pierre Oucif参与解释产品；收入未公开。",
+  "learn": [
+    "可先生成很多嫌疑，再用可复现性过滤噪声；交付失败测试而非长解释降低用户验证成本。"
+  ],
+  "limits": [
+    "70% 缺陷未被代码审查发现是厂商自有 benchmark，非独立结论；官网首页说 174 PR/4 bots，而 benchmark 正文写 236 PR/3 review bots，口径不同，不建议引用总样本数。不能把运行时验证视为全覆盖安全审计，maker 明确 PHP 解释器 CVE 不在当前范围。"
+  ],
+  "worth": "Yes",
+  "revenue": null,
+  "revenue_note": "未查到可靠公开收入数据，不推断MRR",
+  "sources": [
+    {
+      "platform": "Official",
+      "url": "https://www.heal.dev/"
+    },
+    {
+      "platform": "Official",
+      "url": "https://www.heal.dev/benchmark"
+    },
+    {
+      "platform": "Official",
+      "url": "https://www.heal.dev/changelog"
+    },
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/heal-dev"
+    },
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/22"
+    },
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/categories/ai-code-testing?order=recent_launches"
+    }
+  ],
+  "source_details": [
+    {
+      "url": "https://www.producthunt.com/products/heal-dev",
+      "date": "2026-10-22",
+      "date_type": "product_hunt_launch",
+      "verification": "PH 2026-10-22日榜及分类榜单发布徽章交叉核对",
+      "source_date": "2026-10-22",
+      "observed_on": "2026-10-25",
+      "kind": "product_hunt_launch",
+      "label": "Product Hunt"
+    },
+    {
+      "url": "https://www.heal.dev/changelog",
+      "date": "2026-10-16",
+      "date_type": "latest_visible_release",
+      "verification": "v2.6.2；本周仅以PH发布作为新事件",
+      "source_date": "2026-10-16",
+      "observed_on": "2026-10-25",
+      "kind": "latest_visible_release",
+      "label": "Official"
+    }
+  ],
+  "metrics_note": "票数、评论、stars为抓取快照，非周增长。性能、用户与准确率声明未经独立实测。",
+  "observed_at": "2026-10-25",
+  "signal_details": [
+    {
+      "platform": "Product Hunt",
+      "metric": "points",
+      "value": 254,
+      "source_url": "https://www.producthunt.com/products/heal-dev",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "Product Hunt",
+      "metric": "followers",
+      "value": 826,
+      "source_url": "https://www.producthunt.com/products/heal-dev",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    }
+  ],
+  "first_seen": "2026-W43",
+  "last_seen": "2026-W43",
+  "weeks": [
+    "2026-W43"
+  ],
+  "featured_weeks": [
+    "2026-W43"
+  ],
+  "selection": "main",
+  "timeline": [
+    {
+      "week": "2026-W43",
+      "event": "2026-10-22",
+      "signal": "为应用构造接近生产的沙箱，探索行为、性能与安全问题，只报告能够复现并附失败测试的缺陷。 Product Hunt 254 票；Product Hunt 826 累计关注者（2026-10-25 读取快照，非周增长）"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W43",
+      "signals": [
+        {
+          "platform": "Product Hunt",
+          "metric": "points",
+          "value": 254,
+          "source_url": "https://www.producthunt.com/products/heal-dev",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "Product Hunt",
+          "metric": "followers",
+          "value": 826,
+          "source_url": "https://www.producthunt.com/products/heal-dev",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        }
+      ],
+      "observed_at": "2026-10-25"
+    }
+  ]
+}

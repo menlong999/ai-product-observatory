@@ -1,0 +1,107 @@
+{
+  "id": "alter",
+  "name": "Alter Vault",
+  "category": "Agent 基础设施 / 身份与权限 / 企业安全。",
+  "date": "2026-10-21",
+  "event_type": "launch_hn",
+  "description": "代理每次下游 API 请求，按 agent 与最终用户身份执行细粒度策略，保管凭证并留下审计记录。",
+  "facts": "网站列 140 integrations、default-deny 策略、条件人工批准、凭证按请求注入及 SIEM 审计导出；SOC 2 标为 in progress，不能写已通过。创始人解释不相信模型能避免所有注入，强制策略放在掌握凭证的代理层。",
+  "signals": "Hacker News 68 票；Hacker News 51 评（2026-10-25 读取快照，非周增长）",
+  "why": "同一 agent 替很多人做事时，“登录了 Slack”不等于“有权给 CRM 做所有操作”。产品将权限从提示词建议变成确定性执行路径。",
+  "creator": "Srikar 在 Goldman 工作时经历多租户 agent 权限实现昂贵；Kevan 有数据库创业及向高监管环境销售的背景。以上均是创始人自述，不是雇佣履历审计。",
+  "learn": [
+    "卖的是企业上线前必须补齐的 plumbing；围绕谁、代表谁、做什么、谁批准的可解释证据，比笼统“agent 安全”更容易定位买家。"
+  ],
+  "limits": [
+    "代理层访问控制不能自动解决已读数据跨用户泄露、来源污染及合法权限内的坏决策；HN 对此有明确质疑，不应写成全面解决 prompt injection。"
+  ],
+  "worth": "Yes",
+  "revenue": null,
+  "revenue_note": "未查到可靠公开收入数据，不推断MRR",
+  "sources": [
+    {
+      "platform": "Official",
+      "url": "https://alterauth.com/"
+    },
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50176908"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/AlterAIDev/openclaw-alter-plugin"
+    }
+  ],
+  "source_details": [
+    {
+      "url": "https://news.ycombinator.com/item?id=50176908",
+      "date": "2026-10-21T06:42:12Z",
+      "date_type": "launch_hn",
+      "verification": "HN主帖原始HTML title时间戳",
+      "source_date": "2026-10-21T06:42:12Z",
+      "observed_on": "2026-10-25",
+      "kind": "launch_hn",
+      "label": "Hacker News"
+    }
+  ],
+  "metrics_note": "票数、评论、stars为抓取快照，非周增长。性能、用户与准确率声明未经独立实测。",
+  "observed_at": "2026-10-25",
+  "signal_details": [
+    {
+      "platform": "Hacker News",
+      "metric": "points",
+      "value": 68,
+      "source_url": "https://news.ycombinator.com/item?id=50176908",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "Hacker News",
+      "metric": "comments",
+      "value": 51,
+      "source_url": "https://news.ycombinator.com/item?id=50176908",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    }
+  ],
+  "first_seen": "2026-W43",
+  "last_seen": "2026-W43",
+  "weeks": [
+    "2026-W43"
+  ],
+  "featured_weeks": [
+    "2026-W43"
+  ],
+  "selection": "main",
+  "timeline": [
+    {
+      "week": "2026-W43",
+      "event": "2026-10-21",
+      "signal": "代理每次下游 API 请求，按 agent 与最终用户身份执行细粒度策略，保管凭证并留下审计记录。 Hacker News 68 票；Hacker News 51 评（2026-10-25 读取快照，非周增长）"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W43",
+      "signals": [
+        {
+          "platform": "Hacker News",
+          "metric": "points",
+          "value": 68,
+          "source_url": "https://news.ycombinator.com/item?id=50176908",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "Hacker News",
+          "metric": "comments",
+          "value": 51,
+          "source_url": "https://news.ycombinator.com/item?id=50176908",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        }
+      ],
+      "observed_at": "2026-10-25"
+    }
+  ]
+}

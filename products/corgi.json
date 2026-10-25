@@ -1,0 +1,139 @@
+{
+  "id": "corgi",
+  "name": "Corgi",
+  "category": "开发者工具 / Agent 工作台 / 终端多路复用。",
+  "date": "2026-10-23",
+  "event_type": "show_hn",
+  "description": "在一个终端工作台里看多个编码 agent 正在做什么、谁等你处理、token 和机器资源花在哪里。",
+  "facts": "支持 Claude Code/Codex/Pi/OpenCode，活动摘要、多账号、会话恢复、后台保持、按工作区资源统计；F1 跳到未读 agent。SSH 图片粘贴的官方细节要求 Ghostty Nightly，不可写成所有终端都兼容。",
+  "signals": "Hacker News 125 票；Hacker News 42 评；GitHub 97 累计 stars；GitHub 6 累计 forks（2026-10-25 读取快照，非周增长）",
+  "why": "agent 并发之后，用户瓶颈从输入命令变成调度注意力；许多有辨识度的小细节比再次包装模型聊天更有价值。",
+  "creator": "作者 eiopa / GitHub tals 自述受 Herdr 启发，聚焦已有 coding agent 的日常使用体验；未核实收入。",
+  "learn": [
+    "复用已有账号和工具链；聚焦“谁需要我”而非多窗格炫技；交互式官网演示得到正面评论。"
+  ],
+  "limits": [
+    "HN 用户指出原生跨机器接续、重绘/闪烁和主题体验仍待改善；作者说原生 remoting 是下一大项。不要把 SSH 友好等同于完善远程会话同步。"
+  ],
+  "worth": "Yes",
+  "revenue": null,
+  "revenue_note": "未查到可靠公开收入数据，不推断MRR",
+  "sources": [
+    {
+      "platform": "Official",
+      "url": "https://corgi.computer/"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/tals/corgi"
+    },
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50214373"
+    }
+  ],
+  "source_details": [
+    {
+      "url": "https://news.ycombinator.com/item?id=50214373",
+      "date": "2026-10-23T19:46:38Z",
+      "date_type": "show_hn",
+      "verification": "HN主帖原始HTML title时间戳",
+      "source_date": "2026-10-23T19:46:38Z",
+      "observed_on": "2026-10-25",
+      "kind": "show_hn",
+      "label": "Hacker News"
+    }
+  ],
+  "metrics_note": "票数、评论、stars为抓取快照，非周增长。性能、用户与准确率声明未经独立实测。",
+  "observed_at": "2026-10-25",
+  "signal_details": [
+    {
+      "platform": "Hacker News",
+      "metric": "points",
+      "value": 125,
+      "source_url": "https://news.ycombinator.com/item?id=50214373",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "Hacker News",
+      "metric": "comments",
+      "value": 42,
+      "source_url": "https://news.ycombinator.com/item?id=50214373",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "GitHub",
+      "metric": "stars",
+      "value": 97,
+      "source_url": "https://github.com/tals/corgi",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "GitHub",
+      "metric": "forks",
+      "value": 6,
+      "source_url": "https://github.com/tals/corgi",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    }
+  ],
+  "first_seen": "2026-W43",
+  "last_seen": "2026-W43",
+  "weeks": [
+    "2026-W43"
+  ],
+  "featured_weeks": [
+    "2026-W43"
+  ],
+  "selection": "main",
+  "timeline": [
+    {
+      "week": "2026-W43",
+      "event": "2026-10-23",
+      "signal": "在一个终端工作台里看多个编码 agent 正在做什么、谁等你处理、token 和机器资源花在哪里。 Hacker News 125 票；Hacker News 42 评；GitHub 97 累计 stars；GitHub 6 累计 forks（2026-10-25 读取快照，非周增长）"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W43",
+      "signals": [
+        {
+          "platform": "Hacker News",
+          "metric": "points",
+          "value": 125,
+          "source_url": "https://news.ycombinator.com/item?id=50214373",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "Hacker News",
+          "metric": "comments",
+          "value": 42,
+          "source_url": "https://news.ycombinator.com/item?id=50214373",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "GitHub",
+          "metric": "stars",
+          "value": 97,
+          "source_url": "https://github.com/tals/corgi",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "GitHub",
+          "metric": "forks",
+          "value": 6,
+          "source_url": "https://github.com/tals/corgi",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        }
+      ],
+      "observed_at": "2026-10-25"
+    }
+  ]
+}

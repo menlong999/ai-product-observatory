@@ -1,8 +1,8 @@
 {
   "id": "docker-agent",
   "name": "Docker Agent",
-  "category": "Agent Harness / Evaluation / Runtime",
-  "date": "2026-10-15（UTC；main合并，未核验新release）",
+  "category": "Agent Runtime / 成本与运行态",
+  "date": "2026-10-21–23",
   "sources": [
     {
       "platform": "GitHub发布",
@@ -31,22 +31,39 @@
     {
       "platform": "官方releases",
       "url": "https://github.com/docker/docker-agent/releases"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/docker/docker-agent/commit/d0ef875adf778663a88bd6c54b29938f24455c51"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/docker/docker-agent/commit/225a04830be2868b8be292de87475db1bbb3ec0d"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/docker/docker-agent/commit/d1082a27ccb0a815bb1c8af9384ac3908ded94a4"
+    },
+    {
+      "platform": "GitHub release",
+      "url": "https://github.com/docker/docker-agent/releases/tag/v1.152.0"
     }
   ],
-  "description": "用YAML定义、运行、共享agent的Docker CLI插件与运行时。",
-  "signals": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。",
-  "facts": "PR4589用单决定缓冲避免接收方等待前答复丢失，并在新提示前清理旧值；请求仍未keyed，多交互会话和极晚旧回复不是本次完整解决范围。PR4579不再依赖router可变的上次选择，按实际服务provider/tier/endpoint/cache计算。",
-  "why": "承接W41跨runtime预算和A2A恢复限制修复，W42进一步说明确认需要时序/会话正确性，成本记录需要对应真正执行方。品牌本身不是新信号。",
-  "creator": "Docker Engineering持续维护；本期未查到独立创业故事或收入数据，不以品牌作为入选理由。",
-  "learn": "验证快速答复、旧回复延迟、多会话、取消与恢复；审批应绑定请求和会话。按每次实际served provider计价，而非router当前状态。",
-  "limits": "本周仅确认merged main，不宣称已发布新安装包。作者使用本地fake-provider和受控测试，未独立复验，也没有真实账单或全部授权路径的安全保证。",
+  "description": "从上周“按实际serving leaf计价”，推进到压缩每次请求独立计价、存储恢复与并发路由隔离。",
+  "signals": "本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。",
+  "facts": "事实｜10/21 compactionCost逐条计算原生压缩iteration的价格再相加，避免将两次各60k token错误合成120k而触发100k上下文费率档；缺少可用价格时返回unknown而不是免费。\n事实｜10/21新增SQLite reopen回归测试，检查落盘后保留实际serving model和Cost，而非router名。\n事实｜10/22提交、10/23合并删除router级lastSelectedID；返回stream携带自己的ServingModel，并保留并发路由测试。不是首次引入leaf归因，而是移除残留跨会话状态。\n事实｜本周发布v1.151.0（10/19）、v1.152.0（10/21）。上述10/21晚于v1.152.0发版的测试/修复及10/23路由清理只确认已入main，不宣称已进入这两个release。",
+  "why": "研究判断｜计费准确性的单位必须是一次实际请求，不是整个agent任务，更不是路由配置名。并发、回退、压缩和恢复都是归因边界。",
+  "creator": "Docker Engineering；相关代码由Arnaud Héritier、David Gageot等维护，来自官方docker/docker-agent。",
+  "learn": "为每个request/stream绑定serving身份、费率档和usage；压缩循环逐次计价；未知价格不填0；将SQLite恢复与并发隔离纳入回归测试。",
+  "limits": "没有运行其测试或对账真实供应商账单；仅核验公开patch。确认请求keying的旧问题本周未另找到可单独成立的新修复，不重复上周叙述。",
   "worth": "Yes",
-  "observed_at": "2026-10-18T08:42:15+08:00",
+  "observed_at": "2026-10-25",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W42",
+  "last_seen": "2026-W43",
   "weeks": [
     "2026-W41",
-    "2026-W42"
+    "2026-W42",
+    "2026-W43"
   ],
   "timeline": [
     {
@@ -58,10 +75,62 @@
       "week": "2026-W42",
       "event": "2026-10-15（UTC；main合并，未核验新release）",
       "signal": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。"
+    },
+    {
+      "week": "2026-W43",
+      "event": "2026-10-21–23",
+      "signal": "从上周“按实际serving leaf计价”，推进到压缩每次请求独立计价、存储恢复与并发路由隔离。 本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
     }
   ],
   "featured_weeks": [
-    "2026-W41"
+    "2026-W41",
+    "2026-W43"
   ],
-  "selection": "continuity_sidebar"
+  "selection": "main",
+  "source_details": [
+    {
+      "date": "2026-10-21T11:52:38Z",
+      "url": "https://github.com/docker/docker-agent/commit/d0ef875adf778663a88bd6c54b29938f24455c51",
+      "verified": "已读pkg/runtime/native_compaction.go及对应测试patch。",
+      "source_date": "2026-10-21T11:52:38Z",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "GitHub commit"
+    },
+    {
+      "date": "2026-10-21T10:51:30Z",
+      "url": "https://github.com/docker/docker-agent/commit/225a04830be2868b8be292de87475db1bbb3ec0d",
+      "verified": "已读routing_pricing_test.go新增reload case。",
+      "source_date": "2026-10-21T10:51:30Z",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "GitHub commit"
+    },
+    {
+      "date": "2026-10-22T19:14:22Z; merged 2026-10-23T07:18:06Z",
+      "url": "https://github.com/docker/docker-agent/commit/d1082a27ccb0a815bb1c8af9384ac3908ded94a4",
+      "verified": "已读client.go删除全局lastSelectedID及client_race_test.go。",
+      "source_date": "2026-10-22T19:14:22Z; merged 2026-10-23T07:18:06Z",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "GitHub commit"
+    }
+  ],
+  "signal_details": [
+    "本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W42",
+      "signals": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。",
+      "observed_at": "2026-10-18T08:42:15+08:00"
+    },
+    {
+      "week": "2026-W43",
+      "signals": [
+        "本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
+      ],
+      "observed_at": "2026-10-25"
+    }
+  ]
 }

@@ -1,0 +1,139 @@
+{
+  "id": "sphinx",
+  "name": "Sphinx",
+  "category": "AI 编程 / 开发者学习 / Git 工作流。",
+  "date": "2026-10-18",
+  "event_type": "show_hn",
+  "description": "在代码 push 到受保护分支前，根据 diff 询问开发者是否理解边界行为和故障场景。",
+  "facts": "独立 reviewer 读已提交 diff，不看生成代码的聊天；支持 Claude Code、Codex、Cursor、OpenCode、Pi、普通 Git；可使用已有 agent 方案或 OpenAI-compatible endpoint。答错会解释并换场景，答对继续 push；可跳过且记录跳过。",
+  "signals": "Hacker News 253 票；Hacker News 89 评；GitHub 377 累计 stars；GitHub 15 累计 forks（2026-10-25 读取快照，非周增长）",
+  "why": "AI 降低代码生产成本后，新的稀缺品是维护者对行为和失败模式的理解，而非更多代码。把学习嵌进交付边界，比独立知识问答更接近痛点。",
+  "creator": "HN 发帖者 critiquebrowser，仓库所有者 parthh01；没有足够证据补全其真实姓名或收入。讨论中开发者反映“做出了东西却没学到东西”，也质疑 hook 很容易被绕过。",
+  "learn": [
+    "新增少量必要摩擦也可以是产品价值；题目围绕重试、幂等、失败恢复等具体后果，而非变量名记忆。"
+  ],
+  "limits": [
+    "官方明确它是练习工具而非安全闸；本地用户/agent 能绕过、LLM 评审会错；代码和回答会发给所选模型供应商。README 说明会配置全局 Git hooks，不能轻描淡写成“无侵入”。"
+  ],
+  "worth": "Yes",
+  "revenue": null,
+  "revenue_note": "未查到可靠公开收入数据，不推断MRR",
+  "sources": [
+    {
+      "platform": "Official",
+      "url": "https://sphinx-six-theta.vercel.app/"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/parthh01/sphinx"
+    },
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50137950"
+    }
+  ],
+  "source_details": [
+    {
+      "url": "https://news.ycombinator.com/item?id=50137950",
+      "date": "2026-10-18T04:33:49Z",
+      "date_type": "show_hn",
+      "verification": "HN主帖原始HTML title时间戳",
+      "source_date": "2026-10-18T04:33:49Z",
+      "observed_on": "2026-10-25",
+      "kind": "show_hn",
+      "label": "Hacker News"
+    }
+  ],
+  "metrics_note": "票数、评论、stars为抓取快照，非周增长。性能、用户与准确率声明未经独立实测。",
+  "observed_at": "2026-10-25",
+  "signal_details": [
+    {
+      "platform": "Hacker News",
+      "metric": "points",
+      "value": 253,
+      "source_url": "https://news.ycombinator.com/item?id=50137950",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "Hacker News",
+      "metric": "comments",
+      "value": 89,
+      "source_url": "https://news.ycombinator.com/item?id=50137950",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "GitHub",
+      "metric": "stars",
+      "value": 377,
+      "source_url": "https://github.com/parthh01/sphinx",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    },
+    {
+      "platform": "GitHub",
+      "metric": "forks",
+      "value": 15,
+      "source_url": "https://github.com/parthh01/sphinx",
+      "snapshot_at": "2026-10-25",
+      "snapshot_window_utc": "2026-10-25 00:15–00:21"
+    }
+  ],
+  "first_seen": "2026-W43",
+  "last_seen": "2026-W43",
+  "weeks": [
+    "2026-W43"
+  ],
+  "featured_weeks": [
+    "2026-W43"
+  ],
+  "selection": "main",
+  "timeline": [
+    {
+      "week": "2026-W43",
+      "event": "2026-10-18",
+      "signal": "在代码 push 到受保护分支前，根据 diff 询问开发者是否理解边界行为和故障场景。 Hacker News 253 票；Hacker News 89 评；GitHub 377 累计 stars；GitHub 15 累计 forks（2026-10-25 读取快照，非周增长）"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W43",
+      "signals": [
+        {
+          "platform": "Hacker News",
+          "metric": "points",
+          "value": 253,
+          "source_url": "https://news.ycombinator.com/item?id=50137950",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "Hacker News",
+          "metric": "comments",
+          "value": 89,
+          "source_url": "https://news.ycombinator.com/item?id=50137950",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "GitHub",
+          "metric": "stars",
+          "value": 377,
+          "source_url": "https://github.com/parthh01/sphinx",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        },
+        {
+          "platform": "GitHub",
+          "metric": "forks",
+          "value": 15,
+          "source_url": "https://github.com/parthh01/sphinx",
+          "snapshot_at": "2026-10-25",
+          "snapshot_window_utc": "2026-10-25 00:15–00:21"
+        }
+      ],
+      "observed_at": "2026-10-25"
+    }
+  ]
+}

@@ -1,21 +1,22 @@
 {
   "id": "tiden",
   "name": "Tiden",
-  "category": "Coding agent 意图验证／质量门禁",
-  "date": "2026-10-14（PH 当日发布；官方 10/12–14 changelog 有实质改动）",
-  "description": "把需求、分支变更和测试证据关联起来，给 coding agent 会话提供可检查的结束条件；合并仍由人决定。",
-  "facts": "官方10月12日修正progress显示通过、close却拒绝的状态矛盾，并在CLI 0.31.0加入JUnit导入；10月14日处理大规格/测试集超时与限流。10月13日requirement→spec工具名迁移会影响MCP allowlist和脚本。门禁可检查需求满足度，不能证明原需求正确。",
-  "signals": "PH 210 分，日榜第 4（平台公开计数；非商业采用证据；观测2026-10-18）；10/12–14 官方列出 close/progress 一致性、JUnit 导入、大规模门禁修复（官方变更记录；未独立复现；观测2026-10-18）",
-  "why": "延续W34 Checksum/Replay QA→W35独立验证→W40 iFixAi/GitBot。W42更具体的问题是“谁接受这次变更，以及门禁自己会不会假绿”，不是验证产品数量变多。",
-  "creator": "Nikita Fedorov 在 PH 自述来自 Qase 团队，做 Qase 九年、Tiden 一年。动机是 agent 同时写代码与测试时，测试可能只认同自己生成的实现。（创作者自述，不等于外部验证）",
-  "learn": "值得学的是证据归属与失败关闭：别把其他 run 的绿灯算到本次变更；未知需求变更需要明确风险接受。需求是否正确仍不是工具能替人决定的。",
-  "limits": "没有独立交付效率或质量改善试验。 10/13 requirement→spec 工具名迁移可能影响已有 MCP allowlist／脚本。 验证需求被满足，不代表需求本身正确。 10月1日CLI说明仍要求发出的自由文本为英文，非拉丁文字会在联网前拒绝；本周未取得该限制已取消的证据。",
+  "category": "验收证据 / Intent生命周期",
+  "date": "2026-10-20–23",
+  "description": "把验收证据限定到当前intent branch，并保存未交付promise与关闭分支历史。",
+  "facts": "官方发布声明｜10/21 session gate改用该intent branch最新run，不再被main/其他branch的测试结果影响；continue跨轮次汇总既未交付、也未豁免的promise。\n官方发布声明｜10/21关联PR全部合并且intent静默24小时后，自动归并Tiden的intent分支；部分交付7天后将开放promise移到新intent，可hold或关闭此功能。这里是Tiden规格分支，不是代替用户自动合并GitHub代码PR。\n官方发布声明｜10/22 test ingest保留人/agent建立的链接；live documentation每case每run只记一次执行，计数下降可能是去重修复，不是使用下降。\n官方发布声明｜10/23关闭branch保留specs/links/review/run history；重复test在merge preview标识但仍需手动删除，merge本身仍会加重复副本。",
+  "signals": "官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。；官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。",
+  "why": "研究判断｜验收不只需要一个PASS，还需要证明是哪条分支的哪次run、哪个promise未完成，以及放弃后哪些证据仍保存。",
+  "creator": "Tiden，官网表述为Qase团队出品；本次未核验个人创始人履历。",
+  "learn": "测试证据限定分支和run；继续任务带上全部未完成承诺；取消与删除分离；证据链接由谁创建就由谁的同步流维护。",
+  "limits": "只核验官方changelog和RSS，未登录体验或复现闭环。自动归并范围必须讲清；production issues无组件时新增warning并不改变overall verdict，不能说都变成强制发布阻断。",
   "worth": "Yes",
-  "observed_at": "2026-10-18T08:42:15+08:00",
+  "observed_at": "2026-10-25",
   "first_seen": "2026-W42",
-  "last_seen": "2026-W42",
+  "last_seen": "2026-W43",
   "weeks": [
-    "2026-W42"
+    "2026-W42",
+    "2026-W43"
   ],
   "sources": [
     {
@@ -33,6 +34,22 @@
     {
       "platform": "官网产品机制",
       "url": "https://tiden.ai/"
+    },
+    {
+      "platform": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-21"
+    },
+    {
+      "platform": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-22"
+    },
+    {
+      "platform": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-23"
+    },
+    {
+      "platform": "官方RSS",
+      "url": "https://tiden.ai/changelog/feed.xml"
     }
   ],
   "timeline": [
@@ -40,10 +57,16 @@
       "week": "2026-W42",
       "event": "2026-10-14（PH 当日发布；官方 10/12–14 changelog 有实质改动）",
       "signal": "10/12 修正 progress 报通过而 close 实际拒绝的矛盾；10/14 修复大规格／大测试集的超时与限流。可写“验证系统本身也需要防假绿”。"
+    },
+    {
+      "week": "2026-W43",
+      "event": "2026-10-20–23",
+      "signal": "把验收证据限定到当前intent branch，并保存未交付promise与关闭分支历史。 官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。；官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。"
     }
   ],
   "featured_weeks": [
-    "2026-W42"
+    "2026-W42",
+    "2026-W43"
   ],
   "selection": "main",
   "source_details": [
@@ -74,20 +97,52 @@
       "source_date": null,
       "kind": "一手公开来源",
       "observed_on": "2026-10-18"
+    },
+    {
+      "date": "2026-10-21",
+      "url": "https://tiden.ai/changelog#d-2026-10-21",
+      "verified": "实时官方HTML已读；包括branch自己的run、跨轮次promise、自动归并和hold规则。",
+      "source_date": "2026-10-21",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "官方changelog"
+    },
+    {
+      "date": "2026-10-22",
+      "url": "https://tiden.ai/changelog#d-2026-10-22",
+      "verified": "实时官方HTML已读；链接owner保留及execution去重。",
+      "source_date": "2026-10-22",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "官方changelog"
+    },
+    {
+      "date": "2026-10-23",
+      "url": "https://tiden.ai/changelog#d-2026-10-23",
+      "verified": "实时官方HTML和RSS pubDate双重核验；close保留历史及merge duplicates局限。",
+      "source_date": "2026-10-23",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "官方changelog"
     }
   ],
   "signal_details": [
+    "官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。",
+    "官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。"
+  ],
+  "important_signals": [
     {
-      "text": "PH 210 分，日榜第 4",
-      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/14",
-      "classification": "平台公开计数；非商业采用证据",
-      "observed_at": "2026-10-18"
+      "week": "2026-W42",
+      "signals": "PH 210 分，日榜第 4（平台公开计数；非商业采用证据；观测2026-10-18）；10/12–14 官方列出 close/progress 一致性、JUnit 导入、大规模门禁修复（官方变更记录；未独立复现；观测2026-10-18）",
+      "observed_at": "2026-10-18T08:42:15+08:00"
     },
     {
-      "text": "10/12–14 官方列出 close/progress 一致性、JUnit 导入、大规模门禁修复",
-      "url": "https://tiden.ai/changelog",
-      "classification": "官方变更记录；未独立复现",
-      "observed_at": "2026-10-18"
+      "week": "2026-W43",
+      "signals": [
+        "官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。",
+        "官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。"
+      ],
+      "observed_at": "2026-10-25"
     }
   ]
 }

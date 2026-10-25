@@ -1,8 +1,8 @@
 {
   "id": "audr",
-  "name": "AUDR by Chargebee",
-  "category": "Agent Cost / Open Specification",
-  "date": "2026-10-13 02:31:44 北京时间（spec/v1.1.0正式发布；原始UTC 10月12日18:31:44）；OpenRouter adapter于GitHub原始UTC 10月12日合并",
+  "name": "AUDR",
+  "category": "Agent计量协议 / 商业化基础设施",
+  "date": "2026-10-20–23",
   "sources": [
     {
       "platform": "Product Hunt",
@@ -31,22 +31,39 @@
     {
       "platform": "adapter最终changelog",
       "url": "https://github.com/openaudr/audr/blob/main/adapters/openrouter/typescript/CHANGELOG.md"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/openaudr/audr/commit/af0d26fad01c62a41a4d4f17892afc7b5da56993"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/openaudr/audr/commit/80bd9489276401515b0a12afa3ae0351770bcbc4"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/openaudr/audr/commit/f674ef0f9dbca4c71cd4335d3ef519b2568e2b56"
+    },
+    {
+      "platform": "GitHub pinned file",
+      "url": "https://github.com/openaudr/audr/blob/80bd9489276401515b0a12afa3ae0351770bcbc4/IMPLEMENTATIONS.md"
     }
   ],
-  "description": "Agent Usage Detail Record开放JSON记录规范，让harness、router、provider对一次执行的用量与归因信息能够关联；定价和开票仍在下游。",
-  "signals": "10月12日spec/v1.1.0正式发布，增加feature_id与工具namespace；同日OpenRouter adapter 0.1.0实现合并。规范实现延续，不代表标准已被产业普遍采用。",
-  "facts": "1.1.0向后兼容1.0记录；新字段需1.1。feature_id用于宿主选择产品功能的meter/metric/price，namespace只用于工具来源。conformance套件42例。OpenRouter adapter对未知vendor回退并告警；BYOK provider成本不明时留空。集成测试使用fake fetch/local stand-in，未调用live API。 namespace不是URL、地址或凭据；OpenRouter合并后changelog声明不读取prompt、completion、tool payload、请求metadata和错误正文。",
-  "why": "延续W35 Navigara、W38/W40 Weave到W41 AUDR的成本归因研究，新增证据是费用对应哪个产品功能、哪个工具来源。保留独立FinOps不升回一级趋势。",
-  "creator": "团队说明灵感来自电信Call Detail Record，因各层分别知道客户、模型、用量或结果，却难联合回答某客户整次任务成本。",
-  "learn": "先统一run/span/record、缺失和合并语义，再做成本分析。adapter、兼容测试、生产采用与产业标准化是不同证据等级。",
-  "limits": "未核验非发起方生产规模、真实账单对账误差、收入或留存。42个fixture不是42家客户。spec release不等于所有SDK新版本已经发布，本次不作这一断言。",
+  "description": "上周的规范1.1.0字段，本周开始落实到Python/TypeScript SDK、框架adapter和计费sink。",
+  "signals": "13个本周main commits；规范tag spec/v1.1.0发布于10/12，不是本周新规范。；SDK/adapter版本在代码和changelog可确认；未逐一查询npm/PyPI分发成功状态，不写“全部已被下载采用”。",
+  "facts": "事实｜10/20 Python core 0.2.0、10/21 TypeScript core 0.2.0提交；本周LiteLLM、Nemo Relay、Merge Gateway、OpenRouter、Vercel AI、Mastra adapter更新到支持feature_id。\n事实｜10/22 Lago sink 0.2.0删除metricCode配置/环境变量，直接以record.attribution.feature_id作billable metric；缺失则拒绝发送。labels从一个JSON字符串改成独立property，属于破坏性升级。\n事实｜10/23 Mastra adapter 0.2.0将MCP server配置键记录为resource.namespace，使provider/namespace/name共同标识tool。\n事实｜10/20新增第三方implementations目录，但截至核验其Adapters、Sinks、Tools均“No entries yet”；不能称生态采用已被证实。",
+  "why": "研究判断｜这周价值是从“统一usage schema”到“产品feature究竟按哪个meter收费”，补商业产品账单映射，而非只看token。",
+  "creator": "openaudr维护者，公开仓库openaudr/audr；计费sink包含Chargebee和Lago参考实现，不等于这两者是付费客户。",
+  "learn": "在源头绑定feature_id；事件ID、时间和feature保持重放稳定；把缺字段、不可更正、未匹配meter当显式状态。",
+  "limits": "Lago仍可静默忽略不存在的metric code；必须先配置对应metric。sink拒绝corrects，ClickHouse与Postgres去重不同，改timestamp或feature重放可能造成不同计费结果。第三方实现列表为空。",
   "worth": "Yes",
-  "observed_at": "2026-10-18T08:42:15+08:00",
+  "observed_at": "2026-10-25",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W42",
+  "last_seen": "2026-W43",
   "weeks": [
     "2026-W41",
-    "2026-W42"
+    "2026-W42",
+    "2026-W43"
   ],
   "timeline": [
     {
@@ -58,11 +75,65 @@
       "week": "2026-W42",
       "event": "2026-10-13 02:31:44 北京时间（spec/v1.1.0正式发布；原始UTC 10月12日18:31:44）；OpenRouter adapter于GitHub原始UTC 10月12日合并",
       "signal": "10月12日spec/v1.1.0正式发布，增加feature_id与工具namespace；同日OpenRouter adapter 0.1.0实现合并。规范实现延续，不代表标准已被产业普遍采用。"
+    },
+    {
+      "week": "2026-W43",
+      "event": "2026-10-20–23",
+      "signal": "上周的规范1.1.0字段，本周开始落实到Python/TypeScript SDK、框架adapter和计费sink。 13个本周main commits；规范tag spec/v1.1.0发布于10/12，不是本周新规范。；SDK/adapter版本在代码和changelog可确认；未逐一查询npm/PyPI分发成功状态，不写“全部已被下载采用”。"
     }
   ],
   "featured_weeks": [
     "2026-W41",
-    "2026-W42"
+    "2026-W42",
+    "2026-W43"
   ],
-  "selection": "main"
+  "selection": "main",
+  "source_details": [
+    {
+      "date": "2026-10-22T05:54:50Z; changelog labels 2026-10-21",
+      "url": "https://github.com/openaudr/audr/commit/af0d26fad01c62a41a4d4f17892afc7b5da56993",
+      "verified": "已读Lago preflight.ts、credentials.ts、sink.ts及README breaking changes。",
+      "source_date": "2026-10-22T05:54:50Z; changelog labels 2026-10-21",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "GitHub commit"
+    },
+    {
+      "date": "2026-10-23T06:00:00Z",
+      "url": "https://github.com/openaudr/audr/commit/80bd9489276401515b0a12afa3ae0351770bcbc4",
+      "verified": "已读Mastra exporter和attribution实现。",
+      "source_date": "2026-10-23T06:00:00Z",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "GitHub commit"
+    },
+    {
+      "date": "2026-10-20 created; snapshot 2026-10-25",
+      "url": "https://github.com/openaudr/audr/blob/80bd9489276401515b0a12afa3ae0351770bcbc4/IMPLEMENTATIONS.md",
+      "verified": "已读三类第三方实现均暂无条目及不背书声明。",
+      "source_date": "2026-10-20 created; snapshot 2026-10-25",
+      "observed_on": "2026-10-25",
+      "kind": "公开来源",
+      "label": "GitHub pinned file"
+    }
+  ],
+  "signal_details": [
+    "13个本周main commits；规范tag spec/v1.1.0发布于10/12，不是本周新规范。",
+    "SDK/adapter版本在代码和changelog可确认；未逐一查询npm/PyPI分发成功状态，不写“全部已被下载采用”。"
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W42",
+      "signals": "10月12日spec/v1.1.0正式发布，增加feature_id与工具namespace；同日OpenRouter adapter 0.1.0实现合并。规范实现延续，不代表标准已被产业普遍采用。",
+      "observed_at": "2026-10-18T08:42:15+08:00"
+    },
+    {
+      "week": "2026-W43",
+      "signals": [
+        "13个本周main commits；规范tag spec/v1.1.0发布于10/12，不是本周新规范。",
+        "SDK/adapter版本在代码和changelog可确认；未逐一查询npm/PyPI分发成功状态，不写“全部已被下载采用”。"
+      ],
+      "observed_at": "2026-10-25"
+    }
+  ]
 }

@@ -2,7 +2,7 @@
   "id": "cactus-whistle",
   "name": "Cactus Whistle",
   "category": "On-device Speech / Small Model",
-  "date": "2026-10-15—16（GitHub原始UTC实现日期）；3.2.4发布attestation为北京时间10月16日22:55:37",
+  "date": "2026-W43（延续侧栏，未标注精确发布日）",
   "sources": [
     {
       "platform": "官方发布",
@@ -35,22 +35,39 @@
     {
       "platform": "README",
       "url": "https://github.com/cactus-compute/needle/blob/main/README.md"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/cactus-compute/needle/commit/84e85742357487335cad4e969c86dc5b62b778fc"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/cactus-compute/needle/commit/1c5641cd40ad2d8a63a51d3cf40356c06a63d658"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/cactus-compute/needle/commit/b4fc11b04f1852888d375c8c6dfbaca44572d014"
+    },
+    {
+      "platform": "官方博客",
+      "url": "https://www.cactuscompute.com/blog/porting-whistle"
     }
   ],
-  "description": "默认预训练文件16.9MB的端侧ASR；当前支持分窗长音频与流式接口，本周增加本地LoRA微调、扩词和合并导出。",
-  "signals": "10月15—16日加入本地微调及测试，已对应PyPI cactus-needle 3.2.4的发布attestation。补核发现streaming在10月5日、长音频3.2.0在10月10日已有，纠正W41证据缺口，不作为W42首发。",
-  "facts": "基础模型冻结、attention投影LoRA训练，合并后4-bit导出；JSONL含audio/text/language，可扩language tag与词表。默认预训练仍只有en/de/fr/es/it/nl/pl，无中文。推理30秒以内单次、以上分窗；训练loader仍要求片段不超过30秒。",
+  "description": "移植/重建文档与输入边界修复，不作为新的端侧ASR突破。未验证中文或长音频能力新增。",
+  "signals": "本周代码与文档延续观察；未取得可验证的新量化表现。",
+  "facts": "移植/重建文档与输入边界修复，不作为新的端侧ASR突破。未验证中文或长音频能力新增。",
   "why": "W41→W42同产品从轻量预训练推理走向开发者可拥有的离线适配产物。不同于W38 Cactus Needle 3，也不属于使用时自动online learning。",
   "creator": "团队在Reddit解释目标是预算手机、wearables等被忽视的设备，而非追求大模型规模。 本周没有新的已核验收入故事。",
   "learn": "区分预训练支持与可训练入口、有限口令与自由转写、流式可调用与长录音完整性。用户应拥有数据、验证集和导出产物。",
   "limits": "未运行发布包或独立复测。中文token测试只验证词表路径，不证明中文ASR质量；默认16.9MB不能外推扩词产物大小。未取得中文、长录音或能耗验证。音乐等非语音仍可能幻觉，官方建议常开麦加VAD/wake word。 当前Needle分发说明列有默认开启、可退出的binary telemetry；可本地推理不等于零遥测。本次未做隐私审计。",
   "worth": "Yes",
-  "observed_at": "2026-10-18T08:42:15+08:00",
+  "observed_at": "2026-10-25",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W42",
+  "last_seen": "2026-W43",
   "weeks": [
     "2026-W41",
-    "2026-W42"
+    "2026-W42",
+    "2026-W43"
   ],
   "timeline": [
     {
@@ -62,11 +79,29 @@
       "week": "2026-W42",
       "event": "2026-10-15—16（GitHub原始UTC实现日期）；3.2.4发布attestation为北京时间10月16日22:55:37",
       "signal": "10月15—16日加入本地微调及测试，已对应PyPI cactus-needle 3.2.4的发布attestation。补核发现streaming在10月5日、长音频3.2.0在10月10日已有，纠正W41证据缺口，不作为W42首发。"
+    },
+    {
+      "week": "2026-W43",
+      "event": "2026-W43（延续侧栏，未标注精确发布日）",
+      "signal": "移植/重建文档与输入边界修复，不作为新的端侧ASR突破。未验证中文或长音频能力新增。"
     }
   ],
   "featured_weeks": [
     "2026-W41",
     "2026-W42"
   ],
-  "selection": "main"
+  "selection": "continuity_sidebar",
+  "important_signals": [
+    {
+      "week": "2026-W42",
+      "signals": "10月15—16日加入本地微调及测试，已对应PyPI cactus-needle 3.2.4的发布attestation。补核发现streaming在10月5日、长音频3.2.0在10月10日已有，纠正W41证据缺口，不作为W42首发。",
+      "observed_at": "2026-10-18T08:42:15+08:00"
+    },
+    {
+      "week": "2026-W43",
+      "signals": "本周代码与文档延续观察；未取得可验证的新量化表现。",
+      "observed_at": "2026-10-25"
+    }
+  ],
+  "signal_details": []
 }
