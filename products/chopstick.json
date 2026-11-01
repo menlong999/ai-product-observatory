@@ -1,0 +1,97 @@
+{
+  "id": "chopstick",
+  "name": "Chopstick",
+  "category": "Mac个性化工具 / 自动化",
+  "date": "2026-10-30",
+  "description": "本地活动记录发现重复模式，借用已有编码agent生成可编辑、能运行脚本的notch小组件。",
+  "facts": "官方FAQ｜支持已有Claude Code、Codex等agent；macOS15+；本地数据库，不保存键入字符或截图，屏幕文本/复制内容/完整URL等细节30天删除。\n官方边界｜agent读取到的记录会发送给该agent供应商；部分系统权限未开启时仍可降级运行。隐私政策本周10/28更新，不等于全部功能当天新增。",
+  "signals": "PH 10/30日榜第7，129票，130 followers（2026-11-01累计快照，非周增长/付费用户）。",
+  "why": "研究判断｜从用户先想到自动化什么，转向观察重复行为后提出候选，同时保留人工确认和可检查脚本。",
+  "creator": "作者自述｜Joshua Knauber说建议需确认，脚本可查看和编辑；系统给自己建议过PH、Plausible、HN合成launch tracker。FAQ承认受Alcove启发；没有收入或长期留存证据。",
+  "learn": "研究判断｜复用已有agent账号；把本地观察与云模型推理分开说明；建议、确认、可编辑脚本比无人值守执行更容易管理。",
+  "limits": "不能写全端侧或零外传；试用、支付、更新仍有联网。未独立测试脚本安全、模式识别准确率或留存；无额外AI订阅不等于模型调用免费。",
+  "worth": "Yes",
+  "observed_at": "2026-11-01",
+  "first_seen": "2026-W44",
+  "last_seen": "2026-W44",
+  "weeks": [
+    "2026-W44"
+  ],
+  "sources": [
+    {
+      "platform": "PH产品与maker讨论",
+      "url": "https://www.producthunt.com/products/chopstick"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/30"
+    },
+    {
+      "platform": "官网",
+      "url": "https://chopstick.sh/"
+    },
+    {
+      "platform": "官方FAQ",
+      "url": "https://chopstick.sh/faq"
+    },
+    {
+      "platform": "官方隐私政策",
+      "url": "https://chopstick.sh/privacy"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "PH产品与maker讨论",
+      "url": "https://www.producthunt.com/products/chopstick",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/30",
+      "source_date": "2026-10-30",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官网",
+      "url": "https://chopstick.sh/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方FAQ",
+      "url": "https://chopstick.sh/faq",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方隐私政策",
+      "url": "https://chopstick.sh/privacy",
+      "source_date": "2026-10-28",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W44",
+      "event": "2026-10-30",
+      "signal": "本地活动记录发现重复模式，借用已有编码agent生成可编辑、能运行脚本的notch小组件。 PH 10/30日榜第7，129票，130 followers（2026-11-01累计快照，非周增长/付费用户）。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W44",
+      "signals": "PH 10/30日榜第7，129票，130 followers（2026-11-01累计快照，非周增长/付费用户）。",
+      "observed_at": "2026-11-01"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W44"
+  ],
+  "selection": "main"
+}

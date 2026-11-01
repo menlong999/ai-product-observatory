@@ -2,21 +2,22 @@
   "id": "tiden",
   "name": "Tiden",
   "category": "验收证据 / Intent生命周期",
-  "date": "2026-10-20–23",
-  "description": "把验收证据限定到当前intent branch，并保存未交付promise与关闭分支历史。",
-  "facts": "官方发布声明｜10/21 session gate改用该intent branch最新run，不再被main/其他branch的测试结果影响；continue跨轮次汇总既未交付、也未豁免的promise。\n官方发布声明｜10/21关联PR全部合并且intent静默24小时后，自动归并Tiden的intent分支；部分交付7天后将开放promise移到新intent，可hold或关闭此功能。这里是Tiden规格分支，不是代替用户自动合并GitHub代码PR。\n官方发布声明｜10/22 test ingest保留人/agent建立的链接；live documentation每case每run只记一次执行，计数下降可能是去重修复，不是使用下降。\n官方发布声明｜10/23关闭branch保留specs/links/review/run history；重复test在merge preview标识但仍需手动删除，merge本身仍会加重复副本。",
-  "signals": "官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。；官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。",
-  "why": "研究判断｜验收不只需要一个PASS，还需要证明是哪条分支的哪次run、哪个promise未完成，以及放弃后哪些证据仍保存。",
-  "creator": "Tiden，官网表述为Qase团队出品；本次未核验个人创始人履历。",
-  "learn": "测试证据限定分支和run；继续任务带上全部未完成承诺；取消与删除分离；证据链接由谁创建就由谁的同步流维护。",
-  "limits": "只核验官方changelog和RSS，未登录体验或复现闭环。自动归并范围必须讲清；production issues无组件时新增warning并不改变overall verdict，不能说都变成强制发布阻断。",
+  "date": "2026-10-26–29",
+  "description": "将发布质量门禁绑定到release build SHA与特定capture，并纠正失效测试覆盖率。",
+  "facts": "官方发布/代码事实｜10/28 release Quality Gate使用该release build SHA的测试，不再复制当时main状态；缺结果或run未完成为pending，capture可重做且保留历史。CLI 0.44.0、JS reporter 0.5.0、PHPUnit 0.3.0、MCP 0.12.0传递/展示commit与capture身份。10/26已删除测试不再算coverage；测试更名/移动/多reporter识别同一case，可撤销合并。10/29 CLI 0.45.0的impact将diff映射spec，并可按affected/uncovered/unanchored让CI停止合并。",
+  "signals": "官方10/26、28、29 changelog；CLI 0.44.0/0.45.0、JS reporter 0.5.0、PHPUnit 0.3.0、MCP 0.12.0。无可验证周增长或收入。",
+  "why": "研究判断｜branch正确仍不充分；发布判断必须绑定部署commit与特定capture。证据删除、合并和缺失状态也是验收契约的一部分，不能用“main绿了”替代“这个build绿了”。",
+  "creator": "Tiden，官网历来表述Qase团队；未补造个人故事/收入。",
+  "learn": "将对象版本、证据时间和pending明确存储；允许撤销错误归并，避免coverage由失效测试撑起。",
+  "limits": "全为官方发布说明、未独立复现；不声称解决所有假绿。计划中spec不再因缺测试阻断，但已关联失败测试仍计入；不是关闭所有质量门槛。未获得客户/收入/周增长。",
   "worth": "Yes",
-  "observed_at": "2026-10-25",
+  "observed_at": "2026-11-01",
   "first_seen": "2026-W42",
-  "last_seen": "2026-W43",
+  "last_seen": "2026-W44",
   "weeks": [
     "2026-W42",
-    "2026-W43"
+    "2026-W43",
+    "2026-W44"
   ],
   "sources": [
     {
@@ -50,6 +51,18 @@
     {
       "platform": "官方RSS",
       "url": "https://tiden.ai/changelog/feed.xml"
+    },
+    {
+      "platform": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-26"
+    },
+    {
+      "platform": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-28"
+    },
+    {
+      "platform": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-29"
     }
   ],
   "timeline": [
@@ -62,11 +75,17 @@
       "week": "2026-W43",
       "event": "2026-10-20–23",
       "signal": "把验收证据限定到当前intent branch，并保存未交付promise与关闭分支历史。 官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。；官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。"
+    },
+    {
+      "week": "2026-W44",
+      "event": "2026-10-26–29",
+      "signal": "将发布质量门禁绑定到release build SHA与特定capture，并纠正失效测试覆盖率。 官方10/26、28、29 changelog；CLI 0.44.0/0.45.0、JS reporter 0.5.0、PHPUnit 0.3.0、MCP 0.12.0。无可验证周增长或收入。"
     }
   ],
   "featured_weeks": [
     "2026-W42",
-    "2026-W43"
+    "2026-W43",
+    "2026-W44"
   ],
   "selection": "main",
   "source_details": [
@@ -124,11 +143,40 @@
       "observed_on": "2026-10-25",
       "kind": "公开来源",
       "label": "官方changelog"
+    },
+    {
+      "label": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-26",
+      "source_date": "2026-10-26",
+      "date": "2026-10-26",
+      "date_type": "changelog",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
+    },
+    {
+      "label": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-28",
+      "source_date": "2026-10-28",
+      "date": "2026-10-28",
+      "date_type": "changelog",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
+    },
+    {
+      "label": "官方changelog",
+      "url": "https://tiden.ai/changelog#d-2026-10-29",
+      "source_date": "2026-10-29",
+      "date": "2026-10-29",
+      "date_type": "changelog",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
     }
   ],
   "signal_details": [
-    "官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。",
-    "官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。"
+    "官方10/26、28、29 changelog；CLI 0.44.0/0.45.0、JS reporter 0.5.0、PHPUnit 0.3.0、MCP 0.12.0。无可验证周增长或收入。"
   ],
   "important_signals": [
     {
@@ -143,6 +191,33 @@
         "官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。"
       ],
       "observed_at": "2026-10-25"
+    },
+    {
+      "week": "2026-W44",
+      "signals": [
+        "官方10/26、28、29 changelog；CLI 0.44.0/0.45.0、JS reporter 0.5.0、PHPUnit 0.3.0、MCP 0.12.0。无可验证周增长或收入。"
+      ],
+      "observed_at": "2026-11-01T00:54:00Z"
+    }
+  ],
+  "historical_summaries": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-20–23",
+      "description": "把验收证据限定到当前intent branch，并保存未交付promise与关闭分支历史。",
+      "facts": "官方发布声明｜10/21 session gate改用该intent branch最新run，不再被main/其他branch的测试结果影响；continue跨轮次汇总既未交付、也未豁免的promise。\n官方发布声明｜10/21关联PR全部合并且intent静默24小时后，自动归并Tiden的intent分支；部分交付7天后将开放promise移到新intent，可hold或关闭此功能。这里是Tiden规格分支，不是代替用户自动合并GitHub代码PR。\n官方发布声明｜10/22 test ingest保留人/agent建立的链接；live documentation每case每run只记一次执行，计数下降可能是去重修复，不是使用下降。\n官方发布声明｜10/23关闭branch保留specs/links/review/run history；重复test在merge preview标识但仍需手动删除，merge本身仍会加重复副本。",
+      "signals": "官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。；官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。",
+      "why": "研究判断｜验收不只需要一个PASS，还需要证明是哪条分支的哪次run、哪个promise未完成，以及放弃后哪些证据仍保存。",
+      "creator": "Tiden，官网表述为Qase团队出品；本次未核验个人创始人履历。",
+      "learn": "测试证据限定分支和run；继续任务带上全部未完成承诺；取消与删除分离；证据链接由谁创建就由谁的同步流维护。",
+      "limits": "只核验官方changelog和RSS，未登录体验或复现闭环。自动归并范围必须讲清；production issues无组件时新增warning并不改变overall verdict，不能说都变成强制发布阻断。",
+      "worth": "Yes",
+      "observed_at": "2026-10-25",
+      "selection": "main",
+      "signal_details": [
+        "官方changelog本周CLI至0.41.0、MCP至0.10.0；无可用周增长/付费客户证据。",
+        "官网实时HTML与RSS（pubDate和日锚点）双重核验；web open曾读旧缓存，已用实时官方源纠正。"
+      ]
     }
   ]
 }

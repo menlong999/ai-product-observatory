@@ -1,0 +1,97 @@
+{
+  "id": "empacer",
+  "name": "Empacer",
+  "category": "SMB语音工作流 / 营销与客户沟通",
+  "date": "2026-10-29",
+  "description": "三问建立商家背景，先提出一周工作，再把口述任务变为可编辑、可批准的结果。",
+  "facts": "官方工作流｜任务需要时才请求连接工具，拒绝则结果留在产品内；结果卡可改、拒、批，失败卡说明进度、保存内容及是否发送；已发消息不能撤回。\n官方边界｜Instagram直发仍取决Meta批准，可能需要手动发布。语音是老板下任务，不是代接客户电话。",
+  "signals": "PH 10/29日榜第1，444票，834 followers（2026-11-01累计快照，非周增长或客户数）。官网功能页未标发布日期，不把所有集成归为本周新增。",
+  "why": "研究判断｜最值得学的是把空白聊天改为首周可审批计划，并把失败状态做成非技术用户能理解的界面，而非语音本身。",
+  "creator": "作者自述｜Founder/CEO Yerkebulan Akhmetzaki称访谈美国小商家；产品负责人Kenessary说从长onboarding和先连工具，减到店名、差异、委派任务三问；推断展示在profile供纠正。这不是独立转化实验。",
+  "learn": "研究判断｜首次只收集改变第一份结果的信息；推断可纠正，连接授权延后；非技术用户同样需要清楚的失败和发送状态。",
+  "limits": "没有独立核验1000+集成、噪声抑制效果、收入或付费户；maker称iOS coming soon，不说全平台已上线。审批流程未独立测试，不写自主运营商家。",
+  "worth": "Yes",
+  "observed_at": "2026-11-01",
+  "first_seen": "2026-W44",
+  "last_seen": "2026-W44",
+  "weeks": [
+    "2026-W44"
+  ],
+  "sources": [
+    {
+      "platform": "PH产品与maker讨论",
+      "url": "https://www.producthunt.com/products/empacer"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/29"
+    },
+    {
+      "platform": "官网",
+      "url": "https://www.empacer.com/"
+    },
+    {
+      "platform": "官方工作流",
+      "url": "https://www.empacer.com/how-it-works/"
+    },
+    {
+      "platform": "官方About与FAQ",
+      "url": "https://www.empacer.com/about/"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "PH产品与maker讨论",
+      "url": "https://www.producthunt.com/products/empacer",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/29",
+      "source_date": "2026-10-29",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官网",
+      "url": "https://www.empacer.com/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方工作流",
+      "url": "https://www.empacer.com/how-it-works/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方About与FAQ",
+      "url": "https://www.empacer.com/about/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W44",
+      "event": "2026-10-29",
+      "signal": "三问建立商家背景，先提出一周工作，再把口述任务变为可编辑、可批准的结果。 PH 10/29日榜第1，444票，834 followers（2026-11-01累计快照，非周增长或客户数）。官网功能页未标发布日期，不把所有集成归为本周新增。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W44",
+      "signals": "PH 10/29日榜第1，444票，834 followers（2026-11-01累计快照，非周增长或客户数）。官网功能页未标发布日期，不把所有集成归为本周新增。",
+      "observed_at": "2026-11-01"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W44"
+  ],
+  "selection": "main"
+}

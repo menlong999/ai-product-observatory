@@ -1,0 +1,108 @@
+{
+  "id": "faylee",
+  "name": "Faylee",
+  "category": "Bug证据 / QA协作 / Agent上下文",
+  "date": "2026-10-30",
+  "description": "把录屏、点击、console与网络请求对齐到同一时间线，再用MCP交给现有编码agent查询和回复。",
+  "facts": "官方文档｜13个MCP工具，11读、2写；以连接者身份访问其可见报告。get_moment汇总同一时刻证据，get_request返回单次请求及cURL。\n官方说明｜instant replay留本机，分享才上传；上传前凭证脱敏，可配置页面遮罩。公开source map可回溯源代码，登录/VPN后的map当前不能取。",
+  "signals": "PH 10/30日榜第10，102票；99 followers（2026-11-01累计快照，非周增长/用户数）。未找到独立日期的官方changelog，不能称全部功能本周首次上线。",
+  "why": "研究判断｜价值在跨模态共同时间轴和可按需查询的证据，不只是把截图塞进聊天；从真实已发生报告出发，与主动探测缺陷不同。",
+  "creator": "官方归属｜官网页脚为Firefight Labs，UpTech doo Beograd-Čukarica品牌；未核实个人创始人。厂商的问题陈述是报告者看过全过程，开发者却只拿到一句坏了，不当作独立用户研究。",
+  "learn": "研究判断｜以共同时间轴组织信息；按用户权限读取，显式分离写工具；向报告者回写，把沟通闭环纳入工作流。",
+  "limits": "未实测修复成功率；脱敏主要针对凭证/敏感字段，普通PII仍可能需要人工mask，不能说客户数据不会上传。官网演示节省时间不是统计结果；反馈不等于修复已验证。",
+  "worth": "Yes",
+  "observed_at": "2026-11-01",
+  "first_seen": "2026-W44",
+  "last_seen": "2026-W44",
+  "weeks": [
+    "2026-W44"
+  ],
+  "sources": [
+    {
+      "platform": "PH产品页",
+      "url": "https://www.producthunt.com/products/faylee"
+    },
+    {
+      "platform": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/30"
+    },
+    {
+      "platform": "官网",
+      "url": "https://faylee.app/"
+    },
+    {
+      "platform": "官方MCP工具文档",
+      "url": "https://faylee.app/docs/agents/tools"
+    },
+    {
+      "platform": "官方MCP文档",
+      "url": "https://faylee.app/docs/agents/mcp"
+    },
+    {
+      "platform": "官方隐私文档",
+      "url": "https://faylee.app/docs/workspace/privacy"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "PH产品页",
+      "url": "https://www.producthunt.com/products/faylee",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "PH日榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/10/30",
+      "source_date": "2026-10-30",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官网",
+      "url": "https://faylee.app/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方MCP工具文档",
+      "url": "https://faylee.app/docs/agents/tools",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方MCP文档",
+      "url": "https://faylee.app/docs/agents/mcp",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方隐私文档",
+      "url": "https://faylee.app/docs/workspace/privacy",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W44",
+      "event": "2026-10-30",
+      "signal": "把录屏、点击、console与网络请求对齐到同一时间线，再用MCP交给现有编码agent查询和回复。 PH 10/30日榜第10，102票；99 followers（2026-11-01累计快照，非周增长/用户数）。未找到独立日期的官方changelog，不能称全部功能本周首次上线。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W44",
+      "signals": "PH 10/30日榜第10，102票；99 followers（2026-11-01累计快照，非周增长/用户数）。未找到独立日期的官方changelog，不能称全部功能本周首次上线。",
+      "observed_at": "2026-11-01"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W44"
+  ],
+  "selection": "main"
+}

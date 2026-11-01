@@ -1,0 +1,75 @@
+{
+  "id": "simantic",
+  "name": "Simantic",
+  "category": "固件验证 / Agent测试基础设施",
+  "date": "2026-10-29",
+  "description": "让编码agent在虚拟MCU里运行固件场景，取得接近板级的测试反馈。",
+  "facts": "官方产品说明｜虚拟MCU通过HTTP API、TypeScript和MCP接入；PR bot构建固件、根据diff设计场景并在模拟器运行，报告测试与发现。\n官方边界｜Python和CLI仍标Coming soon；不能把路线图型号写成已支持。",
+  "signals": "Hacker News 77票、36评（2026-11-01读取累计快照，非周增长）；10/29 Launch HN事件，不等于所有功能当天首次发布。",
+  "why": "研究判断｜代码生成后需要真实行为反馈；硬件仿真的难点在于和硅片行为、时序校准，不是多写一份代码审查意见。",
+  "creator": "作者自述｜Ahnaf、Seungmin称曾在Neuralink/Tesla做固件，从Renode封装转向自建Rust仿真，并用持续运行的硬件台架对照；履历与节省成本数字未独立核实。",
+  "learn": "研究判断｜把真硬件差分验证作为产品核心；先把少量MCU做深，再扩型号；把仿真反馈接入PR。",
+  "limits": "未独立运行产品；作者明确不替代HIL，混合模拟/数字信号仍受限，硅与仿真对照benchmark尚未公开。公开可跑型号比宽泛宣传窄；不推断安全关键可靠性、客户数或收入。",
+  "worth": "Yes",
+  "observed_at": "2026-11-01",
+  "first_seen": "2026-W44",
+  "last_seen": "2026-W44",
+  "weeks": [
+    "2026-W44"
+  ],
+  "sources": [
+    {
+      "platform": "Hacker News原始发布",
+      "url": "https://news.ycombinator.com/item?id=50291116"
+    },
+    {
+      "platform": "官网",
+      "url": "https://simantic.com/"
+    },
+    {
+      "platform": "官方Cloud Sim",
+      "url": "https://simantic.com/cloud-sim"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "Hacker News原始发布",
+      "url": "https://news.ycombinator.com/item?id=50291116",
+      "source_date": "2026-10-29T15:56:32Z",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官网",
+      "url": "https://simantic.com/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方Cloud Sim",
+      "url": "https://simantic.com/cloud-sim",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W44",
+      "event": "2026-10-29",
+      "signal": "让编码agent在虚拟MCU里运行固件场景，取得接近板级的测试反馈。 Hacker News 77票、36评（2026-11-01读取累计快照，非周增长）；10/29 Launch HN事件，不等于所有功能当天首次发布。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W44",
+      "signals": "Hacker News 77票、36评（2026-11-01读取累计快照，非周增长）；10/29 Launch HN事件，不等于所有功能当天首次发布。",
+      "observed_at": "2026-11-01"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W44"
+  ],
+  "selection": "main"
+}

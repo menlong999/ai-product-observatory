@@ -2,7 +2,7 @@
   "id": "strands-decider",
   "name": "Strands Decider",
   "category": "窄决策模型 / 校准与定制",
-  "date": "2026-10-19–23",
+  "date": "2026-10-26–30",
   "sources": [
     {
       "platform": "官方博客",
@@ -51,23 +51,32 @@
     {
       "platform": "GitHub issue / 使用者自报",
       "url": "https://github.com/strands-labs/strands-decider/issues/102"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/strands-labs/strands-decider/commit/13faf5214f7cbea07d005278f1aeaf3973611eba"
+    },
+    {
+      "platform": "GitHub commit",
+      "url": "https://github.com/strands-labs/strands-decider/commit/13c05149265dc404c09d2469636f71b1320e1713"
     }
   ],
-  "description": "补上从已发布checkpoint真实续训、冻结业务评测集到校准比较的定制路径，并把实际下载模型运行加入发布门槛。",
-  "signals": "7个窗口内main commits；10/19 v0.2.0 release包含若干更早代码，不能把其全份changelog都算本周新功能。；新issue #102/#103是有可追溯代码链接的用户自报实验信号，不是付费客户证据。",
-  "facts": "事实｜10/19 init_from不再重建随机head做head-only实验，而是恢复已训练LoRA adapter和head并继续训练；冲突架构配置在加载前拒绝，既有温度重置为1。\n事实｜10/19新增customize-decider材料：固定选项任务卡、带hash的冻结评测集、现有方法/多数类baseline、train/eval重叠检查、3-seed训练、校准与成对比较；要求先测量，只有数据证明缺口再训练。\n事实｜10/23 release workflow增加candidate wheel安装、下载公开checkpoint并运行ask --json验证；发布任务依赖此检查。只是发布门槛代码，不是独立质量认证。\n作者自报｜10/22 issue #103用563对科学摘要/新闻句子报告：分别做序数选择再用代码比较，macro-F1由0.408变0.498，但默认argmax误报也更高。不是通用性能提升。",
-  "why": "研究判断｜W42的“训练路径缺口”有实质补齐，但“带confidence”仍不等于能直接充当通用路由/安全判断。选项与阈值设计依然决定误报代价。",
+  "description": "将MLX模型加载与每次evaluate绑定同一worker，补齐从可训练到跨线程HTTP服务的可靠性边界。",
+  "signals": "10/30 MLX线程一致性及10/26 pointer兼容代码变化仅确认main；最新已核验GitHub release仍为10/19 v0.2.0，不是本周新模型或质量benchmark。",
+  "facts": "代码事实｜10/30修复Gemma4首次HTTP请求GPU stream线程不匹配；回归测试记录并比较加载线程与并发调用线程。10/26删除旧slot-head，保留pointer兼容并显式拒绝旧slot。",
+  "why": "研究判断｜训练可启动不等于服务路径可用；窄决策模型仍需线程、并发与兼容边界的回归测试。",
   "creator": "Strands Labs；相关定制训练代码由官方仓库贡献者nonatofabio等维护。#102来自retailbox-automation，#103来自usv240，两者是使用者而非官方基准。",
-  "learn": "把“是否该微调”本身做成有baseline和停止条件的产品流程；冻结测试集、比较配对样本与噪声范围；在自己的流量上定阈值。",
-  "limits": "本研究未复跑训练或用户实验；不能说全部训练复现缺口已关闭。模型仅输出noul/choice/score，不生成任意文本；多选仍是10/19 issue #92的提案，未核验为已发布功能。#103最终macro-F1仍约0.50。",
-  "worth": "Yes",
-  "observed_at": "2026-10-25",
+  "learn": "模型初始化和推理运行上下文显式绑定；兼容支持与已移除格式分别处理。",
+  "limits": "仅核验main代码和测试内容，未独立运行、复训或实测质量；不推断中文性能、通用安全路由或新release。",
+  "worth": "Sidebar",
+  "observed_at": "2026-11-01",
   "first_seen": "2026-W41",
-  "last_seen": "2026-W43",
+  "last_seen": "2026-W44",
   "weeks": [
     "2026-W41",
     "2026-W42",
-    "2026-W43"
+    "2026-W43",
+    "2026-W44"
   ],
   "timeline": [
     {
@@ -84,6 +93,11 @@
       "week": "2026-W43",
       "event": "2026-10-19–23",
       "signal": "补上从已发布checkpoint真实续训、冻结业务评测集到校准比较的定制路径，并把实际下载模型运行加入发布门槛。 7个窗口内main commits；10/19 v0.2.0 release包含若干更早代码，不能把其全份changelog都算本周新功能。；新issue #102/#103是有可追溯代码链接的用户自报实验信号，不是付费客户证据。"
+    },
+    {
+      "week": "2026-W44",
+      "event": "2026-10-26–30",
+      "signal": "将MLX模型加载与每次evaluate绑定同一worker，补齐从可训练到跨线程HTTP服务的可靠性边界。 10/30 MLX线程一致性及10/26 pointer兼容代码变化仅确认main；最新已核验GitHub release仍为10/19 v0.2.0，不是本周新模型或质量benchmark。"
     }
   ],
   "featured_weeks": [
@@ -91,7 +105,7 @@
     "2026-W42",
     "2026-W43"
   ],
-  "selection": "main",
+  "selection": "sidebar",
   "source_details": [
     {
       "date": "2026-10-19T16:37:11Z",
@@ -128,11 +142,30 @@
       "observed_on": "2026-10-25",
       "kind": "公开来源",
       "label": "GitHub issue / 使用者自报"
+    },
+    {
+      "label": "GitHub commit",
+      "url": "https://github.com/strands-labs/strands-decider/commit/13faf5214f7cbea07d005278f1aeaf3973611eba",
+      "source_date": "2026-10-30T13:43:08Z",
+      "date": "2026-10-30T13:43:08Z",
+      "date_type": "commit",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取patch与回归测试；仅确认main，未运行。"
+    },
+    {
+      "label": "GitHub commit",
+      "url": "https://github.com/strands-labs/strands-decider/commit/13c05149265dc404c09d2469636f71b1320e1713",
+      "source_date": "2026-10-26",
+      "date": "2026-10-26",
+      "date_type": "commit",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取patch与回归测试；仅确认main，未运行。"
     }
   ],
   "signal_details": [
-    "7个窗口内main commits；10/19 v0.2.0 release包含若干更早代码，不能把其全份changelog都算本周新功能。",
-    "新issue #102/#103是有可追溯代码链接的用户自报实验信号，不是付费客户证据。"
+    "10/30 MLX线程一致性及10/26 pointer兼容代码变化仅确认main；最新已核验GitHub release仍为10/19 v0.2.0，不是本周新模型或质量benchmark。"
   ],
   "important_signals": [
     {
@@ -147,6 +180,36 @@
         "新issue #102/#103是有可追溯代码链接的用户自报实验信号，不是付费客户证据。"
       ],
       "observed_at": "2026-10-25"
+    },
+    {
+      "week": "2026-W44",
+      "signals": [
+        "10/30 MLX线程一致性及10/26 pointer兼容代码变化仅确认main；最新已核验GitHub release仍为10/19 v0.2.0，不是本周新模型或质量benchmark。"
+      ],
+      "observed_at": "2026-11-01T00:54:00Z"
     }
+  ],
+  "historical_summaries": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-19–23",
+      "description": "补上从已发布checkpoint真实续训、冻结业务评测集到校准比较的定制路径，并把实际下载模型运行加入发布门槛。",
+      "facts": "事实｜10/19 init_from不再重建随机head做head-only实验，而是恢复已训练LoRA adapter和head并继续训练；冲突架构配置在加载前拒绝，既有温度重置为1。\n事实｜10/19新增customize-decider材料：固定选项任务卡、带hash的冻结评测集、现有方法/多数类baseline、train/eval重叠检查、3-seed训练、校准与成对比较；要求先测量，只有数据证明缺口再训练。\n事实｜10/23 release workflow增加candidate wheel安装、下载公开checkpoint并运行ask --json验证；发布任务依赖此检查。只是发布门槛代码，不是独立质量认证。\n作者自报｜10/22 issue #103用563对科学摘要/新闻句子报告：分别做序数选择再用代码比较，macro-F1由0.408变0.498，但默认argmax误报也更高。不是通用性能提升。",
+      "signals": "7个窗口内main commits；10/19 v0.2.0 release包含若干更早代码，不能把其全份changelog都算本周新功能。；新issue #102/#103是有可追溯代码链接的用户自报实验信号，不是付费客户证据。",
+      "why": "研究判断｜W42的“训练路径缺口”有实质补齐，但“带confidence”仍不等于能直接充当通用路由/安全判断。选项与阈值设计依然决定误报代价。",
+      "creator": "Strands Labs；相关定制训练代码由官方仓库贡献者nonatofabio等维护。#102来自retailbox-automation，#103来自usv240，两者是使用者而非官方基准。",
+      "learn": "把“是否该微调”本身做成有baseline和停止条件的产品流程；冻结测试集、比较配对样本与噪声范围；在自己的流量上定阈值。",
+      "limits": "本研究未复跑训练或用户实验；不能说全部训练复现缺口已关闭。模型仅输出noul/choice/score，不生成任意文本；多选仍是10/19 issue #92的提案，未核验为已发布功能。#103最终macro-F1仍约0.50。",
+      "worth": "Yes",
+      "observed_at": "2026-10-25",
+      "selection": "main",
+      "signal_details": [
+        "7个窗口内main commits；10/19 v0.2.0 release包含若干更早代码，不能把其全份changelog都算本周新功能。",
+        "新issue #102/#103是有可追溯代码链接的用户自报实验信号，不是付费客户证据。"
+      ]
+    }
+  ],
+  "sidebar_weeks": [
+    "2026-W44"
   ]
 }

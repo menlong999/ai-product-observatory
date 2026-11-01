@@ -1,0 +1,108 @@
+{
+  "id": "herdr",
+  "name": "Herdr",
+  "category": "多Agent工作台 / 跨机器终端",
+  "date": "2026-10-30",
+  "description": "原生桌面应用把跨机器终端、agent状态和消息聚在一起；本周是新形态讨论，不是整个Herdr首发。",
+  "facts": "官方文档｜spaces/tabs/panes组织工作，集中呈现Working/Blocked/Done/Idle；core维护终端，app负责窗口；SSH机器共用终端结构，agent可通过core互发消息。\n官方文档｜布局/mod是可编辑JS，损坏编辑保留最后良好版本；Apache-2.0。\n历史边界｜9/7官方博客已描述0.9跨机器TUI，不把SSH多机器算作本周首次实现。",
+  "signals": "Hacker News 360票、257评；GitHub显示1.2k累计stars、117 forks（2026-11-01快照，stars为页面舍入，非周增长）。GitHub releases页无release条目，本周日期锚为HN讨论。",
+  "why": "研究判断｜多agent协作的稀缺品是人的注意力与运行状态连续性；跨harness通信和界面/进程分离比增加窗口更有辨识度。",
+  "creator": "官方博客署名｜Can Celik在9/7文章解释：agent常运行数小时，希望笔记本只作client、远端机器保持运行；把外层UI移至client才支持多机器同屏。这是历史故事，非本周新发布。",
+  "learn": "研究判断｜分离界面生命周期和后台任务；明确恢复边界；优先解决谁在等人，而不是堆面板。",
+  "limits": "关窗口不等于关pane；关pane/tab会终止终端。重启或core崩溃后只重开shell，不复活旧进程。遥测默认开启可关闭，mods是可信代码而非沙箱扩展。未核验收入或活跃用户。",
+  "worth": "Yes",
+  "observed_at": "2026-11-01",
+  "first_seen": "2026-W44",
+  "last_seen": "2026-W44",
+  "weeks": [
+    "2026-W44"
+  ],
+  "sources": [
+    {
+      "platform": "Hacker News原始讨论",
+      "url": "https://news.ycombinator.com/item?id=50298436"
+    },
+    {
+      "platform": "官方仓库",
+      "url": "https://github.com/herdrdev/herdr-app"
+    },
+    {
+      "platform": "官网",
+      "url": "https://herdr.dev/"
+    },
+    {
+      "platform": "官方releases索引",
+      "url": "https://github.com/herdrdev/herdr-app/releases"
+    },
+    {
+      "platform": "官方作者故事：跨机器",
+      "url": "https://herdr.dev/blog/connecting-the-machines/"
+    },
+    {
+      "platform": "官方作者故事：状态检测",
+      "url": "https://herdr.dev/blog/coding-agents-are-becoming-runtimes/"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "Hacker News原始讨论",
+      "url": "https://news.ycombinator.com/item?id=50298436",
+      "source_date": "2026-10-30T00:42:41Z",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方仓库",
+      "url": "https://github.com/herdrdev/herdr-app",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官网",
+      "url": "https://herdr.dev/",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方releases索引",
+      "url": "https://github.com/herdrdev/herdr-app/releases",
+      "source_date": null,
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方作者故事：跨机器",
+      "url": "https://herdr.dev/blog/connecting-the-machines/",
+      "source_date": "2026-09-07",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    },
+    {
+      "label": "官方作者故事：状态检测",
+      "url": "https://herdr.dev/blog/coding-agents-are-becoming-runtimes/",
+      "source_date": "2026-06-10",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-01"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W44",
+      "event": "2026-10-30",
+      "signal": "原生桌面应用把跨机器终端、agent状态和消息聚在一起；本周是新形态讨论，不是整个Herdr首发。 Hacker News 360票、257评；GitHub显示1.2k累计stars、117 forks（2026-11-01快照，stars为页面舍入，非周增长）。GitHub releases页无release条目，本周日期锚为HN讨论。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W44",
+      "signals": "Hacker News 360票、257评；GitHub显示1.2k累计stars、117 forks（2026-11-01快照，stars为页面舍入，非周增长）。GitHub releases页无release条目，本周日期锚为HN讨论。",
+      "observed_at": "2026-11-01"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W44"
+  ],
+  "selection": "main"
+}

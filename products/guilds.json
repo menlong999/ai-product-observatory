@@ -2,21 +2,22 @@
   "id": "guilds",
   "name": "Guilds",
   "category": "持久多Agent工作台 / 授权与证据",
-  "date": "2026-10-18–23",
-  "description": "从共享notes的协作表面，推进到读写来源可见、Task引用按agent权限求值及逐项ACL；同时暴露迁移扩权代价。",
-  "facts": "事实｜10/19 Studio State列出note/table/script/Memory由谁改动/读取，References显示Task嵌入链和未解析项，Topology把stored wake cause与操作人作为事实呈现。\n事实｜10/22 notes和tables统一到artifact_access，agent显式行优先，否则取guild/org较高权限，无行无访问；Task嵌入以Task自己的agent解析，不再用高权限operator actor，修复SEC-42私有笔记进入别的guild提示词的问题。\n事实｜官方migration 0012明确给组织表默认org-read，旧note grant覆盖不迁移；此前没有任何guild授权的组织表变为所有agent可读，被单独收紧的agent会回到新的共享行，需要operator重新设定。\n持续边界｜SEC-24仍open/accepted by design：同一machine的agent以root共享container，可读彼此home、token和浏览器session；新的notes ACL并未解决机器隔离。",
-  "signals": "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。；安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。",
-  "why": "研究判断｜引用可观测性与授权修复一起，让读取身份问题可核查。但安全修复的迁移也会扩权，必须与权限对比一起审查。",
-  "creator": "CigaleAI；官方CigaleAI/guilds仓库，AGPL-3.0。没有核验团队营收或用户数。",
-  "learn": "记录谁改、谁读、谁唤醒与引用内容的版本；嵌入解析必须使用执行agent身份；ACL迁移提供dry-run差异及默认拒绝，比只发“权限已升级”公告有用。",
-  "limits": "未部署或攻防复验，修复状态来自官方代码与register。新ACL不等于sandbox隔离；迁移不保留所有旧限制。shared notes仍可能错误/被提示注入，读写历史不是内容真实性。",
+  "date": "2026-10-26–30",
+  "description": "在首次工具发现、recipe导出和历史版本读取中补齐权限边界，同时披露新增浏览器信任面。",
+  "facts": "官方发布/代码事实｜10/26 5c61644修复先读bindings后sync首次tool listing导致默认Off工具被提供为On；现在sync后重新读取，测试同时检查run实际工具和access视图。10/28 5bcd062给recipe capture传入带真实private-guild边界的loadOperatorActor，测试按路径/文件名都不能复制未获权私有guild note；0dfe30b为Memory revision读补orgId检查，跨组织返回404。\n官方发布/代码事实｜同时10/30新增agent-optimized browser的安全登记SEC-53/54仍为open accepted，分别指出容器网络DevTools relay和宿主临时CDP bridge的本地信任边界。不能因修复SEC-48/50/51就宣布安全成熟。",
+  "signals": "10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。",
+  "why": "研究判断｜权限必须随发现、导出、历史版本、读取视图重复执行，而不是只在主页面检查一次。功能扩张同时增加新的网络信任面，安全登记透明不等于漏洞全部修复。",
+  "creator": "CigaleAI/Guilds仓库维护者；未核实收入。",
+  "learn": "tool发现后再求权限；export/capture沿用调用者身份；历史读取先验租户；回归测试必须同时看UI和执行结果。",
+  "limits": "未运行测试或验证hosted部署；CHANGELOG浏览器内容在Unreleased，不作正式产品release。安全登记是维护者披露和研究patch阅读，不是独立审计认证。",
   "worth": "Yes",
-  "observed_at": "2026-10-25",
+  "observed_at": "2026-11-01",
   "first_seen": "2026-W42",
-  "last_seen": "2026-W43",
+  "last_seen": "2026-W44",
   "weeks": [
     "2026-W42",
-    "2026-W43"
+    "2026-W43",
+    "2026-W44"
   ],
   "sources": [
     {
@@ -54,6 +55,26 @@
     {
       "platform": "GitHub pinned security register",
       "url": "https://github.com/CigaleAI/guilds/blob/fc333380163cc5566ba1fd4f50187ad2e027f62b/docs/architecture/security-register.md"
+    },
+    {
+      "platform": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/5c61644e58e32ecb196ba35e3c655fcc53450193"
+    },
+    {
+      "platform": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/5bcd062e8e2b552a8b7be807302646cf0f45bb91"
+    },
+    {
+      "platform": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/0dfe30bbf28ccb59be9cb036bedb834893aa22b3"
+    },
+    {
+      "platform": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64"
+    },
+    {
+      "platform": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/blob/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64/docs/architecture/security-register.md"
     }
   ],
   "timeline": [
@@ -66,11 +87,17 @@
       "week": "2026-W43",
       "event": "2026-10-18–23",
       "signal": "从共享notes的协作表面，推进到读写来源可见、Task引用按agent权限求值及逐项ACL；同时暴露迁移扩权代价。 窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。；安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
+    },
+    {
+      "week": "2026-W44",
+      "event": "2026-10-26–30",
+      "signal": "在首次工具发现、recipe导出和历史版本读取中补齐权限边界，同时披露新增浏览器信任面。 10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
     }
   ],
   "featured_weeks": [
     "2026-W42",
-    "2026-W43"
+    "2026-W43",
+    "2026-W44"
   ],
   "selection": "main",
   "source_details": [
@@ -135,11 +162,60 @@
       "observed_on": "2026-10-25",
       "kind": "公开来源",
       "label": "GitHub pinned security register"
+    },
+    {
+      "label": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/5c61644e58e32ecb196ba35e3c655fcc53450193",
+      "source_date": "2026-10-26T14:57:54Z",
+      "date": "2026-10-26T14:57:54Z",
+      "date_type": "commit",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
+    },
+    {
+      "label": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/5bcd062e8e2b552a8b7be807302646cf0f45bb91",
+      "source_date": "2026-10-28T18:59:12Z",
+      "date": "2026-10-28T18:59:12Z",
+      "date_type": "commit",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
+    },
+    {
+      "label": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/0dfe30bbf28ccb59be9cb036bedb834893aa22b3",
+      "source_date": "2026-10-28T18:59:12Z",
+      "date": "2026-10-28T18:59:12Z",
+      "date_type": "commit",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
+    },
+    {
+      "label": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/commit/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64",
+      "source_date": "2026-10-30",
+      "date": "2026-10-30",
+      "date_type": "fixed_document",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
+    },
+    {
+      "label": "GitHub 固定来源",
+      "url": "https://github.com/CigaleAI/guilds/blob/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64/docs/architecture/security-register.md",
+      "source_date": "2026-10-30",
+      "date": "2026-10-30",
+      "date_type": "fixed_document",
+      "observed_on": "2026-11-01",
+      "kind": "一手公开来源",
+      "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
     }
   ],
   "signal_details": [
-    "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。",
-    "安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
+    "10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
   ],
   "important_signals": [
     {
@@ -154,6 +230,33 @@
         "安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
       ],
       "observed_at": "2026-10-25"
+    },
+    {
+      "week": "2026-W44",
+      "signals": [
+        "10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
+      ],
+      "observed_at": "2026-11-01T00:54:00Z"
+    }
+  ],
+  "historical_summaries": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-18–23",
+      "description": "从共享notes的协作表面，推进到读写来源可见、Task引用按agent权限求值及逐项ACL；同时暴露迁移扩权代价。",
+      "facts": "事实｜10/19 Studio State列出note/table/script/Memory由谁改动/读取，References显示Task嵌入链和未解析项，Topology把stored wake cause与操作人作为事实呈现。\n事实｜10/22 notes和tables统一到artifact_access，agent显式行优先，否则取guild/org较高权限，无行无访问；Task嵌入以Task自己的agent解析，不再用高权限operator actor，修复SEC-42私有笔记进入别的guild提示词的问题。\n事实｜官方migration 0012明确给组织表默认org-read，旧note grant覆盖不迁移；此前没有任何guild授权的组织表变为所有agent可读，被单独收紧的agent会回到新的共享行，需要operator重新设定。\n持续边界｜SEC-24仍open/accepted by design：同一machine的agent以root共享container，可读彼此home、token和浏览器session；新的notes ACL并未解决机器隔离。",
+      "signals": "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。；安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。",
+      "why": "研究判断｜引用可观测性与授权修复一起，让读取身份问题可核查。但安全修复的迁移也会扩权，必须与权限对比一起审查。",
+      "creator": "CigaleAI；官方CigaleAI/guilds仓库，AGPL-3.0。没有核验团队营收或用户数。",
+      "learn": "记录谁改、谁读、谁唤醒与引用内容的版本；嵌入解析必须使用执行agent身份；ACL迁移提供dry-run差异及默认拒绝，比只发“权限已升级”公告有用。",
+      "limits": "未部署或攻防复验，修复状态来自官方代码与register。新ACL不等于sandbox隔离；迁移不保留所有旧限制。shared notes仍可能错误/被提示注入，读写历史不是内容真实性。",
+      "worth": "Yes",
+      "observed_at": "2026-10-25",
+      "selection": "main",
+      "signal_details": [
+        "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。",
+        "安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
+      ]
     }
   ]
 }
