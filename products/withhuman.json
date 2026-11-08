@@ -1,24 +1,80 @@
 {
   "id": "withhuman",
   "name": "withHuman",
-  "category": "Runtime授权 / 人工审批",
-  "date": "2026-10-29",
-  "description": "Hermes插件收窄子进程环境并联动审批超时，同时明确后置hook改参和全局安装设置边界。",
-  "facts": "官方发布/代码事实｜10/29 ed5c6ba把Hermes插件CLI环境改为allowlist，不再直接继承provider key和其他插件secret；保留hook超时时请求在其到期前失效，CLI提前停止，避免外部审批悬挂。setup改为询问是否将plugins.hook_callback_timeout设0（影响全部插件hook），但Enter默认仍yes。README明确后续hook可改参数，必须避免后续pre_tool_call hook改写，否则运行内容可能不同于批准内容。",
-  "signals": "10/29 Hermes插件catalog review后的代码与文档修正；不是hosted部署或采用率证据。",
-  "why": "研究判断｜治理产品的接入/安装过程也能扩大权限或改变全局超时；“修改后重审”的文档承诺不等于后续hook执行路径具有参数不可变性。应把审批生命周期和参数最终版本一起验收。",
-  "creator": "withHuman维护团队，commit说明来自Hermes插件catalog review；不推断付费采用。",
-  "learn": "最小子进程环境；审批超时与宿主hook联动；安装时披露全局变更和卸载残留。",
-  "limits": "是已合并代码与README，不是hosted部署验证；不是全部插件路径安全审计。该README还说明移除插件不会自动撤销timeout/gateway/skills；许可证仍应按历史ELv2，不称无限制开源托管克隆。",
+  "category": "Agent Approval / Human-in-the-loop",
+  "date": "2026-11-05",
+  "description": "Agent审批和审计项目，核心代码许可改为Apache 2.0。",
+  "facts": "代码事实｜PR143将LICENSE从Elastic License2.0替换为Apache2.0，并更新README/package/插件声明；新增商标说明，代码许可不授权withHuman名称和logo，fork需自有品牌。",
+  "signals": "2026-11-05 09:26:40 UTC提交dc6f673合入；可验证分发条件改变，未核实具体发行包及商业采用指标。",
+  "why": "研究判断｜修正W44：ELv2托管限制不能继续套用在本次Apache代码版本。旧版本、第三方依赖、商标和服务条款仍须分别核验。",
+  "creator": "版权与商标主体Metoro, Inc.；未核实新的创业故事或收入。",
+  "learn": "许可与品牌权限也需持续观察；代码许可扩大不等于审批安全增强。",
+  "limits": "已读完整许可及商标差异，未验证打包发布或托管行为；不是法律意见。W44 hook改参/全局超时边界并未被许可变化解决。",
   "worth": "Yes",
-  "observed_at": "2026-11-01",
   "first_seen": "2026-W42",
-  "last_seen": "2026-W44",
   "weeks": [
     "2026-W42",
     "2026-W43",
-    "2026-W44"
+    "2026-W44",
+    "2026-W45"
   ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-13（官方 1.0 发布 10/13；PH 发布 10/15；10/16 继续修复）",
+      "signal": "1.0 正式开放核心代码、Python/TypeScript SDK 与自托管版；10/16 修复 Hermes 工具调用无法送达，显示“有审批 UI”仍不足以证明调用链受控。"
+    },
+    {
+      "week": "2026-W43",
+      "event": "2026-10-20–22",
+      "signal": "从批准/拒绝按钮推进到“按审阅意见修改后重新送审”、长工具参数规则求值及可读摘要。 窗口内10个main commits，无GitHub release条目；未核验hosted环境实际部署版本。"
+    },
+    {
+      "week": "2026-W44",
+      "event": "2026-10-29",
+      "signal": "Hermes插件收窄子进程环境并联动审批超时，同时明确后置hook改参和全局安装设置边界。 10/29 Hermes插件catalog review后的代码与文档修正；不是hosted部署或采用率证据。"
+    },
+    {
+      "week": "2026-W45",
+      "event": "2026-11-05",
+      "signal": "Agent审批和审计项目，核心代码许可改为Apache 2.0。 2026-11-05 09:26:40 UTC提交dc6f673合入；可验证分发条件改变，未核实具体发行包及商业采用指标。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W42",
+      "signals": "PH 108 分，日榜第 8（平台公开计数；非商业采用证据；观测2026-10-18）；GitHub 页面快照 13 stars、2 forks（平台公开计数；非商业采用证据；观测2026-10-18）；10/13 1.0；10/16 1.0.20 修复 Hermes 调用（官方变更记录；不是客户采用数据；观测2026-10-18）",
+      "observed_at": "2026-10-18T08:42:15+08:00"
+    },
+    {
+      "week": "2026-W43",
+      "signals": [
+        "窗口内10个main commits，无GitHub release条目；未核验hosted环境实际部署版本。"
+      ],
+      "observed_at": "2026-10-25"
+    },
+    {
+      "week": "2026-W44",
+      "signals": [
+        "10/29 Hermes插件catalog review后的代码与文档修正；不是hosted部署或采用率证据。"
+      ],
+      "observed_at": "2026-11-01T00:54:00Z"
+    },
+    {
+      "week": "2026-W45",
+      "signals": "2026-11-05 09:26:40 UTC提交dc6f673合入；可验证分发条件改变，未核实具体发行包及商业采用指标。",
+      "observed_at": "2026-11-08"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42",
+    "2026-W43",
+    "2026-W44",
+    "2026-W45"
+  ],
+  "last_seen": "2026-W45",
+  "observed_at": "2026-11-08",
+  "selection": "main",
   "sources": [
     {
       "platform": "PH 创作者发布与讨论",
@@ -71,31 +127,12 @@
     {
       "platform": "GitHub 固定来源",
       "url": "https://github.com/withHumanAI/withHuman/blob/ed5c6ba819e5c41bf2664bbbc401bd31b4e17a1a/plugins/hermes/withhuman/README.md"
-    }
-  ],
-  "timeline": [
-    {
-      "week": "2026-W42",
-      "event": "2026-10-13（官方 1.0 发布 10/13；PH 发布 10/15；10/16 继续修复）",
-      "signal": "1.0 正式开放核心代码、Python/TypeScript SDK 与自托管版；10/16 修复 Hermes 工具调用无法送达，显示“有审批 UI”仍不足以证明调用链受控。"
     },
     {
-      "week": "2026-W43",
-      "event": "2026-10-20–22",
-      "signal": "从批准/拒绝按钮推进到“按审阅意见修改后重新送审”、长工具参数规则求值及可读摘要。 窗口内10个main commits，无GitHub release条目；未核验hosted环境实际部署版本。"
-    },
-    {
-      "week": "2026-W44",
-      "event": "2026-10-29",
-      "signal": "Hermes插件收窄子进程环境并联动审批超时，同时明确后置hook改参和全局安装设置边界。 10/29 Hermes插件catalog review后的代码与文档修正；不是hosted部署或采用率证据。"
+      "platform": "核心重许可代码差异",
+      "url": "https://github.com/withHumanAI/withHuman/commit/dc6f673222aba5409dda44fd95b86a284586220e"
     }
   ],
-  "featured_weeks": [
-    "2026-W42",
-    "2026-W43",
-    "2026-W44"
-  ],
-  "selection": "main",
   "source_details": [
     {
       "label": "PH 创作者发布与讨论",
@@ -194,49 +231,13 @@
       "observed_on": "2026-11-01",
       "kind": "一手公开来源",
       "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
-    }
-  ],
-  "signal_details": [
-    "10/29 Hermes插件catalog review后的代码与文档修正；不是hosted部署或采用率证据。"
-  ],
-  "important_signals": [
-    {
-      "week": "2026-W42",
-      "signals": "PH 108 分，日榜第 8（平台公开计数；非商业采用证据；观测2026-10-18）；GitHub 页面快照 13 stars、2 forks（平台公开计数；非商业采用证据；观测2026-10-18）；10/13 1.0；10/16 1.0.20 修复 Hermes 调用（官方变更记录；不是客户采用数据；观测2026-10-18）",
-      "observed_at": "2026-10-18T08:42:15+08:00"
     },
     {
-      "week": "2026-W43",
-      "signals": [
-        "窗口内10个main commits，无GitHub release条目；未核验hosted环境实际部署版本。"
-      ],
-      "observed_at": "2026-10-25"
-    },
-    {
-      "week": "2026-W44",
-      "signals": [
-        "10/29 Hermes插件catalog review后的代码与文档修正；不是hosted部署或采用率证据。"
-      ],
-      "observed_at": "2026-11-01T00:54:00Z"
-    }
-  ],
-  "historical_summaries": [
-    {
-      "week": "2026-W43",
-      "date": "2026-10-20–22",
-      "description": "从批准/拒绝按钮推进到“按审阅意见修改后重新送审”、长工具参数规则求值及可读摘要。",
-      "facts": "事实｜10/22修改agent指导：若拒绝附带修改要求，只做该项修改并将同一调用重新送审；换工具、脚本、换说法或拆小绕过拒绝仍禁止。此处是使用指导变化，不是已证明的runtime防绕过机制。\n事实｜10/22规则/webhook输入上限64KiB提高到1MiB；字符串contains/prefix/equality按KiB计预算，regex按16字节；超限转人工并给input_too_large代码。代码含900KB长Bash和150KB regex测试。\n事实｜10/22新增request summary扩展点和通知摘要，队列可按摘要展示；改动workflow命令序列，作者要求在zero pending approvals时部署。\n持续边界｜当前onboarding生成的StartingBlocks仍批准未被选择的工具，空tool list全部批准；ELv2许可未变。不能把本周易用性更新说成默认deny或完全开源。",
-      "signals": "窗口内10个main commits，无GitHub release条目；未核验hosted环境实际部署版本。",
-      "why": "研究判断｜审批产品需要区分“拒绝并要求修订”与“拒绝执行”，也需避免长参数意外把大量正常动作全部升级人工，造成审批疲劳。",
-      "creator": "withHumanAI；LICENSE copyright为Metoro, Inc.，Elastic License 2.0。",
-      "learn": "拒绝应带结构化下一步，修订必须新一轮授权；规则求值有输入/算力预算，超限原因单独编码；摘要不能替代可检查的原始参数。",
-      "limits": "默认onboarding是按所选工具拦截，不是全量deny。摘要扩展点可被edition实现，不等于开源版自带AI摘要。升级需先清空pending审批；许可不允许提供实质同功能的第三方托管服务。",
-      "worth": "Yes",
-      "observed_at": "2026-10-25",
-      "selection": "main",
-      "signal_details": [
-        "窗口内10个main commits，无GitHub release条目；未核验hosted环境实际部署版本。"
-      ]
+      "label": "核心重许可代码差异",
+      "url": "https://github.com/withHumanAI/withHuman/commit/dc6f673222aba5409dda44fd95b86a284586220e",
+      "source_date": "2026-11-05T09:26:40Z",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-08"
     }
   ]
 }

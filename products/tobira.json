@@ -1,0 +1,75 @@
+{
+  "id": "tobira",
+  "name": "Tobira Site Agent",
+  "category": "SMB网站／Agent commerce／客户沟通。",
+  "date": "2026-11-06",
+  "description": "将网站资料变为能与访客及其AI交流的站点agent，并将线索交接到邮件、Telegram或预约。",
+  "facts": "已核验官方说明｜将网站资料变为能与访客及其AI交流的站点agent，并将线索交接到邮件、Telegram或预约。创始人明确当前先做电话／咨询，实体产品是以后，勿把介绍中的takes orders泛化为全品类成交闭环。",
+  "signals": "#1 of day；产品页Upvote 379 points，1.7K followers；榜单3379包含Shipping points +3000，绝不能写3379票。均为11/8快照，非付费客户数。",
+  "why": "研究判断｜W44 Dedica关注网站可被agent合法使用，Tobira把它延伸至站点所有者的线索处理。真正需要追踪的是成交流程和承诺边界，不是把所有AI流量算商机。",
+  "creator": "[Vlad的制作复盘](https://www.producthunt.com/p/tobira-ai/back-after-5-months-what-changed-in-how-i-build-tobira-with-ai-agents)：跨AI会话共享决策／尝试／下一步，解决停滞的agent loop。效果仅为作者自述，没有独立效率测试。",
+  "learn": "研究判断｜把知识边界、人工交接与未成交问题作为产品对象；尽早暴露不能完成的步骤。",
+  "limits": "官网未能直接完成核验，功能与创作者故事以PH发布方原文为限；未实际测试。未核验客户收入、留存，未证明规则能完全防幻觉。",
+  "worth": "Yes",
+  "observed_at": "2026-11-08",
+  "first_seen": "2026-W45",
+  "last_seen": "2026-W45",
+  "weeks": [
+    "2026-W45"
+  ],
+  "sources": [
+    {
+      "platform": "产品及创始人评论",
+      "url": "https://www.producthunt.com/products/tobira-ai"
+    },
+    {
+      "platform": "当日榜单",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/6"
+    },
+    {
+      "platform": "Vlad的制作复盘",
+      "url": "https://www.producthunt.com/p/tobira-ai/back-after-5-months-what-changed-in-how-i-build-tobira-with-ai-agents"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "产品及创始人评论",
+      "url": "https://www.producthunt.com/products/tobira-ai",
+      "source_date": "2026-11-06",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "当日榜单",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/6",
+      "source_date": "2026-11-06",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "Vlad的制作复盘",
+      "url": "https://www.producthunt.com/p/tobira-ai/back-after-5-months-what-changed-in-how-i-build-tobira-with-ai-agents",
+      "source_date": null,
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W45",
+      "event": "2026-11-06",
+      "signal": "#1 of day；产品页Upvote 379 points，1.7K followers；榜单3379包含Shipping points +3000，绝不能写3379票。均为11/8快照，非付费客户数。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W45",
+      "signals": "#1 of day；产品页Upvote 379 points，1.7K followers；榜单3379包含Shipping points +3000，绝不能写3379票。均为11/8快照，非付费客户数。",
+      "observed_at": "2026-11-08"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W45"
+  ],
+  "selection": "main"
+}

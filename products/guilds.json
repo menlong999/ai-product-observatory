@@ -1,24 +1,81 @@
 {
   "id": "guilds",
   "name": "Guilds",
-  "category": "持久多Agent工作台 / 授权与证据",
-  "date": "2026-10-26–30",
-  "description": "在首次工具发现、recipe导出和历史版本读取中补齐权限边界，同时披露新增浏览器信任面。",
-  "facts": "官方发布/代码事实｜10/26 5c61644修复先读bindings后sync首次tool listing导致默认Off工具被提供为On；现在sync后重新读取，测试同时检查run实际工具和access视图。10/28 5bcd062给recipe capture传入带真实private-guild边界的loadOperatorActor，测试按路径/文件名都不能复制未获权私有guild note；0dfe30b为Memory revision读补orgId检查，跨组织返回404。\n官方发布/代码事实｜同时10/30新增agent-optimized browser的安全登记SEC-53/54仍为open accepted，分别指出容器网络DevTools relay和宿主临时CDP bridge的本地信任边界。不能因修复SEC-48/50/51就宣布安全成熟。",
-  "signals": "10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。",
-  "why": "研究判断｜权限必须随发现、导出、历史版本、读取视图重复执行，而不是只在主页面检查一次。功能扩张同时增加新的网络信任面，安全登记透明不等于漏洞全部修复。",
-  "creator": "CigaleAI/Guilds仓库维护者；未核实收入。",
-  "learn": "tool发现后再求权限；export/capture沿用调用者身份；历史读取先验租户；回归测试必须同时看UI和执行结果。",
-  "limits": "未运行测试或验证hosted部署；CHANGELOG浏览器内容在Unreleased，不作正式产品release。安全登记是维护者披露和研究patch阅读，不是独立审计认证。",
+  "category": "Agent Runtime / Workflow",
+  "date": "2026-11-05",
+  "description": "把run待唤醒变为可见、可取消、可跨交接追踪的状态。",
+  "facts": "代码事实｜run详情增加pending_wake，取消端点及run.wake.changed事件；唤醒随continuation转移，运行到达上限取消待唤醒。文档和代码均为可读取run者即可取消，并非额外严格操作角色。",
+  "signals": "2026-11-05 PR29合入main，新增状态广播测试断言；未核实发行包/托管上线及采用数值。",
+  "why": "研究判断｜W44工具发现与历史权限延伸到跨时间动作控制：完成当前运行不等于未来不会再行动。",
+  "creator": "CigaleAI仓库贡献者m4nuC等维护；不从AI协作署名推断团队规模或效率。",
+  "learn": "交接、撤销和预算耗尽需更新同一持久化待执行记录，面向用户展示时间与原因。",
+  "limits": "已读实现和测试差异，未执行测试或独立审计；main合并不等于正式发行。可读即可取消需按企业角色再审。",
   "worth": "Yes",
-  "observed_at": "2026-11-01",
   "first_seen": "2026-W42",
-  "last_seen": "2026-W44",
   "weeks": [
     "2026-W42",
     "2026-W43",
-    "2026-W44"
+    "2026-W44",
+    "2026-W45"
   ],
+  "timeline": [
+    {
+      "week": "2026-W42",
+      "event": "2026-10-12（PH 发布 10/12；安全登记有 10/13–17 新记录）",
+      "signal": "产品发布之外，原始安全登记主动暴露机器级信任边界与未解决风险，适合写“可观察”与“隔离”是两项不同能力。"
+    },
+    {
+      "week": "2026-W43",
+      "event": "2026-10-18–23",
+      "signal": "从共享notes的协作表面，推进到读写来源可见、Task引用按agent权限求值及逐项ACL；同时暴露迁移扩权代价。 窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。；安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
+    },
+    {
+      "week": "2026-W44",
+      "event": "2026-10-26–30",
+      "signal": "在首次工具发现、recipe导出和历史版本读取中补齐权限边界，同时披露新增浏览器信任面。 10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
+    },
+    {
+      "week": "2026-W45",
+      "event": "2026-11-05",
+      "signal": "把run待唤醒变为可见、可取消、可跨交接追踪的状态。 2026-11-05 PR29合入main，新增状态广播测试断言；未核实发行包/托管上线及采用数值。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W42",
+      "signals": "PH 202 分，日榜第 4（平台公开计数；非商业采用证据；观测2026-10-18）；GitHub 快照 60 stars、8 forks；AGPL-3.0 core（平台公开计数；非商业采用证据；观测2026-10-18）；10/13 修复跨私有 guild 放置 agent 的权限问题；同机共享 root 边界仍明确接受（维护者安全登记；未独立审计；观测2026-10-18）",
+      "observed_at": "2026-10-18T08:42:15+08:00"
+    },
+    {
+      "week": "2026-W43",
+      "signals": [
+        "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。",
+        "安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
+      ],
+      "observed_at": "2026-10-25"
+    },
+    {
+      "week": "2026-W44",
+      "signals": [
+        "10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
+      ],
+      "observed_at": "2026-11-01T00:54:00Z"
+    },
+    {
+      "week": "2026-W45",
+      "signals": "2026-11-05 PR29合入main，新增状态广播测试断言；未核实发行包/托管上线及采用数值。",
+      "observed_at": "2026-11-08"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W42",
+    "2026-W43",
+    "2026-W44",
+    "2026-W45"
+  ],
+  "last_seen": "2026-W45",
+  "observed_at": "2026-11-08",
+  "selection": "main",
   "sources": [
     {
       "platform": "PH 发布与讨论",
@@ -75,31 +132,16 @@
     {
       "platform": "GitHub 固定来源",
       "url": "https://github.com/CigaleAI/guilds/blob/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64/docs/architecture/security-register.md"
-    }
-  ],
-  "timeline": [
-    {
-      "week": "2026-W42",
-      "event": "2026-10-12（PH 发布 10/12；安全登记有 10/13–17 新记录）",
-      "signal": "产品发布之外，原始安全登记主动暴露机器级信任边界与未解决风险，适合写“可观察”与“隔离”是两项不同能力。"
     },
     {
-      "week": "2026-W43",
-      "event": "2026-10-18–23",
-      "signal": "从共享notes的协作表面，推进到读写来源可见、Task引用按agent权限求值及逐项ACL；同时暴露迁移扩权代价。 窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。；安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
+      "platform": "待唤醒显示及操作者取消实现",
+      "url": "https://github.com/CigaleAI/guilds/commit/b28fdf0579375963f316f5669e84891fe2a47b78"
     },
     {
-      "week": "2026-W44",
-      "event": "2026-10-26–30",
-      "signal": "在首次工具发现、recipe导出和历史版本读取中补齐权限边界，同时披露新增浏览器信任面。 10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
+      "platform": "PR29合并记录",
+      "url": "https://github.com/CigaleAI/guilds/commit/ee45585933dc6dec6669d692baf8fdb05963807d"
     }
   ],
-  "featured_weeks": [
-    "2026-W42",
-    "2026-W43",
-    "2026-W44"
-  ],
-  "selection": "main",
   "source_details": [
     {
       "label": "PH 发布与讨论",
@@ -212,51 +254,20 @@
       "observed_on": "2026-11-01",
       "kind": "一手公开来源",
       "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
-    }
-  ],
-  "signal_details": [
-    "10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
-  ],
-  "important_signals": [
-    {
-      "week": "2026-W42",
-      "signals": "PH 202 分，日榜第 4（平台公开计数；非商业采用证据；观测2026-10-18）；GitHub 快照 60 stars、8 forks；AGPL-3.0 core（平台公开计数；非商业采用证据；观测2026-10-18）；10/13 修复跨私有 guild 放置 agent 的权限问题；同机共享 root 边界仍明确接受（维护者安全登记；未独立审计；观测2026-10-18）",
-      "observed_at": "2026-10-18T08:42:15+08:00"
     },
     {
-      "week": "2026-W43",
-      "signals": [
-        "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。",
-        "安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
-      ],
-      "observed_at": "2026-10-25"
+      "label": "待唤醒显示及操作者取消实现",
+      "url": "https://github.com/CigaleAI/guilds/commit/b28fdf0579375963f316f5669e84891fe2a47b78",
+      "source_date": "2026-11-05T12:59:15Z",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-08"
     },
     {
-      "week": "2026-W44",
-      "signals": [
-        "10/26–30权限回归与安全登记变化；新增浏览器为Unreleased，SEC-53/54仍open accepted。"
-      ],
-      "observed_at": "2026-11-01T00:54:00Z"
-    }
-  ],
-  "historical_summaries": [
-    {
-      "week": "2026-W43",
-      "date": "2026-10-18–23",
-      "description": "从共享notes的协作表面，推进到读写来源可见、Task引用按agent权限求值及逐项ACL；同时暴露迁移扩权代价。",
-      "facts": "事实｜10/19 Studio State列出note/table/script/Memory由谁改动/读取，References显示Task嵌入链和未解析项，Topology把stored wake cause与操作人作为事实呈现。\n事实｜10/22 notes和tables统一到artifact_access，agent显式行优先，否则取guild/org较高权限，无行无访问；Task嵌入以Task自己的agent解析，不再用高权限operator actor，修复SEC-42私有笔记进入别的guild提示词的问题。\n事实｜官方migration 0012明确给组织表默认org-read，旧note grant覆盖不迁移；此前没有任何guild授权的组织表变为所有agent可读，被单独收紧的agent会回到新的共享行，需要operator重新设定。\n持续边界｜SEC-24仍open/accepted by design：同一machine的agent以root共享container，可读彼此home、token和浏览器session；新的notes ACL并未解决机器隔离。",
-      "signals": "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。；安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。",
-      "why": "研究判断｜引用可观测性与授权修复一起，让读取身份问题可核查。但安全修复的迁移也会扩权，必须与权限对比一起审查。",
-      "creator": "CigaleAI；官方CigaleAI/guilds仓库，AGPL-3.0。没有核验团队营收或用户数。",
-      "learn": "记录谁改、谁读、谁唤醒与引用内容的版本；嵌入解析必须使用执行agent身份；ACL迁移提供dry-run差异及默认拒绝，比只发“权限已升级”公告有用。",
-      "limits": "未部署或攻防复验，修复状态来自官方代码与register。新ACL不等于sandbox隔离；迁移不保留所有旧限制。shared notes仍可能错误/被提示注入，读写历史不是内容真实性。",
-      "worth": "Yes",
-      "observed_at": "2026-10-25",
-      "selection": "main",
-      "signal_details": [
-        "窗口内30个main commits，无release条目；版本频率不等于安全成熟或商业采用。",
-        "安全register明确记载SEC-42发现10/19、修复10/22和剩余风险，可追溯性比泛化安全承诺更有价值。"
-      ]
+      "label": "PR29合并记录",
+      "url": "https://github.com/CigaleAI/guilds/commit/ee45585933dc6dec6669d692baf8fdb05963807d",
+      "source_date": "2026-11-05T14:27:42Z",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-08"
     }
   ]
 }

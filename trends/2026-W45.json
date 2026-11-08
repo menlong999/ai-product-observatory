@@ -1,0 +1,807 @@
+[
+  {
+    "id": "execution-governance",
+    "weeks": [
+      "2026-W33",
+      "2026-W35",
+      "2026-W36",
+      "2026-W37",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42",
+      "2026-W43",
+      "2026-W44",
+      "2026-W45"
+    ],
+    "change": "Docker发行版阻止截断工具执行并区分拒绝；Deep Agents向父任务明确上报子代理拒绝；Guilds让未来唤醒可见和可取消。许可变化不代表旧审批边界消失。",
+    "products": [
+      "withhuman",
+      "guilds",
+      "librepaper",
+      "docker-agent",
+      "alter",
+      "deep-agents"
+    ],
+    "evidence": [
+      "https://busabase.com/docs/mcp",
+      "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+      "https://rill.love/privacy",
+      "https://www.producthunt.com/products/withhuman",
+      "https://github.com/withHumanAI/withHuman",
+      "https://withhuman.ai/changelog",
+      "https://withhuman.ai/docs/getting-started/set-up-mcp-gateway",
+      "https://github.com/withHumanAI/withHuman/blob/main/LICENSE",
+      "https://www.producthunt.com/products/guilds-run",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md",
+      "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "https://github.com/LibrePaper/librepaper",
+      "https://librepaper.org/what.html",
+      "https://librepaper.org/notebooks/quarto.html",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/notebooks/quarto.md",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/privacy.md",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://github.com/docker/docker-agent",
+      "https://news.ycombinator.com/front?day=2026-10-07",
+      "https://github.com/docker/docker-agent/pull/4589",
+      "https://github.com/docker/docker-agent/pull/4579",
+      "https://github.com/docker/docker-agent/releases",
+      "https://news.ycombinator.com/item?id=50176908",
+      "https://github.com/CigaleAI/guilds/commit/8d3f8536d6eb623b82af5afa756f9e68bf8fa61c",
+      "https://github.com/withHumanAI/withHuman/commit/ed5c6ba819e5c41bf2664bbbc401bd31b4e17a1a",
+      "https://github.com/withHumanAI/withHuman/blob/ed5c6ba819e5c41bf2664bbbc401bd31b4e17a1a/plugins/hermes/withhuman/README.md",
+      "https://github.com/CigaleAI/guilds/commit/5c61644e58e32ecb196ba35e3c655fcc53450193",
+      "https://github.com/CigaleAI/guilds/commit/5bcd062e8e2b552a8b7be807302646cf0f45bb91",
+      "https://github.com/CigaleAI/guilds/commit/0dfe30bbf28ccb59be9cb036bedb834893aa22b3",
+      "https://github.com/CigaleAI/guilds/commit/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64",
+      "https://github.com/CigaleAI/guilds/blob/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64/docs/architecture/security-register.md",
+      "https://github.com/docker/docker-agent/releases/tag/v1.157.0",
+      "https://github.com/withHumanAI/withHuman/commit/dc6f673222aba5409dda44fd95b86a284586220e",
+      "https://github.com/CigaleAI/guilds/commit/b28fdf0579375963f316f5669e84891fe2a47b78",
+      "https://github.com/CigaleAI/guilds/commit/ee45585933dc6dec6669d692baf8fdb05963807d",
+      "https://github.com/langchain-ai/deepagents/releases/tag/deepagents==0.7.33",
+      "https://github.com/langchain-ai/deepagents/commit/0fd438a4b952efcc13a4f599d2d7699dd6966f2d"
+    ],
+    "name": "执行治理",
+    "status": "持续深化",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "补充跨入口和恢复路径不变量，不声称普遍解决",
+        "products": [
+          "busabase",
+          "docker-agent",
+          "rill-browser"
+        ],
+        "evidence": [
+          "https://busabase.com/docs/mcp",
+          "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+          "https://rill.love/privacy"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W39 policy/boundary→W40数据与动作权限→W41入口/恢复不变量→W42默认批准、旧直连旁路与确认时序。新增失败边界，未证明治理已普遍解决。",
+        "status": "深化",
+        "products": [
+          "withhuman",
+          "guilds",
+          "librepaper",
+          "docker-agent"
+        ]
+      },
+      {
+        "week": "2026-W43",
+        "event": "新增证据要求将身份、动作版本与迁移默认分别验收；不宣布安全问题解决。",
+        "products": [
+          "alter",
+          "withhuman",
+          "guilds"
+        ],
+        "evidence": [
+          "https://news.ycombinator.com/item?id=50176908",
+          "https://withhuman.ai/changelog",
+          "https://github.com/CigaleAI/guilds/commit/8d3f8536d6eb623b82af5afa756f9e68bf8fa61c"
+        ],
+        "change": "新增多用户代理执行权限、修改后重审说明、数据ACL迁移扩权反例。",
+        "status": "持续观察"
+      },
+      {
+        "week": "2026-W44",
+        "change": "将审批安装副作用、后置hook、首次tool发现、导出与历史版本纳入权限验收；新增浏览器信任面仍有open accepted项，不宣称整体更安全。",
+        "status": "持续观察",
+        "products": [
+          "withhuman",
+          "guilds"
+        ],
+        "evidence": [
+          "https://github.com/withHumanAI/withHuman/commit/ed5c6ba819e5c41bf2664bbbc401bd31b4e17a1a",
+          "https://github.com/withHumanAI/withHuman/blob/ed5c6ba819e5c41bf2664bbbc401bd31b4e17a1a/plugins/hermes/withhuman/README.md",
+          "https://github.com/CigaleAI/guilds/commit/5c61644e58e32ecb196ba35e3c655fcc53450193",
+          "https://github.com/CigaleAI/guilds/commit/5bcd062e8e2b552a8b7be807302646cf0f45bb91",
+          "https://github.com/CigaleAI/guilds/commit/0dfe30bbf28ccb59be9cb036bedb834893aa22b3",
+          "https://github.com/CigaleAI/guilds/commit/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64",
+          "https://github.com/CigaleAI/guilds/blob/0c67a67c4f92f1016f124e7f5ec7afe35e1beb64/docs/architecture/security-register.md"
+        ],
+        "observed_at": "2026-11-01T00:54:00Z"
+      },
+      {
+        "week": "2026-W45",
+        "change": "Docker发行版阻止截断工具执行并区分拒绝；Deep Agents向父任务明确上报子代理拒绝；Guilds让未来唤醒可见和可取消。许可变化不代表旧审批边界消失。",
+        "status": "持续深化",
+        "evidence": [
+          "https://github.com/docker/docker-agent/releases/tag/v1.157.0",
+          "https://github.com/withHumanAI/withHuman/commit/dc6f673222aba5409dda44fd95b86a284586220e",
+          "https://github.com/CigaleAI/guilds/commit/b28fdf0579375963f316f5669e84891fe2a47b78",
+          "https://github.com/CigaleAI/guilds/commit/ee45585933dc6dec6669d692baf8fdb05963807d",
+          "https://github.com/langchain-ai/deepagents/releases/tag/deepagents==0.7.33",
+          "https://github.com/langchain-ai/deepagents/commit/0fd438a4b952efcc13a4f599d2d7699dd6966f2d"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "typed-decision-plane",
+    "weeks": [
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42",
+      "2026-W43",
+      "2026-W44",
+      "2026-W45"
+    ],
+    "change": "Strands v0.3.0隔离健康检查与繁忙worker；11/6可选max-concurrency仅main，不是发行包，不推断真实GPU吞吐或中文准确率。",
+    "products": [
+      "strands-decider",
+      "jevcrawl",
+      "pulse-local"
+    ],
+    "evidence": [
+      "https://strandsagents.com/blog/introducing-strands-decider/",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://news.ycombinator.com/item?id=49987076",
+      "https://github.com/strands-labs/strands-decider",
+      "https://github.com/strands-labs/strands-decider/pull/18",
+      "https://github.com/strands-labs/strands-decider/pull/79",
+      "https://github.com/strands-labs/strands-decider/pull/81",
+      "https://pypi.org/project/strands-decider/",
+      "https://github.com/RayenMlayeh/jevcrawl",
+      "https://news.ycombinator.com/item?id=50080450",
+      "https://hacker-news.firebaseio.com/v0/item/50080450.json",
+      "https://pypi.org/project/jevcrawl/",
+      "https://news.ycombinator.com/item?id=50080275",
+      "https://hacker-news.firebaseio.com/v0/item/50080275.json",
+      "https://pulseos.finance/pulse-local/writing/agree-or-not-sure",
+      "https://pulseos.finance/privacy",
+      "https://github.com/strands-labs/strands-decider/commit/e69edb2650d87ecdd28e6ff0563c5a40d716f1f1",
+      "https://github.com/strands-labs/strands-decider/commit/d807d8698ff7f58a2cf2b62444f629ba0c40ffa1",
+      "https://github.com/strands-labs/strands-decider/commit/b81d443c07438dc5ed51d0e85f9db184ad65d809",
+      "https://github.com/strands-labs/strands-decider/issues/103",
+      "https://github.com/strands-labs/strands-decider/commit/13faf5214f7cbea07d005278f1aeaf3973611eba",
+      "https://github.com/strands-labs/strands-decider/commit/13c05149265dc404c09d2469636f71b1320e1713",
+      "https://github.com/strands-labs/strands-decider/releases/tag/v0.3.0",
+      "https://github.com/strands-labs/strands-decider/commit/9a7470eb90e5afe5ae9f0e1dfc52d65bd3ab71b7",
+      "https://github.com/strands-labs/strands-decider/commit/87d0fd5774587ae786ccfea7470e58f6a5b4ddef"
+    ],
+    "name": "有类型的判断",
+    "status": "深化服务工程，不推断质量突破",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "增加公开架构与可替换evaluator实现；仍是窄任务",
+        "products": [
+          "strands-decider",
+          "docker-agent"
+        ],
+        "evidence": [
+          "https://strandsagents.com/blog/introducing-strands-decider/",
+          "https://github.com/docker/docker-agent/releases/tag/v1.149.0"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W38候选→W39 Jev/AgentRun→W40 Clef→W41 Strands→W42 Strands并发/校准与Jevcrawl应用。Pulse补充拒答和覆盖率代价；仍限定在可枚举/可验证任务。",
+        "status": "深化",
+        "products": [
+          "strands-decider",
+          "jevcrawl",
+          "pulse-local"
+        ]
+      },
+      {
+        "week": "2026-W43",
+        "change": "补记W43正文已明确的真实checkpoint续训、冻结评测集与发布测试路径；修补元数据滞后，不是新增产品事件。",
+        "status": "深化",
+        "products": [
+          "strands-decider"
+        ],
+        "evidence": [
+          "https://github.com/strands-labs/strands-decider/commit/e69edb2650d87ecdd28e6ff0563c5a40d716f1f1",
+          "https://github.com/strands-labs/strands-decider/commit/d807d8698ff7f58a2cf2b62444f629ba0c40ffa1",
+          "https://github.com/strands-labs/strands-decider/commit/b81d443c07438dc5ed51d0e85f9db184ad65d809",
+          "https://github.com/strands-labs/strands-decider/issues/103"
+        ],
+        "metadata_repair": true
+      },
+      {
+        "week": "2026-W44",
+        "change": "补齐MLX初始化/推理线程一致性与旧格式边界；仍是窄决策与服务可靠性，不是新模型或质量提升证明。",
+        "status": "深化",
+        "products": [
+          "strands-decider"
+        ],
+        "evidence": [
+          "https://github.com/strands-labs/strands-decider/commit/13faf5214f7cbea07d005278f1aeaf3973611eba",
+          "https://github.com/strands-labs/strands-decider/commit/13c05149265dc404c09d2469636f71b1320e1713"
+        ],
+        "observed_at": "2026-11-01T00:54:00Z"
+      },
+      {
+        "week": "2026-W45",
+        "change": "Strands v0.3.0隔离健康检查与繁忙worker；11/6可选max-concurrency仅main，不是发行包，不推断真实GPU吞吐或中文准确率。",
+        "status": "深化服务工程，不推断质量突破",
+        "evidence": [
+          "https://github.com/strands-labs/strands-decider/releases/tag/v0.3.0",
+          "https://github.com/strands-labs/strands-decider/commit/9a7470eb90e5afe5ae9f0e1dfc52d65bd3ab71b7",
+          "https://github.com/strands-labs/strands-decider/commit/87d0fd5774587ae786ccfea7470e58f6a5b4ddef"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "agent-owned-compute",
+    "weeks": [
+      "2026-W35",
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W35 OpenComputer→W38 Bitrise→W39 Solid/Sai→W40 Dots→W41 Pine。W42没有取得能升级端到端完成率判断的新对照；guilds共享机器边界是邻近证据，不算Pine等产品增长。",
+    "products": [
+      "guilds"
+    ],
+    "evidence": [
+      "https://pinecomputer.io/blog/introducing-pine-computer/",
+      "https://www.producthunt.com/products/guilds-run",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md"
+    ],
+    "name": "长期代理计算环境",
+    "status": "维持观察",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "区分checkpoint与resolved，运行环境优化不等于完成率领先",
+        "products": [
+          "pine-computer"
+        ],
+        "evidence": [
+          "https://pinecomputer.io/blog/introducing-pine-computer/"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W35 OpenComputer→W38 Bitrise→W39 Solid/Sai→W40 Dots→W41 Pine。W42没有取得能升级端到端完成率判断的新对照；guilds共享机器边界是邻近证据，不算Pine等产品增长。",
+        "status": "维持观察",
+        "products": [
+          "guilds"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shared-data-plane",
+    "weeks": [
+      "2026-W34",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W34共享上下文→W39权威事实/情景记忆→W40动作权限→W41提案与写入分离；W42 guilds显示共享错误传播，LibrePaper保留文档审阅权限。协作笔记不自动成为权威事实。",
+    "products": [
+      "guilds",
+      "librepaper"
+    ],
+    "evidence": [
+      "https://busabase.com/docs/mcp",
+      "https://github.com/AlkeraAI/Databench",
+      "https://www.producthunt.com/products/guilds-run",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md",
+      "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "https://github.com/LibrePaper/librepaper",
+      "https://librepaper.org/what.html",
+      "https://librepaper.org/notebooks/quarto.html",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/notebooks/quarto.md",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/privacy.md"
+    ],
+    "name": "共享事实与上下文",
+    "status": "维持并细分",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "共享事实+审批、可复现数据产物；与情景记忆分开",
+        "products": [
+          "busabase",
+          "databench"
+        ],
+        "evidence": [
+          "https://busabase.com/docs/mcp",
+          "https://github.com/AlkeraAI/Databench"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W34共享上下文→W39权威事实/情景记忆→W40动作权限→W41提案与写入分离；W42 guilds显示共享错误传播，LibrePaper保留文档审阅权限。协作笔记不自动成为权威事实。",
+        "status": "维持并细分",
+        "products": [
+          "guilds",
+          "librepaper"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "human-attention-router",
+    "weeks": [
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42",
+      "2026-W45"
+    ],
+    "change": "Guilds展示pending wake和取消原因，说明接管不只发生在当前窗口，也发生在未来动作；可读run者也能取消，组织角色边界仍需核查。",
+    "products": [
+      "withhuman",
+      "docker-agent",
+      "guilds"
+    ],
+    "evidence": [
+      "https://rill.love/privacy",
+      "https://www.producthunt.com/products/irisgo-public-beta",
+      "https://www.producthunt.com/products/withhuman",
+      "https://github.com/withHumanAI/withHuman",
+      "https://withhuman.ai/changelog",
+      "https://withhuman.ai/docs/getting-started/set-up-mcp-gateway",
+      "https://github.com/withHumanAI/withHuman/blob/main/LICENSE",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+      "https://github.com/docker/docker-agent",
+      "https://news.ycombinator.com/front?day=2026-10-07",
+      "https://github.com/docker/docker-agent/pull/4589",
+      "https://github.com/docker/docker-agent/pull/4579",
+      "https://github.com/docker/docker-agent/releases",
+      "https://github.com/CigaleAI/guilds/commit/b28fdf0579375963f316f5669e84891fe2a47b78",
+      "https://github.com/CigaleAI/guilds/commit/ee45585933dc6dec6669d692baf8fdb05963807d"
+    ],
+    "name": "人的注意力与审批",
+    "status": "持续观察",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "新增浏览器和桌面流程入口；交回人不等于硬权限",
+        "products": [
+          "rill-browser",
+          "irisgo"
+        ],
+        "evidence": [
+          "https://rill.love/privacy",
+          "https://www.producthunt.com/products/irisgo-public-beta"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W38移动接管→W39 Superset→W40异步注意力→W41浏览器/桌面入口；W42 withHuman增加审核路由，Docker暴露快速答复丢失与会话绑定缺口。UI交回人仍不等于正确消费批准。",
+        "status": "深化",
+        "products": [
+          "withhuman",
+          "docker-agent"
+        ]
+      },
+      {
+        "week": "2026-W45",
+        "change": "Guilds展示pending wake和取消原因，说明接管不只发生在当前窗口，也发生在未来动作；可读run者也能取消，组织角色边界仍需核查。",
+        "status": "持续观察",
+        "evidence": [
+          "https://github.com/CigaleAI/guilds/commit/b28fdf0579375963f316f5669e84891fe2a47b78",
+          "https://github.com/CigaleAI/guilds/commit/ee45585933dc6dec6669d692baf8fdb05963807d"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "agent-finops",
+    "weeks": [
+      "2026-W33",
+      "2026-W35",
+      "2026-W38",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42",
+      "2026-W43",
+      "2026-W44",
+      "2026-W45"
+    ],
+    "change": "Docker完整累计server fallback各次尝试的token预算；这是计量/停止逻辑证据，不是付费FinOps需求或盈利验证。",
+    "products": [
+      "navige",
+      "audr",
+      "docker-agent"
+    ],
+    "evidence": [
+      "https://github.com/openaudr/audr",
+      "https://www.producthunt.com/products/navige",
+      "https://navige.ai/",
+      "https://www.producthunt.com/products/chargebee",
+      "https://github.com/openaudr/audr/releases/tag/spec/v1.1.0",
+      "https://openaudr.dev/spec/v1.1.0/",
+      "https://github.com/openaudr/audr/pull/51",
+      "https://github.com/openaudr/audr/blob/main/adapters/openrouter/typescript/CHANGELOG.md",
+      "https://github.com/docker/docker-agent/releases/tag/v1.149.0",
+      "https://github.com/docker/docker-agent/releases/tag/v1.150.0",
+      "https://github.com/docker/docker-agent",
+      "https://news.ycombinator.com/front?day=2026-10-07",
+      "https://github.com/docker/docker-agent/pull/4589",
+      "https://github.com/docker/docker-agent/pull/4579",
+      "https://github.com/docker/docker-agent/releases",
+      "https://github.com/docker/docker-agent/commit/d0ef875adf778663a88bd6c54b29938f24455c51",
+      "https://github.com/docker/docker-agent/commit/5d3f904b77c2195d5a4fdc0a5c8a850ba82fd435",
+      "https://github.com/docker/docker-agent/releases/tag/v1.153.0",
+      "https://github.com/docker/docker-agent/releases/tag/v1.154.0",
+      "https://github.com/docker/docker-agent/commit/fcb865d638c06f30f4e2438d26107f1b180a9920",
+      "https://github.com/docker/docker-agent/releases/tag/v1.157.0"
+    ],
+    "name": "执行经济性与成本归因",
+    "status": "持续观察，不升为独立一级趋势",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "维持非一级；AUDR是跨层归因契约新增证据，不代表独立FinOps商业验证",
+        "products": [
+          "audr"
+        ],
+        "evidence": [
+          "https://github.com/openaudr/audr"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W35 Navigara→W38/W40 Weave→W41 AUDR→W42 Navige优化与AUDR feature/tool归因、Docker实际serving归因。执行链内证据增加，仍无足够独立生产采用与对账结果重开Standalone FinOps。",
+        "status": "维持非独立一级",
+        "products": [
+          "navige",
+          "audr",
+          "docker-agent"
+        ]
+      },
+      {
+        "week": "2026-W43",
+        "event": "代码接入证据增加，真实账单与采用证据仍缺。",
+        "products": [
+          "docker-agent",
+          "audr"
+        ],
+        "evidence": [
+          "https://github.com/docker/docker-agent/commit/d0ef875adf778663a88bd6c54b29938f24455c51"
+        ],
+        "change": "Docker每请求/压缩计价与并发模型身份、AUDR feature_id进入适配器；不据此恢复独立FinOps一级趋势。",
+        "status": "维持观察"
+      },
+      {
+        "week": "2026-W44",
+        "change": "从request/compaction进一步细到fallback hop及其拒绝证据；上周部分修复正式发行。计量更细不证明盈利，不升级独立FinOps一级趋势。",
+        "status": "持续观察",
+        "products": [
+          "docker-agent"
+        ],
+        "evidence": [
+          "https://github.com/docker/docker-agent/commit/5d3f904b77c2195d5a4fdc0a5c8a850ba82fd435",
+          "https://github.com/docker/docker-agent/releases/tag/v1.153.0",
+          "https://github.com/docker/docker-agent/releases/tag/v1.154.0",
+          "https://github.com/docker/docker-agent/commit/fcb865d638c06f30f4e2438d26107f1b180a9920"
+        ],
+        "observed_at": "2026-11-01T00:54:00Z"
+      },
+      {
+        "week": "2026-W45",
+        "change": "Docker完整累计server fallback各次尝试的token预算；这是计量/停止逻辑证据，不是付费FinOps需求或盈利验证。",
+        "status": "持续观察，不升为独立一级趋势",
+        "evidence": [
+          "https://github.com/docker/docker-agent/releases/tag/v1.157.0"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "teach-by-demonstration",
+    "weeks": [
+      "2026-W35",
+      "2026-W37",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W35 Caddi→W37退出重点→W41 IrisGo回到候选；W42没有足以升级的独立稳定性证据。Whistle离线微调不是演示学流程，也不是使用中的自动学习。",
+    "products": [],
+    "evidence": [
+      "https://www.producthunt.com/products/irisgo-public-beta"
+    ],
+    "name": "演示捕获",
+    "status": "候选，不升级",
+    "timeline": [
+      {
+        "week": "2026-W41",
+        "change": "W37退出重点后回到候选，不升级",
+        "products": [
+          "irisgo"
+        ],
+        "evidence": [
+          "https://www.producthunt.com/products/irisgo-public-beta"
+        ]
+      },
+      {
+        "week": "2026-W42",
+        "change": "W35 Caddi→W37退出重点→W41 IrisGo回到候选；W42没有足以升级的独立稳定性证据。Whistle离线微调不是演示学流程，也不是使用中的自动学习。",
+        "status": "候选，不升级",
+        "products": []
+      }
+    ]
+  },
+  {
+    "id": "independent-assurance",
+    "name": "独立验收与运行时证据",
+    "status": "维持重点，产品轮换",
+    "weeks": [
+      "2026-W34",
+      "2026-W35",
+      "2026-W36",
+      "2026-W37",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42",
+      "2026-W43",
+      "2026-W44",
+      "2026-W45"
+    ],
+    "change": "延续W44证据完整性要求；Tiden本周增量弱而退出Top，Docker/Deep Agents明确拒绝与失败的执行含义，不将终止语义修复当全流程验收。",
+    "products": [
+      "tiden",
+      "kerno",
+      "sphinx",
+      "heal-dev",
+      "docker-agent",
+      "deep-agents"
+    ],
+    "evidence": [
+      "https://www.producthunt.com/products/tiden",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/14",
+      "https://tiden.ai/changelog",
+      "https://tiden.ai/",
+      "https://kerno.io/blog/kerno-v1/",
+      "https://www.producthunt.com/products/kerno",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/15",
+      "https://kerno.io/",
+      "https://news.ycombinator.com/item?id=50137950",
+      "https://www.producthunt.com/products/heal-dev",
+      "https://tiden.ai/changelog#d-2026-10-21",
+      "https://tiden.ai/changelog#d-2026-10-26",
+      "https://tiden.ai/changelog#d-2026-10-28",
+      "https://tiden.ai/changelog#d-2026-10-29",
+      "https://github.com/docker/docker-agent/commit/5d3f904b77c2195d5a4fdc0a5c8a850ba82fd435",
+      "https://github.com/docker/docker-agent/releases/tag/v1.153.0",
+      "https://github.com/docker/docker-agent/releases/tag/v1.154.0",
+      "https://github.com/docker/docker-agent/commit/fcb865d638c06f30f4e2438d26107f1b180a9920",
+      "https://github.com/docker/docker-agent/releases/tag/v1.157.0",
+      "https://github.com/langchain-ai/deepagents/releases/tag/deepagents==0.7.33",
+      "https://github.com/langchain-ai/deepagents/commit/0fd438a4b952efcc13a4f599d2d7699dd6966f2d"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "W34可执行验证→W35独立验收→W37 Evidence Spine→W40门禁→W42 Tiden状态一致性与Kerno真实后端回归。升温指可检查机制增多，不指市场增长。",
+        "status": "升温（实现证据）",
+        "products": [
+          "tiden",
+          "kerno"
+        ]
+      },
+      {
+        "week": "2026-W43",
+        "event": "证据绑定和可复现性更具体，但未取得独立效果或商业采用数据。",
+        "products": [
+          "sphinx",
+          "heal-dev",
+          "tiden"
+        ],
+        "evidence": [
+          "https://news.ycombinator.com/item?id=50137950",
+          "https://www.producthunt.com/products/heal-dev",
+          "https://tiden.ai/changelog#d-2026-10-21"
+        ],
+        "change": "Sphinx理解练习、Heal运行时复现、Tiden分支/run归属形成互不替代的三层证据。",
+        "status": "提高观察优先级"
+      },
+      {
+        "week": "2026-W44",
+        "change": "从分支/run归属细化到release build SHA、capture与judge完整输入；缺失或未完成证据保持pending，删除截断仍仅main。",
+        "status": "提高观察优先级",
+        "products": [
+          "tiden",
+          "docker-agent"
+        ],
+        "evidence": [
+          "https://tiden.ai/changelog#d-2026-10-26",
+          "https://tiden.ai/changelog#d-2026-10-28",
+          "https://tiden.ai/changelog#d-2026-10-29",
+          "https://github.com/docker/docker-agent/commit/5d3f904b77c2195d5a4fdc0a5c8a850ba82fd435",
+          "https://github.com/docker/docker-agent/releases/tag/v1.153.0",
+          "https://github.com/docker/docker-agent/releases/tag/v1.154.0",
+          "https://github.com/docker/docker-agent/commit/fcb865d638c06f30f4e2438d26107f1b180a9920"
+        ],
+        "observed_at": "2026-11-01T00:54:00Z"
+      },
+      {
+        "week": "2026-W45",
+        "change": "延续W44证据完整性要求；Tiden本周增量弱而退出Top，Docker/Deep Agents明确拒绝与失败的执行含义，不将终止语义修复当全流程验收。",
+        "status": "维持重点，产品轮换",
+        "evidence": [
+          "https://github.com/docker/docker-agent/releases/tag/v1.157.0",
+          "https://github.com/langchain-ai/deepagents/releases/tag/deepagents==0.7.33",
+          "https://github.com/langchain-ai/deepagents/commit/0fd438a4b952efcc13a4f599d2d7699dd6966f2d"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "behavior-configuration-supply-chain",
+    "name": "规则与配置变更",
+    "status": "观察，不升级",
+    "weeks": [
+      "2026-W36",
+      "2026-W37",
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "W36经验→候选→测试→发布/回滚；W42 guilds Studio保留提案发布边界，Whistle提供离线适配。不能把共享笔记、一次回放或本地训练统一叫自动持续学习。",
+    "products": [
+      "guilds",
+      "cactus-whistle"
+    ],
+    "evidence": [
+      "https://www.producthunt.com/products/guilds-run",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/12",
+      "https://github.com/CigaleAI/guilds",
+      "https://github.com/CigaleAI/guilds/blob/main/docs/architecture/security-register.md",
+      "https://github.com/CigaleAI/guilds/blob/main/CHANGELOG.md",
+      "https://cactuscompute.com/blog/whistle",
+      "https://www.reddit.com/r/LocalLLaMA/comments/1wyemcb/whistle_speech_to_text_in_a_169mb_file/",
+      "https://news.ycombinator.com/item?id=50008427",
+      "https://github.com/cactus-compute/needle/commit/482361d8d9f94d161dae27317162e5ccc717af74",
+      "https://github.com/cactus-compute/needle/commit/bf69a0ad55a22c74b707af5f5565e3cd301e47be",
+      "https://pypi.org/project/cactus-needle/3.2.4/",
+      "https://github.com/cactus-compute/needle/pull/168",
+      "https://github.com/cactus-compute/needle/blob/main/README.md"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "W36经验→候选→测试→发布/回滚；W42 guilds Studio保留提案发布边界，Whistle提供离线适配。不能把共享笔记、一次回放或本地训练统一叫自动持续学习。",
+        "status": "观察，不升级",
+        "products": [
+          "guilds",
+          "cactus-whistle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persistent-specification",
+    "name": "持久规格与审阅工件",
+    "status": "降低优先级，维持候选",
+    "weeks": [
+      "2026-W34",
+      "2026-W35",
+      "2026-W37",
+      "2026-W38",
+      "2026-W39",
+      "2026-W40",
+      "2026-W41",
+      "2026-W42"
+    ],
+    "change": "Huzzah W34→EasySpecs W37→Whiteboard W39→W40/W41观察。W42 Tiden和LibrePaper支持验收/修订工件，尚不足以证明独立持久规格品类；不是由搜索缺席推断需求下降。",
+    "products": [
+      "tiden",
+      "librepaper"
+    ],
+    "evidence": [
+      "https://www.producthunt.com/products/tiden",
+      "https://www.producthunt.com/leaderboard/daily/2026/10/14",
+      "https://tiden.ai/changelog",
+      "https://tiden.ai/",
+      "https://bsky.app/profile/vincentab.bsky.social/post/3mxtnc7t2js2e",
+      "https://github.com/LibrePaper/librepaper",
+      "https://librepaper.org/what.html",
+      "https://librepaper.org/notebooks/quarto.html",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/notebooks/quarto.md",
+      "https://github.com/LibrePaper/librepaper/blob/main/docs/privacy.md"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "Huzzah W34→EasySpecs W37→Whiteboard W39→W40/W41观察。W42 Tiden和LibrePaper支持验收/修订工件，尚不足以证明独立持久规格品类；不是由搜索缺席推断需求下降。",
+        "status": "降低优先级，维持候选",
+        "products": [
+          "tiden",
+          "librepaper"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "local-model-reliability",
+    "name": "本地小模型的可靠性边界",
+    "status": "延续候选，不升级",
+    "weeks": [
+      "2026-W41",
+      "2026-W42",
+      "2026-W45"
+    ],
+    "change": "Pauta本周发行与PH发布补充默认本地/可选云路径及项目连续性；无中文长会议或相对准确率实测，系统要求不一致。",
+    "products": [
+      "pulse-local",
+      "cactus-whistle",
+      "pauta"
+    ],
+    "evidence": [
+      "https://news.ycombinator.com/item?id=50080275",
+      "https://hacker-news.firebaseio.com/v0/item/50080275.json",
+      "https://pulseos.finance/pulse-local/writing/agree-or-not-sure",
+      "https://pulseos.finance/privacy",
+      "https://cactuscompute.com/blog/whistle",
+      "https://www.reddit.com/r/LocalLLaMA/comments/1wyemcb/whistle_speech_to_text_in_a_169mb_file/",
+      "https://news.ycombinator.com/item?id=50008427",
+      "https://github.com/cactus-compute/needle/commit/482361d8d9f94d161dae27317162e5ccc717af74",
+      "https://github.com/cactus-compute/needle/commit/bf69a0ad55a22c74b707af5f5565e3cd301e47be",
+      "https://pypi.org/project/cactus-needle/3.2.4/",
+      "https://github.com/cactus-compute/needle/pull/168",
+      "https://github.com/cactus-compute/needle/blob/main/README.md",
+      "https://www.producthunt.com/products/pauta",
+      "https://www.producthunt.com/leaderboard/daily/2026/11/6",
+      "https://www.pauta-ai.com/en",
+      "https://github.com/LeonardoLuize/pauta-releases/releases"
+    ],
+    "timeline": [
+      {
+        "week": "2026-W42",
+        "change": "W41 Whistle小体积与语言边界→W42已发布微调路径；Pulse补充拒答、覆盖率、延迟及数据路径。两类任务不能合并性能指标，不升级为通用端侧AI优越性。",
+        "status": "首次单列观察",
+        "products": [
+          "pulse-local",
+          "cactus-whistle"
+        ]
+      },
+      {
+        "week": "2026-W45",
+        "change": "Pauta本周发行与PH发布补充默认本地/可选云路径及项目连续性；无中文长会议或相对准确率实测，系统要求不一致。",
+        "status": "延续候选，不升级",
+        "evidence": [
+          "https://www.producthunt.com/products/pauta",
+          "https://www.producthunt.com/leaderboard/daily/2026/11/6",
+          "https://www.pauta-ai.com/en",
+          "https://github.com/LeonardoLuize/pauta-releases/releases"
+        ]
+      }
+    ]
+  }
+]

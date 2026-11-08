@@ -1,0 +1,86 @@
+{
+  "id": "floot",
+  "name": "Floot Payments",
+  "category": "AI app builder／SMB商业化工作流。",
+  "date": "2026-11-04",
+  "description": "在聊天生成的app中接入Stripe付款；preview为模拟交易，上线接用户自己的Stripe账户。",
+  "facts": "已核验官方说明｜在聊天生成的app中接入Stripe付款；preview为模拟交易，上线接用户自己的Stripe账户。PH本周发布Payments，但付款教程10/20已有，不能声称11/4首次实现付款。",
+  "signals": "11/4 #2，328 upvote points；产品累计2.8K followers、21 reviews（4.4），非本次客户增长。第四次PH发布，10/29的ChatGPT发布与本周Payments应分开。",
+  "why": "研究判断｜生成能运行的页面与经营可收费服务是两道门槛；本周增加的是支付叙事的正式分发信号，不应把已有功能全部记成新技术。",
+  "creator": "官方教程署名Xian Li，以商店和SaaS定价示例说明测试／真实支付区别；作者称商店做过1美元真实购买，属于厂商示例，不是第三方商业验证。",
+  "learn": "研究判断｜先让用户在preview走通付款状态，再做真实收款开户；把test/live分隔和记录可查性放在流程中心。",
+  "limits": "真实付款须Stripe onboarding与Floot Pro/Power；官方教程写Pro 1%平台费、Power 0%，另付Stripe费用。未验证真实订阅续扣、退款、税务和运费闭环，未引用未知营收。未能直接核验X原帖，未以镜像转述作证据。",
+  "worth": "Yes",
+  "observed_at": "2026-11-08",
+  "first_seen": "2026-W45",
+  "last_seen": "2026-W45",
+  "weeks": [
+    "2026-W45"
+  ],
+  "sources": [
+    {
+      "platform": "PH",
+      "url": "https://www.producthunt.com/products/floot"
+    },
+    {
+      "platform": "11/4榜单",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/4"
+    },
+    {
+      "platform": "官方付款教程，2026-10-20",
+      "url": "https://floot.com/blog/how-to-add-payments-in-floot"
+    },
+    {
+      "platform": "官网",
+      "url": "https://floot.com/"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "PH",
+      "url": "https://www.producthunt.com/products/floot",
+      "source_date": "2026-11-04",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "11/4榜单",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/4",
+      "source_date": "2026-11-04",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "官方付款教程，2026-10-20",
+      "url": "https://floot.com/blog/how-to-add-payments-in-floot",
+      "source_date": "2026-10-20",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "官网",
+      "url": "https://floot.com/",
+      "source_date": null,
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W45",
+      "event": "2026-11-04",
+      "signal": "11/4 #2，328 upvote points；产品累计2.8K followers、21 reviews（4.4），非本次客户增长。第四次PH发布，10/29的ChatGPT发布与本周Payments应分开。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W45",
+      "signals": "11/4 #2，328 upvote points；产品累计2.8K followers、21 reviews（4.4），非本次客户增长。第四次PH发布，10/29的ChatGPT发布与本周Payments应分开。",
+      "observed_at": "2026-11-08"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W45"
+  ],
+  "selection": "main"
+}

@@ -1,8 +1,86 @@
 {
   "id": "docker-agent",
   "name": "Docker Agent",
-  "category": "Agent Runtime / 成本与运行态",
-  "date": "2026-10-26–30",
+  "category": "Agent Runtime / Security / Coding Agent",
+  "date": "2026-11-05",
+  "description": "多模型 agent 执行环境，本周将拒绝、截断与预算边界纳入已发布修复。",
+  "facts": "版本事实｜v1.157.0修复输出token上限截断后工具仍执行；Gemini SAFETY和MAX_TOKENS分别映射拒绝和长度结束；fallback预算累计所有尝试，后台agent可选择独立worktree。",
+  "signals": "2026-11-05 v1.157.0正式版本，PR4784、4786、4799可定位；v1.157.1/2仅依赖维护，不重复计创新。未取得PH/HN票数、收入或周stars增长。",
+  "why": "研究判断｜W44的fallback归因和judge证据完整性继续推进到执行阻断及预算完整性；正常返回不等于动作获准。",
+  "creator": "Docker项目及社区贡献者维护；没有本轮新创业故事。",
+  "learn": "回归测试应覆盖截断参数、供应商拒绝格式、多次回退预算；worktree并非权限沙箱。",
+  "limits": "已读官方版本正文，未运行产品或独立验证安全效果；未核实生产采用与性能收益。页面发布时间未标时区。",
+  "worth": "Yes",
+  "first_seen": "2026-W41",
+  "weeks": [
+    "2026-W41",
+    "2026-W42",
+    "2026-W43",
+    "2026-W44",
+    "2026-W45"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W41",
+      "event": "2026-10-07（v1.149.0）；2026-10-09（v1.150.0）",
+      "signal": "本周有明确版本增量；10月7日HN日期页记录303 points、145 comments（原帖获取失败，保留日期页证据，不补造帖ID）。Apache-2.0。未记录stars增长。"
+    },
+    {
+      "week": "2026-W42",
+      "event": "2026-10-15（UTC；main合并，未核验新release）",
+      "signal": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。"
+    },
+    {
+      "week": "2026-W43",
+      "event": "2026-10-21–23",
+      "signal": "从上周“按实际serving leaf计价”，推进到压缩每次请求独立计价、存储恢复与并发路由隔离。 本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
+    },
+    {
+      "week": "2026-W44",
+      "event": "2026-10-26–30",
+      "signal": "逐fallback hop按拒绝证据归因成本；上周压缩计价修复进入发行版，judge完整输入修复仍仅main。 10/28 v1.153.0收入压缩计价、路由状态与fallback计费修复；同日v1.154.0后续发行。10/29 judge截断修复（10/30合并）仅确认main。"
+    },
+    {
+      "week": "2026-W45",
+      "event": "2026-11-05",
+      "signal": "多模型 agent 执行环境，本周将拒绝、截断与预算边界纳入已发布修复。 2026-11-05 v1.157.0正式版本，PR4784、4786、4799可定位；v1.157.1/2仅依赖维护，不重复计创新。未取得PH/HN票数、收入或周stars增长。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W42",
+      "signals": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。",
+      "observed_at": "2026-10-18T08:42:15+08:00"
+    },
+    {
+      "week": "2026-W43",
+      "signals": [
+        "本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
+      ],
+      "observed_at": "2026-10-25"
+    },
+    {
+      "week": "2026-W44",
+      "signals": [
+        "10/28 v1.153.0收入压缩计价、路由状态与fallback计费修复；同日v1.154.0后续发行。10/29 judge截断修复（10/30合并）仅确认main。"
+      ],
+      "observed_at": "2026-11-01T00:54:00Z"
+    },
+    {
+      "week": "2026-W45",
+      "signals": "2026-11-05 v1.157.0正式版本，PR4784、4786、4799可定位；v1.157.1/2仅依赖维护，不重复计创新。未取得PH/HN票数、收入或周stars增长。",
+      "observed_at": "2026-11-08"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W41",
+    "2026-W43",
+    "2026-W44",
+    "2026-W45"
+  ],
+  "last_seen": "2026-W45",
+  "observed_at": "2026-11-08",
+  "selection": "main",
   "sources": [
     {
       "platform": "GitHub发布",
@@ -63,53 +141,12 @@
     {
       "platform": "GitHub 固定来源",
       "url": "https://github.com/docker/docker-agent/commit/fcb865d638c06f30f4e2438d26107f1b180a9920"
+    },
+    {
+      "platform": "官方版本v1.157.0",
+      "url": "https://github.com/docker/docker-agent/releases/tag/v1.157.0"
     }
   ],
-  "description": "逐fallback hop按拒绝证据归因成本；上周压缩计价修复进入发行版，judge完整输入修复仍仅main。",
-  "signals": "10/28 v1.153.0收入压缩计价、路由状态与fallback计费修复；同日v1.154.0后续发行。10/29 judge截断修复（10/30合并）仅确认main。",
-  "facts": "官方发布/代码事实｜10/28发布v1.153.0明确收入W43逐次compaction计价及删除lastSelectedID，关闭上周“是否入发行版”待办；同日v1.154.0为后续provider/sbx兼容版本。\n官方发布/代码事实｜10/26 commit 5d3f904（10/27 PR #4700合并；v1.153.0列入）逐fallback hop保留拒绝分类证据，合并该hop server-tool各iteration，按各模型费率；缺失/无法匹配证据保守计费，不能把null等同missing，也不重复加顶层usage。源码测试验证hook、budget、UI usage与SQLite存储成本一致。\n官方发布/代码事实｜10/29 fcb865d（10/30 PR #4771合并）删除judge transcript工具返回500字节截断。回归测试覆盖第501字节、末尾PASS、中部ERROR、跨边界UTF-8和大输出。此项晚于v1.154.0，仅确认main，不宣称已正式发布。",
-  "why": "研究判断｜请求级归因进一步细到fallback hop及其拒绝证据；独立judge若看到被截断的证据，也会误判正确或错误答案。验收者的数据管道同样需要测试。",
-  "creator": "Docker Engineering；计费patch Arnaud Héritier，judge patch Mohamed El Mennaoui。公开贡献归因，不是创始人增长故事。",
-  "learn": "未知与显式无值区别建模；预算、账单、存储共用同一成本结果；验证judge输入是否完整。",
-  "limits": "未运行测试/对账真实供应商发票；删除截断不是证明judge准确性提高多少，也可能增加上下文成本。",
-  "worth": "Yes",
-  "observed_at": "2026-11-01",
-  "first_seen": "2026-W41",
-  "last_seen": "2026-W44",
-  "weeks": [
-    "2026-W41",
-    "2026-W42",
-    "2026-W43",
-    "2026-W44"
-  ],
-  "timeline": [
-    {
-      "week": "2026-W41",
-      "event": "2026-10-07（v1.149.0）；2026-10-09（v1.150.0）",
-      "signal": "本周有明确版本增量；10月7日HN日期页记录303 points、145 comments（原帖获取失败，保留日期页证据，不补造帖ID）。Apache-2.0。未记录stars增长。"
-    },
-    {
-      "week": "2026-W42",
-      "event": "2026-10-15（UTC；main合并，未核验新release）",
-      "signal": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。"
-    },
-    {
-      "week": "2026-W43",
-      "event": "2026-10-21–23",
-      "signal": "从上周“按实际serving leaf计价”，推进到压缩每次请求独立计价、存储恢复与并发路由隔离。 本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
-    },
-    {
-      "week": "2026-W44",
-      "event": "2026-10-26–30",
-      "signal": "逐fallback hop按拒绝证据归因成本；上周压缩计价修复进入发行版，judge完整输入修复仍仅main。 10/28 v1.153.0收入压缩计价、路由状态与fallback计费修复；同日v1.154.0后续发行。10/29 judge截断修复（10/30合并）仅确认main。"
-    }
-  ],
-  "featured_weeks": [
-    "2026-W41",
-    "2026-W43",
-    "2026-W44"
-  ],
-  "selection": "main",
   "source_details": [
     {
       "date": "2026-10-21T11:52:38Z",
@@ -177,49 +214,13 @@
       "observed_on": "2026-11-01",
       "kind": "一手公开来源",
       "verified": "依据W44连续性研究读取官方说明/原始patch；未独立运行测试或核验hosted部署。"
-    }
-  ],
-  "signal_details": [
-    "10/28 v1.153.0收入压缩计价、路由状态与fallback计费修复；同日v1.154.0后续发行。10/29 judge截断修复（10/30合并）仅确认main。"
-  ],
-  "important_signals": [
-    {
-      "week": "2026-W42",
-      "signals": "W42连续观察侧栏：10月15日main修复快速确认答复可能丢失的竞态，并按每次请求实际serving leaf/tier归因成本。最新核验正式release仍为10月9日v1.150.0。",
-      "observed_at": "2026-10-18T08:42:15+08:00"
     },
     {
-      "week": "2026-W43",
-      "signals": [
-        "本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
-      ],
-      "observed_at": "2026-10-25"
-    },
-    {
-      "week": "2026-W44",
-      "signals": [
-        "10/28 v1.153.0收入压缩计价、路由状态与fallback计费修复；同日v1.154.0后续发行。10/29 judge截断修复（10/30合并）仅确认main。"
-      ],
-      "observed_at": "2026-11-01T00:54:00Z"
-    }
-  ],
-  "historical_summaries": [
-    {
-      "week": "2026-W43",
-      "date": "2026-10-21–23",
-      "description": "从上周“按实际serving leaf计价”，推进到压缩每次请求独立计价、存储恢复与并发路由隔离。",
-      "facts": "事实｜10/21 compactionCost逐条计算原生压缩iteration的价格再相加，避免将两次各60k token错误合成120k而触发100k上下文费率档；缺少可用价格时返回unknown而不是免费。\n事实｜10/21新增SQLite reopen回归测试，检查落盘后保留实际serving model和Cost，而非router名。\n事实｜10/22提交、10/23合并删除router级lastSelectedID；返回stream携带自己的ServingModel，并保留并发路由测试。不是首次引入leaf归因，而是移除残留跨会话状态。\n事实｜本周发布v1.151.0（10/19）、v1.152.0（10/21）。上述10/21晚于v1.152.0发版的测试/修复及10/23路由清理只确认已入main，不宣称已进入这两个release。",
-      "signals": "本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。",
-      "why": "研究判断｜计费准确性的单位必须是一次实际请求，不是整个agent任务，更不是路由配置名。并发、回退、压缩和恢复都是归因边界。",
-      "creator": "Docker Engineering；相关代码由Arnaud Héritier、David Gageot等维护，来自官方docker/docker-agent。",
-      "learn": "为每个request/stream绑定serving身份、费率档和usage；压缩循环逐次计价；未知价格不填0；将SQLite恢复与并发隔离纳入回归测试。",
-      "limits": "没有运行其测试或对账真实供应商账单；仅核验公开patch。确认请求keying的旧问题本周未另找到可单独成立的新修复，不重复上周叙述。",
-      "worth": "Yes",
-      "observed_at": "2026-10-25",
-      "selection": "main",
-      "signal_details": [
-        "本周2个release；证据为代码+测试+release，不等于生产事故率或用户采用数据。"
-      ]
+      "label": "官方版本v1.157.0",
+      "url": "https://github.com/docker/docker-agent/releases/tag/v1.157.0",
+      "source_date": "2026-11-05",
+      "kind": "一手公开来源",
+      "observed_on": "2026-11-08"
     }
   ]
 }

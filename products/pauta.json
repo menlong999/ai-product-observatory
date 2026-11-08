@@ -1,0 +1,86 @@
+{
+  "id": "pauta",
+  "name": "Pauta",
+  "category": "本地会议转写／个人记忆／效率。",
+  "date": "2026-11-06",
+  "description": "桌面录音、转写、摘要及按项目跨会议问答。",
+  "facts": "已核验官方说明｜桌面录音、转写、摘要及按项目跨会议问答。默认本地Qwen摘要，可主动连接云AI。Mac、Windows已提供；移动端WIP，不写全平台交付。",
+  "signals": "11/6 #10；89 upvote points + 200 shipping points = 289榜单显示，81 followers。GitHub发行页v1.0.6显示11/6 14:49（页面未注明时区），上一版1.0.5为10/28；有本周软件发行，但发布说明仅安装要求，不能把首页所有New功能都认作该版新增。",
+  "why": "研究判断｜差异不是再做转写，而是将项目连续性和可选择的数据去向结合。对比W44 Empacer的工作状态，Pauta着重保存决策背景；不是同一产品类型，不能拼成已验证大趋势。",
+  "creator": "Paulo Pereira称与Fê和Leo共同构建，希望会议内容成为本人记忆而非另一份云数据源。来自PH maker评论。",
+  "learn": "研究判断｜明确默认路径与可选云服务；离线定位需说明许可证、模型与更新仍会联网。录音仍应告知参与者。",
+  "limits": "官网macOS 13+与release说明14.2+存在不一致，应核对具体包，不宣称支持范围已实测；低价买断不等于可持续商业验证。无留存、收入或转写准确率数据。",
+  "worth": "Maybe",
+  "observed_at": "2026-11-08",
+  "first_seen": "2026-W45",
+  "last_seen": "2026-W45",
+  "weeks": [
+    "2026-W45"
+  ],
+  "sources": [
+    {
+      "platform": "PH",
+      "url": "https://www.producthunt.com/products/pauta"
+    },
+    {
+      "platform": "11/6榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/6"
+    },
+    {
+      "platform": "官方产品页",
+      "url": "https://www.pauta-ai.com/en"
+    },
+    {
+      "platform": "官方链接的发布仓库",
+      "url": "https://github.com/LeonardoLuize/pauta-releases/releases"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "PH",
+      "url": "https://www.producthunt.com/products/pauta",
+      "source_date": "2026-11-06",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "11/6榜",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/6",
+      "source_date": "2026-11-06",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "官方产品页",
+      "url": "https://www.pauta-ai.com/en",
+      "source_date": null,
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    },
+    {
+      "label": "官方链接的发布仓库",
+      "url": "https://github.com/LeonardoLuize/pauta-releases/releases",
+      "source_date": "2026-11-06",
+      "kind": "一手公开来源；日期为所讨论事件或最近发行，不一定是页面首次发布时间",
+      "observed_on": "2026-11-08"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W45",
+      "event": "2026-11-06",
+      "signal": "11/6 #10；89 upvote points + 200 shipping points = 289榜单显示，81 followers。GitHub发行页v1.0.6显示11/6 14:49（页面未注明时区），上一版1.0.5为10/28；有本周软件发行，但发布说明仅安装要求，不能把首页所有New功能都认作该版新增。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W45",
+      "signals": "11/6 #10；89 upvote points + 200 shipping points = 289榜单显示，81 followers。GitHub发行页v1.0.6显示11/6 14:49（页面未注明时区），上一版1.0.5为10/28；有本周软件发行，但发布说明仅安装要求，不能把首页所有New功能都认作该版新增。",
+      "observed_at": "2026-11-08"
+    }
+  ],
+  "featured_weeks": [
+    "2026-W45"
+  ],
+  "selection": "main"
+}
