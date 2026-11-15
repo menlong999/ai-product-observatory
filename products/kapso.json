@@ -1,0 +1,64 @@
+{
+  "id": "kapso",
+  "name": "Kapso（Leeroo）",
+  "date": "2026-11-12（Show HN）",
+  "category": "Agent Learning / Data Engineering",
+  "description": "把企业数据任务变成实验树：假设、实现、独立验证，再把有适用范围和证据的经验沉淀到 git。",
+  "facts": "事实/官方描述｜README 描述 build/learn/deploy 与 domain harness；经验卡含边界、credence 与证据，支持有/无经验的A/B。；验证器与实验代码分离；作者称实验可提议修改评测但需验证器批准。；CLI/Python包名 leeroo-kapso，与同名WhatsApp产品不同。",
+  "signals": "Show HN 59 points、13 comments（2026-11-15快照）。RelBench/MLE/IOAI排名为作者引用的成绩，本轮未独立复跑，不作为已证实商业采用。",
+  "creator": "Leeroo 创始人 Alireza、Majid 自述曾在 LinkedIn/Meta 开发大规模系统；从复杂数据资产迁移中总结实验式探索。",
+  "why": "研究判断｜学习不是无限加笔记：要保留适用条件、反例和可撤销版本。给W36以来反馈学习方向新增可检查实现。",
+  "learn": "冻结评测器；每条经验保留证据/适用边界；先A/B再将经验升为默认。",
+  "limits": "HN评论指出RelBench预测由提交者自报，不能与统一受控重跑等同；长期总搜索成本未核实。模型CLI权限/订阅与可选知识服务仍有外部依赖。",
+  "worth": "Yes",
+  "sources": [
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://news.ycombinator.com/item?id=50471281"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://github.com/Leeroo-AI/kapso"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "一手发布/讨论",
+      "url": "https://news.ycombinator.com/item?id=50471281",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://github.com/Leeroo-AI/kapso",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    }
+  ],
+  "first_seen": "2026-W46",
+  "last_seen": "2026-W46",
+  "observed_at": "2026-11-15",
+  "selection": "main",
+  "weeks": [
+    "2026-W46"
+  ],
+  "featured_weeks": [
+    "2026-W46"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W46",
+      "event": "2026-11-12（Show HN）",
+      "signal": "把企业数据任务变成实验树：假设、实现、独立验证，再把有适用范围和证据的经验沉淀到 git。 Show HN 59 points、13 comments（2026-11-15快照）。RelBench/MLE/IOAI排名为作者引用的成绩，本轮未独立复跑，不作为已证实商业采用。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W46",
+      "signals": "Show HN 59 points、13 comments（2026-11-15快照）。RelBench/MLE/IOAI排名为作者引用的成绩，本轮未独立复跑，不作为已证实商业采用。",
+      "observed_at": "2026-11-15"
+    }
+  ]
+}

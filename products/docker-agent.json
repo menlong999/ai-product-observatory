@@ -1,15 +1,15 @@
 {
   "id": "docker-agent",
   "name": "Docker Agent",
-  "category": "Agent Runtime / Security / Coding Agent",
-  "date": "2026-11-05",
-  "description": "多模型 agent 执行环境，本周将拒绝、截断与预算边界纳入已发布修复。",
-  "facts": "版本事实｜v1.157.0修复输出token上限截断后工具仍执行；Gemini SAFETY和MAX_TOKENS分别映射拒绝和长度结束；fallback预算累计所有尝试，后台agent可选择独立worktree。",
-  "signals": "2026-11-05 v1.157.0正式版本，PR4784、4786、4799可定位；v1.157.1/2仅依赖维护，不重复计创新。未取得PH/HN票数、收入或周stars增长。",
-  "why": "研究判断｜W44的fallback归因和judge证据完整性继续推进到执行阻断及预算完整性；正常返回不等于动作获准。",
-  "creator": "Docker项目及社区贡献者维护；没有本轮新创业故事。",
-  "learn": "回归测试应覆盖截断参数、供应商拒绝格式、多次回退预算；worktree并非权限沙箱。",
-  "limits": "已读官方版本正文，未运行产品或独立验证安全效果；未核实生产采用与性能收益。页面发布时间未标时区。",
+  "category": "Agent Runtime / Execution Safety",
+  "date": "2026-11-09至13（v1.158–1.161）",
+  "description": "延续W41–W45的运行时治理，本周把API读写分类、未完成回答、部分文件操作结果进一步明确化。",
+  "facts": "事实/官方描述｜v1.159只给精确GET工具read-only hint；PR4896声明只读不等于保密保证，并列回归验证。；v1.159无最终回复时警告；Gemini非法函数调用为不可重试错误；content_filter视为拒绝。；v1.161批量目录操作中断时报告已完成部分，修复sub-session唯一约束持久化错误。",
+  "signals": "四个窗口内正式release，日期可核验；不记录无基线stars或将发布频率当商业增长。",
+  "why": "研究判断｜W45结束原因判断仍不足以覆盖权限分类与部分副作用：成功/失败不应只是一个布尔值。",
+  "creator": "Docker官方维护者；不因品牌入选，入选理由是具体错误边界的代码与版本增量。",
+  "learn": "HTTP方法读写分类写回归测试；批量动作输出部分成功明细；读权限和泄密风险分别管理。",
+  "limits": "未本地跑Docker测试；PR列验证是维护者执行声明；GET也可返回敏感数据，不等于可任意传播。",
   "worth": "Yes",
   "first_seen": "2026-W41",
   "weeks": [
@@ -17,7 +17,8 @@
     "2026-W42",
     "2026-W43",
     "2026-W44",
-    "2026-W45"
+    "2026-W45",
+    "2026-W46"
   ],
   "timeline": [
     {
@@ -44,6 +45,11 @@
       "week": "2026-W45",
       "event": "2026-11-05",
       "signal": "多模型 agent 执行环境，本周将拒绝、截断与预算边界纳入已发布修复。 2026-11-05 v1.157.0正式版本，PR4784、4786、4799可定位；v1.157.1/2仅依赖维护，不重复计创新。未取得PH/HN票数、收入或周stars增长。"
+    },
+    {
+      "week": "2026-W46",
+      "event": "2026-11-09至13（v1.158–1.161）",
+      "signal": "延续W41–W45的运行时治理，本周把API读写分类、未完成回答、部分文件操作结果进一步明确化。 四个窗口内正式release，日期可核验；不记录无基线stars或将发布频率当商业增长。"
     }
   ],
   "important_signals": [
@@ -70,16 +76,22 @@
       "week": "2026-W45",
       "signals": "2026-11-05 v1.157.0正式版本，PR4784、4786、4799可定位；v1.157.1/2仅依赖维护，不重复计创新。未取得PH/HN票数、收入或周stars增长。",
       "observed_at": "2026-11-08"
+    },
+    {
+      "week": "2026-W46",
+      "signals": "四个窗口内正式release，日期可核验；不记录无基线stars或将发布频率当商业增长。",
+      "observed_at": "2026-11-15"
     }
   ],
   "featured_weeks": [
     "2026-W41",
     "2026-W43",
     "2026-W44",
-    "2026-W45"
+    "2026-W45",
+    "2026-W46"
   ],
-  "last_seen": "2026-W45",
-  "observed_at": "2026-11-08",
+  "last_seen": "2026-W46",
+  "observed_at": "2026-11-15",
   "selection": "main",
   "sources": [
     {
@@ -145,6 +157,18 @@
     {
       "platform": "官方版本v1.157.0",
       "url": "https://github.com/docker/docker-agent/releases/tag/v1.157.0"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://github.com/docker/docker-agent/releases/tag/v1.159.0"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://github.com/docker/docker-agent/releases/tag/v1.161.0"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://github.com/docker/docker-agent/pull/4896"
     }
   ],
   "source_details": [
@@ -221,6 +245,27 @@
       "source_date": "2026-11-05",
       "kind": "一手公开来源",
       "observed_on": "2026-11-08"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://github.com/docker/docker-agent/releases/tag/v1.159.0",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://github.com/docker/docker-agent/releases/tag/v1.161.0",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://github.com/docker/docker-agent/pull/4896",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
     }
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "id": "three-dev",
+  "name": "three.dev",
+  "date": "2026-11-12（PH）",
+  "category": "Agent Evaluation / Production Feedback",
+  "description": "通过代理采集生产LLM请求，按故障模式聚合并按严重度排序，将证据给coding agent修复及前后对比。",
+  "facts": "事实/官方描述｜官网给出请求、规则证据、故障模式与MCP读取接口。；Experiments及专用小模型在官网标Early access。；退款错误386→16等为示例checkout-copilot演示，不是客户真实收益。",
+  "signals": "PH第8、131 upvote points、231followers（11月15快照）。未核验收入、留存或实际失败检测精度。",
+  "creator": "round3公司；本轮未取得可核验个人创业过程，不补造。",
+  "why": "研究判断｜W44 Faylee现场证据→W46线上行为失败的聚类和修复回传；不同于只收崩溃/延迟日志。",
+  "learn": "修复前后同时看新故障，保留分母；检测器结论也需人工检查。",
+  "limits": "异步评分不等于代理网络零延迟；网页自动修复流程为演示，本轮未实测上线；流量会经第三方。",
+  "worth": "Yes",
+  "sources": [
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://three.dev/"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.producthunt.com/products/three-dev"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/12"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "一手发布/讨论",
+      "url": "https://three.dev/",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.producthunt.com/products/three-dev",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/12",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    }
+  ],
+  "first_seen": "2026-W46",
+  "last_seen": "2026-W46",
+  "observed_at": "2026-11-15",
+  "selection": "main",
+  "weeks": [
+    "2026-W46"
+  ],
+  "featured_weeks": [
+    "2026-W46"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W46",
+      "event": "2026-11-12（PH）",
+      "signal": "通过代理采集生产LLM请求，按故障模式聚合并按严重度排序，将证据给coding agent修复及前后对比。 PH第8、131 upvote points、231followers（11月15快照）。未核验收入、留存或实际失败检测精度。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W46",
+      "signals": "PH第8、131 upvote points、231followers（11月15快照）。未核验收入、留存或实际失败检测精度。",
+      "observed_at": "2026-11-15"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "omnigraph",
+  "name": "Omnigraph",
+  "date": "2026-11-12（PH）",
+  "category": "Agent Context / Versioned Graph",
+  "description": "对象存储上的类型化知识图谱，提供分支、diff、merge和历史，供多个agent提议共享事实更新。",
+  "facts": "事实/官方描述｜官网当前v0.15.0，Rust、Lance、S3/本地，Azure Blob为preview；MIT。；官方说明写入schema检查、引擎内Cedar策略及三路merge；知识分支可先审阅再入main。；Cloud为private preview，不应写成已全面开放。",
+  "signals": "PH11月12日第3、295 upvote points；633followers（11月15快照）。官网2.4k stars为累计展示且无周基线，不计周增长。",
+  "creator": "Modern Relay；网站两位使用者证言与贡献故事为厂商展示，未独立核实雇主采购。",
+  "why": "研究判断｜W41 Busabase共享事实提案权限、W43/W44 Guilds ACL之后，知识库自身的版本/合并与结构约束成为另一个可检查实现。",
+  "learn": "把被提出的事实与已接受事实分开；保留关系来源与历史快照；schema正确不代表内容真实。",
+  "limits": "未代码审计/部署；厂商安全描述不等于不可绕过；对象存储自有不代表接入模型不会发送数据。",
+  "worth": "Yes",
+  "sources": [
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.omnigraph.dev/"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.producthunt.com/products/omnigraph"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/12"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.omnigraph.dev/",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.producthunt.com/products/omnigraph",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/12",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    }
+  ],
+  "first_seen": "2026-W46",
+  "last_seen": "2026-W46",
+  "observed_at": "2026-11-15",
+  "selection": "main",
+  "weeks": [
+    "2026-W46"
+  ],
+  "featured_weeks": [
+    "2026-W46"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W46",
+      "event": "2026-11-12（PH）",
+      "signal": "对象存储上的类型化知识图谱，提供分支、diff、merge和历史，供多个agent提议共享事实更新。 PH11月12日第3、295 upvote points；633followers（11月15快照）。官网2.4k stars为累计展示且无周基线，不计周增长。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W46",
+      "signals": "PH11月12日第3、295 upvote points；633followers（11月15快照）。官网2.4k stars为累计展示且无周基线，不计周增长。",
+      "observed_at": "2026-11-15"
+    }
+  ]
+}

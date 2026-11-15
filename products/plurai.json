@@ -1,0 +1,75 @@
+{
+  "id": "plurai",
+  "name": "Plurai Simulation",
+  "date": "2026-11-11（官方）；11-12（PH）",
+  "category": "Agent Evaluation / Stateful Simulation",
+  "description": "从 agent 代码和工具契约生成共享状态的模拟世界，用户场景、工具读写与最终状态评测相互一致。",
+  "facts": "事实/官方描述｜官方发布 Claude Code、Codex、Copilot 插件；模拟在本地启动真实 agent，后端生成世界与评测。；代码/凭据相关工作在本地，但 plurai_sim/、选择加入的资料及模拟对话会传到后端，不是全离线。；mock、real、observe 三类连接必须区分；real/observe 会运行真实工具，不能泛称绝不触碰真实系统。",
+  "signals": "PH 11月12日第1，411 upvote points；观测2026-11-15。没有独立留存/收入证据。",
+  "creator": "Ilan Kadar 与 Elad Levi 自述将自动驾驶仿真经验转向 agent 长尾故障；不是以融资作为入选理由。",
+  "why": "研究判断｜W42 Tiden、W44 Simantic 的可核验执行，向软件 agent 的有状态环境模拟延伸。测试应证明动作后世界如何变化，而不只判断说得对不对。",
+  "learn": "每场景共享状态；最终状态作为证据；版本锁定模拟与代码；保留人工接受修复边界。",
+  "limits": "未实测；82%故障减少、97%成本下降及40x/44x对比均厂商自报，无公开同条件独立复验，不作为通用收益。连接页本轮不可读，官方两篇全文可读。",
+  "worth": "Yes",
+  "sources": [
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.plurai.ai/blog/how-plurai-tests-real-agents-in-simulated-worlds"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.plurai.ai/blog/introducing-plurai-simulation-self-improving-layer-for-ai-agents"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/12"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.plurai.ai/blog/how-plurai-tests-real-agents-in-simulated-worlds",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.plurai.ai/blog/introducing-plurai-simulation-self-improving-layer-for-ai-agents",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/12",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    }
+  ],
+  "first_seen": "2026-W46",
+  "last_seen": "2026-W46",
+  "observed_at": "2026-11-15",
+  "selection": "main",
+  "weeks": [
+    "2026-W46"
+  ],
+  "featured_weeks": [
+    "2026-W46"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W46",
+      "event": "2026-11-11（官方）；11-12（PH）",
+      "signal": "从 agent 代码和工具契约生成共享状态的模拟世界，用户场景、工具读写与最终状态评测相互一致。 PH 11月12日第1，411 upvote points；观测2026-11-15。没有独立留存/收入证据。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W46",
+      "signals": "PH 11月12日第1，411 upvote points；观测2026-11-15。没有独立留存/收入证据。",
+      "observed_at": "2026-11-15"
+    }
+  ]
+}

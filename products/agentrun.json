@@ -1,0 +1,64 @@
+{
+  "id": "agentrun",
+  "name": "AgentRun",
+  "date": "2026-11-12（Show HN）；旧档W39已提及",
+  "category": "Agent Runtime / Learning / Typed Workflow",
+  "description": "在现有 harness 周围加持久执行、预算、审批和学习目录；重复任务可由经验转成有类型工作流。",
+  "facts": "事实/官方描述｜当前README提供notes、skills、workflows学习层，先规则检查再grader；危险规则需人批准。；已完成步骤不重跑；崩溃打断的写操作标interrupted而非盲重试。；学习工作流承接当前run的权限与cap；持久经验有git历史，可退休。",
+  "signals": "Show HN 137 points、39 comments（2026-11-15快照）。18美分/code review、30个保留PR上1.6倍缺陷发现、商户分类0.89→0.12美元均vendor-reported。",
+  "creator": "GREP.AI/Parcha团队称源于自己agent与代码审阅费用增长，将内部harness开放为托管/自托管平台。",
+  "why": "研究判断｜不是首次发现AgentRun；相对W39 typed decisions，本周新增可检查学习保存、权限继承和恢复语义。",
+  "learn": "经验也需安全审查；未知成本不写0；执行失败与写入结果未知分开；工作流编译可减重复推理但不代表模型权重训练。",
+  "limits": "界面部分为fixtures，不是实测；HN作者尚未支持Claude/ChatGPT订阅复用；后台子进程成本cap问题在讨论中未有完成证据。未运行代码。",
+  "worth": "Yes",
+  "sources": [
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://news.ycombinator.com/item?id=50471650"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "一手发布/讨论",
+      "url": "https://news.ycombinator.com/item?id=50471650",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    }
+  ],
+  "first_seen": "2026-W39",
+  "last_seen": "2026-W46",
+  "observed_at": "2026-11-15",
+  "selection": "main",
+  "weeks": [
+    "2026-W46"
+  ],
+  "featured_weeks": [
+    "2026-W46"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W46",
+      "event": "2026-11-12（Show HN）；旧档W39已提及",
+      "signal": "在现有 harness 周围加持久执行、预算、审批和学习目录；重复任务可由经验转成有类型工作流。 Show HN 137 points、39 comments（2026-11-15快照）。18美分/code review、30个保留PR上1.6倍缺陷发现、商户分类0.89→0.12美元均vendor-reported。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W46",
+      "signals": "Show HN 137 points、39 comments（2026-11-15快照）。18美分/code review、30个保留PR上1.6倍缺陷发现、商户分类0.89→0.12美元均vendor-reported。",
+      "observed_at": "2026-11-15"
+    }
+  ]
+}

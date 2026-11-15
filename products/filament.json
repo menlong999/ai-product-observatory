@@ -1,0 +1,75 @@
+{
+  "id": "filament",
+  "name": "Filament by Galaxy",
+  "date": "2026-11-13（PH）",
+  "category": "Data Infrastructure / Replication",
+  "description": "Go编写的全量/增量/CDC复制引擎，以批次校验、成功后checkpoint和可恢复执行为中心，不是泛AI聊天wrapper。",
+  "facts": "事实/官方描述｜README提供独立服务/API/Web UI或嵌入Go，源/目标/状态/事件接口可替换，Apache2.0。；厂商说明只有成功写入并验证后推进checkpoint；有状态Postgres、事件NATS JetStream。；PH maker说明schema类型变更会停下，尚无PG17 failover=true slot支持。",
+  "signals": "PH11月13日第2、306 upvote points、437followers（11月15快照）。15x latency改善仅creator-reported，未独立benchmark。",
+  "creator": "Leon Kozlowski、Mitchell Bregman；Leon称近十年数据工作及复制工具成本/恢复体验驱动产品。",
+  "why": "研究判断｜与agent共用的基础原则是不能把已尝试当已完成；这周新增非模型产品反例，可靠的数据移动本身有价值。",
+  "learn": "checkpoint只跟已确认提交走；schema漂移与类型危险变更要明确暂停；默认HA支持需逐项查。",
+  "limits": "本轮未复制真实数据；文档站打开失败，改读官方GitHub README；不把checksum说成端到端所有目标都已验证。",
+  "worth": "Maybe",
+  "sources": [
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://github.com/galaxy-io/filament"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.producthunt.com/products/galaxy"
+    },
+    {
+      "platform": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/13"
+    }
+  ],
+  "source_details": [
+    {
+      "label": "一手发布/讨论",
+      "url": "https://github.com/galaxy-io/filament",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.producthunt.com/products/galaxy",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    },
+    {
+      "label": "一手发布/讨论",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/11/13",
+      "source_date": null,
+      "kind": "官方/作者原始内容，日期见正文",
+      "observed_on": "2026-11-15"
+    }
+  ],
+  "first_seen": "2026-W46",
+  "last_seen": "2026-W46",
+  "observed_at": "2026-11-15",
+  "selection": "main",
+  "weeks": [
+    "2026-W46"
+  ],
+  "featured_weeks": [
+    "2026-W46"
+  ],
+  "timeline": [
+    {
+      "week": "2026-W46",
+      "event": "2026-11-13（PH）",
+      "signal": "Go编写的全量/增量/CDC复制引擎，以批次校验、成功后checkpoint和可恢复执行为中心，不是泛AI聊天wrapper。 PH11月13日第2、306 upvote points、437followers（11月15快照）。15x latency改善仅creator-reported，未独立benchmark。"
+    }
+  ],
+  "important_signals": [
+    {
+      "week": "2026-W46",
+      "signals": "PH11月13日第2、306 upvote points、437followers（11月15快照）。15x latency改善仅creator-reported，未独立benchmark。",
+      "observed_at": "2026-11-15"
+    }
+  ]
+}
