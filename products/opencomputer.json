@@ -2,10 +2,10 @@
   "id": "opencomputer",
   "name": "OpenComputer",
   "category": "持久 Agent 工作空间",
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "description": "持久团队 VM 与 rootless Podman 工作隔离，支持 Git 分支/worktree、按轮快照和恢复。",
   "facts": "持久团队 VM 与 rootless Podman 工作隔离，支持 Git 分支/worktree、按轮快照和恢复。",
-  "signals": "Show HN 116 points、36 comments；厂商窄基准称中位 24 秒首次推送、56 秒四 PR 绿、6 次中完成 5 次。",
+  "signals": "Show HN 116 points、36 comments；官网首发是 11 月 13 日，早于本轮；厂商此前窄基准称中位 24 秒首次推送、56 秒四 PR 绿、6 次中完成 5 次。",
   "why": "分开测恢复时间、工作区权限和已验收完整结果，不能用第一次 push 代替完成。",
   "creator": "本观察 W35 已有旧记录；本周是团队工作区与恢复机制再验证，不是首次出现。",
   "learn": "分开测恢复时间、工作区权限和已验收完整结果，不能用第一次 push 代替完成。",
@@ -31,6 +31,10 @@
     {
       "platform": "官方",
       "url": "https://opencomputer.dev/blog/cloud-agents-as-fast-as-local/"
+    },
+    {
+      "platform": "官方",
+      "url": "https://opencomputer.dev/blog/opencomputer-open-source-devin-alternative/"
     }
   ],
   "timeline": [
@@ -42,7 +46,7 @@
     {
       "week": "2026-W47",
       "event": "持久团队 VM 与 rootless Podman 工作隔离，支持 Git 分支/worktree、按轮快照和恢复。",
-      "signal": "Show HN 116 points、36 comments；厂商窄基准称中位 24 秒首次推送、56 秒四 PR 绿、6 次中完成 5 次。"
+      "signal": "Show HN 116 points、36 comments；官网首发是 11 月 13 日，早于本轮；厂商此前窄基准称中位 24 秒首次推送、56 秒四 PR 绿、6 次中完成 5 次。"
     }
   ]
 }
