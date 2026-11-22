@@ -1,0 +1,38 @@
+{
+  "id": "testsprite",
+  "name": "TestSprite 4.0",
+  "category": "规格驱动 QA / 浏览器回归",
+  "date": "2026-11-19",
+  "description": "把需求、票据或规格变成真实浏览器测试，向 PR 回传失败证据。",
+  "facts": "把需求、票据或规格变成真实浏览器测试，向 PR 回传失败证据。",
+  "signals": "PH 11/19 日榜第 1、373 points；周榜样本第 5。厂商展示 10 行规格生成 29 项测试，在两条分别通过 CI 的 PR 合并后捕获植入回归。",
+  "why": "让测试依据来自业务规格而不只是现有实现，记录规格版本与实际被测构建。",
+  "creator": "由发布作者 Yunhao Jiao 解释 coding agent 修一处坏一处与 QA 如何独立验收。",
+  "learn": "让测试依据来自业务规格而不只是现有实现，记录规格版本与实际被测构建。",
+  "china_localization": "适合企业 Web 验收；先做中文规格证据链和内网测试账号，再谈自动修改。",
+  "limits": "演示为厂商构造，不是公开 held-out 跨项目基准或客户故障率。",
+  "worth": "Yes",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/testsprite"
+    },
+    {
+      "platform": "官方",
+      "url": "https://www.testsprite.com/blog/introducing-testsprite-4-0"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "把需求、票据或规格变成真实浏览器测试，向 PR 回传失败证据。",
+      "signal": "PH 11/19 日榜第 1、373 points；周榜样本第 5。厂商展示 10 行规格生成 29 项测试，在两条分别通过 CI 的 PR 合并后捕获植入回归。"
+    }
+  ]
+}

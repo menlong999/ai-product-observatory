@@ -1,0 +1,38 @@
+{
+  "id": "starsling",
+  "name": "StarSling",
+  "category": "CI 执行和基准 PR",
+  "date": "2026-11-17",
+  "description": "高速 CI runner 加 agent 提交的优化 PR，用基准报告说明建议而非自动采纳。",
+  "facts": "高速 CI runner 加 agent 提交的优化 PR，用基准报告说明建议而非自动采纳。",
+  "signals": "Launch HN 89 points、53 comments；Gogs 公开复跑材料比较了选定任务，冷缓存、每侧 5 次取中位。",
+  "why": "硬件、缓存与优化补丁分别给控制组；快不代表测试仍覆盖原失效模式。",
+  "creator": "Yonas、Daniel 自述因内部 Agent 提交变多，CI 成了交付限制。",
+  "learn": "硬件、缓存与优化补丁分别给控制组；快不代表测试仍覆盖原失效模式。",
+  "china_localization": "可先做企业现有流水线耗时定位与带证据的提案，不必迁移所有 runner。",
+  "limits": "公开 Gogs 对照是 runner 与补丁组合效应，不能单独归因 Agent；非独立普遍收益。",
+  "worth": "Yes",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50536468"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/starsling-demo-org/benchmark-gogs"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "高速 CI runner 加 agent 提交的优化 PR，用基准报告说明建议而非自动采纳。",
+      "signal": "Launch HN 89 points、53 comments；Gogs 公开复跑材料比较了选定任务，冷缓存、每侧 5 次取中位。"
+    }
+  ]
+}

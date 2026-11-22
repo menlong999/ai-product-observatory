@@ -1,0 +1,38 @@
+{
+  "id": "maritime",
+  "name": "Maritime",
+  "category": "Agent 云 / 生命周期",
+  "date": "2026-11-18",
+  "description": "在可保留状态的 microVM 上提供休眠/唤醒、事件触发、恢复与每 Agent 限额。",
+  "facts": "在可保留状态的 microVM 上提供休眠/唤醒、事件触发、恢复与每 Agent 限额。",
+  "signals": "Launch HN 60 points、66 comments；厂商的 2 GB 实例起价样例不含模型与完整运营开支。",
+  "why": "区分空闲成本、激活延迟、磁盘留存、失败恢复，以及不再需要时的停止责任。",
+  "creator": "共同创始人 Ary 和 Maria 称痛点不只是隔离，还有更新、路由和恢复。",
+  "learn": "区分空闲成本、激活延迟、磁盘留存、失败恢复，以及不再需要时的停止责任。",
+  "china_localization": "国内可先针对低占用的定时 Agent 测同一负载的休眠、恢复及触发成本。",
+  "limits": "官方方案与作者说法，不是生产 SLA 或综合成本比较；未审计权限。",
+  "worth": "Yes",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50549188"
+    },
+    {
+      "platform": "官方",
+      "url": "https://maritime.sh/"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "在可保留状态的 microVM 上提供休眠/唤醒、事件触发、恢复与每 Agent 限额。",
+      "signal": "Launch HN 60 points、66 comments；厂商的 2 GB 实例起价样例不含模型与完整运营开支。"
+    }
+  ]
+}

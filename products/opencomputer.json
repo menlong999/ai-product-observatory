@@ -1,0 +1,48 @@
+{
+  "id": "opencomputer",
+  "name": "OpenComputer",
+  "category": "持久 Agent 工作空间",
+  "date": "2026-11-19",
+  "description": "持久团队 VM 与 rootless Podman 工作隔离，支持 Git 分支/worktree、按轮快照和恢复。",
+  "facts": "持久团队 VM 与 rootless Podman 工作隔离，支持 Git 分支/worktree、按轮快照和恢复。",
+  "signals": "Show HN 116 points、36 comments；厂商窄基准称中位 24 秒首次推送、56 秒四 PR 绿、6 次中完成 5 次。",
+  "why": "分开测恢复时间、工作区权限和已验收完整结果，不能用第一次 push 代替完成。",
+  "creator": "本观察 W35 已有旧记录；本周是团队工作区与恢复机制再验证，不是首次出现。",
+  "learn": "分开测恢复时间、工作区权限和已验收完整结果，不能用第一次 push 代替完成。",
+  "china_localization": "可从国内自托管研发环境的临时 worktree、审阅和接管做小范围试验。",
+  "limits": "作者基准的任务与计时口径狭窄；未验证不同负载/团队的端到端吞吐。",
+  "worth": "Yes",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W35",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W35",
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50581403"
+    },
+    {
+      "platform": "官方",
+      "url": "https://docs.opencomputer.dev/getting-started/architecture"
+    },
+    {
+      "platform": "官方",
+      "url": "https://opencomputer.dev/blog/cloud-agents-as-fast-as-local/"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W35",
+      "event": "历史周报已有持久 Agent 电脑信号；详见 W41 对照",
+      "signal": "不是 W47 首次收录"
+    },
+    {
+      "week": "2026-W47",
+      "event": "持久团队 VM 与 rootless Podman 工作隔离，支持 Git 分支/worktree、按轮快照和恢复。",
+      "signal": "Show HN 116 points、36 comments；厂商窄基准称中位 24 秒首次推送、56 秒四 PR 绿、6 次中完成 5 次。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "canfit",
+  "name": "canfit",
+  "category": "本地模型容量估计",
+  "date": "2026-11-18",
+  "description": "开源 Rust 工具按权重、KV、开销估算模型能否装下，并与进程实际占用对照。",
+  "facts": "开源 Rust 工具按权重、KV、开销估算模型能否装下，并与进程实际占用对照。",
+  "signals": "PH 样本 72 points；公开 MIT 仓库。观测热度不是使用量。",
+  "why": "把估值和实测进程树并排展示，注明上下文与量化参数。",
+  "creator": "作者 Federico La Terra 从买或下载大模型前判断硬件能否装下切入。",
+  "learn": "把估值和实测进程树并排展示，注明上下文与量化参数。",
+  "china_localization": "可做国内常见公开模型与消费硬件的跑前容量提示，配实际测量。",
+  "limits": "装得下不等于速度、可并发或 ASR 体验达标；未测本轮模型或设备。",
+  "worth": "Maybe",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/canfit"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/federicolaterra/canfit"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "开源 Rust 工具按权重、KV、开销估算模型能否装下，并与进程实际占用对照。",
+      "signal": "PH 样本 72 points；公开 MIT 仓库。观测热度不是使用量。"
+    }
+  ]
+}

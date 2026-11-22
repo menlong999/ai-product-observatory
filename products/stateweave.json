@@ -1,0 +1,34 @@
+{
+  "id": "stateweave",
+  "name": "StateWeave",
+  "category": "有状态 Agent 仿真",
+  "date": "2026-11-16",
+  "description": "为 Agent 提供带一致数据的业务应用副本，重置状态、注入常见故障并按实际调用与断言记分。",
+  "facts": "为 Agent 提供带一致数据的业务应用副本，重置状态、注入常见故障并按实际调用与断言记分。",
+  "signals": "PH 当日第 12；产品页有制作者原始描述。持续同步真实环境仍为规划。",
+  "why": "让多工具共享状态并评最终状态，同时验证权限失败与重试。",
+  "creator": "团队以应用副本替代空转 mock；独立官网未能从本环境读到正文。",
+  "learn": "让多工具共享状态并评最终状态，同时验证权限失败与重试。",
+  "china_localization": "可从国产 ERP/IM 的少数读取接口做合成 twin，先解决权限和版本。",
+  "limits": "未测 API 完整性、跨租户隔离或复刻误差；不能视为所有应用与真实环境等价。",
+  "worth": "Yes",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/stateweave"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "为 Agent 提供带一致数据的业务应用副本，重置状态、注入常见故障并按实际调用与断言记分。",
+      "signal": "PH 当日第 12；产品页有制作者原始描述。持续同步真实环境仍为规划。"
+    }
+  ]
+}

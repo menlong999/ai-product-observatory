@@ -1,0 +1,38 @@
+{
+  "id": "appxiom",
+  "name": "Appxiom",
+  "category": "生产故障上下文",
+  "date": "2026-11-17",
+  "description": "把移动和 Web 的崩溃、冻结、网络和流程故障组织成 coding agent 能查询的上下文。",
+  "facts": "把移动和 Web 的崩溃、冻结、网络和流程故障组织成 coding agent 能查询的上下文。",
+  "signals": "PH 日榜第 4；W47 周榜样本第 11、297 points。技能和 MCP 发布早于本周，本周增量为传播。",
+  "why": "把症状、复现条件与版本连起来，避免同时让修复 Agent 充当唯一裁判。",
+  "creator": "团队强调按受损业务目标排序，未见可复核客户收益。",
+  "learn": "把症状、复现条件与版本连起来，避免同时让修复 Agent 充当唯一裁判。",
+  "china_localization": "先做 App 线上错误到只读复现包，敏感字段在提供给模型前裁剪。",
+  "limits": "产品自述，不证明全栈根因均可推断、问题已修复或营销排名可外推采用率。",
+  "worth": "Maybe",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/appxiom"
+    },
+    {
+      "platform": "官方",
+      "url": "https://www.appxiom.com/announcements/appxiom-agent-skills-and-mcp-server"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "把移动和 Web 的崩溃、冻结、网络和流程故障组织成 coding agent 能查询的上下文。",
+      "signal": "PH 日榜第 4；W47 周榜样本第 11、297 points。技能和 MCP 发布早于本周，本周增量为传播。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "mastra-factory",
+  "name": "Mastra Factory",
+  "category": "开源软件交付工作流",
+  "date": "2026-11-18",
+  "description": "把长会话 Agent、Slack、PR 反馈及共享知识接入分阶段的交付看板。",
+  "facts": "把长会话 Agent、Slack、PR 反馈及共享知识接入分阶段的交付看板。",
+  "signals": "Show HN 156 points、44 comments；团队自报一周 Factory 创建并合并 238 PR，人类合并 630 PR。",
+  "why": "对任务逐步留下证据与责任，不把 Agent PR 数当成生产力。",
+  "creator": "Shane、Sam、Abhi 把内部维护流程做成开源模板；具体阶段可配置。",
+  "learn": "对任务逐步留下证据与责任，不把 Agent PR 数当成生产力。",
+  "china_localization": "可从企业 IM 事项到内部 Git 的可审阅交付链做集成，保留人工变更控制。",
+  "limits": "PR 范围和规模不等，未控制人工 review、返工和生产事故；另一些 harness 仍在接入计划中。",
+  "worth": "Yes",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=50548660"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/mastra-ai/template-factory"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "把长会话 Agent、Slack、PR 反馈及共享知识接入分阶段的交付看板。",
+      "signal": "Show HN 156 points、44 comments；团队自报一周 Factory 创建并合并 238 PR，人类合并 630 PR。"
+    }
+  ]
+}

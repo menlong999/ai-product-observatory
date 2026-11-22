@@ -1,0 +1,42 @@
+{
+  "id": "bluedot",
+  "name": "Bluedot 2.2",
+  "category": "会议信息与电话渠道",
+  "date": "2026-11-18",
+  "description": "把支持条件下的 Android 应用内外呼记录，与会议库和 CRM 工作流整合。",
+  "facts": "把支持条件下的 Android 应用内外呼记录，与会议库和 CRM 工作流整合。",
+  "signals": "PH 11/18 日榜第 2；官方发布与支持文档可查。",
+  "why": "比较录音入口、查看权限和导出，而非泛化成“手机现在都能录”。",
+  "creator": "厂商产品迭代，未见可核验公司采用、留存或收入。",
+  "learn": "比较录音入口、查看权限和导出，而非泛化成“手机现在都能录”。",
+  "china_localization": "若做中文/企业电话可迁移转写交接流程，但应先验证线路、同意及数据流。",
+  "limits": "不是原生拨号器所有场景录音；依赖应用内支持流程和付费方案，不是本地 TWS。",
+  "worth": "Maybe",
+  "observed_at": "2026-11-22",
+  "first_seen": "2026-W47",
+  "last_seen": "2026-W47",
+  "weeks": [
+    "2026-W47"
+  ],
+  "sources": [
+    {
+      "platform": "Product Hunt",
+      "url": "https://www.producthunt.com/products/bluedot-2"
+    },
+    {
+      "platform": "官方",
+      "url": "https://www.bluedothq.com/blog/bluedot-2-2"
+    },
+    {
+      "platform": "官方",
+      "url": "https://help.bluedothq.com/en/articles/18474820-how-to-record-phone-calls-with-bluedot-android"
+    }
+  ],
+  "timeline": [
+    {
+      "week": "2026-W47",
+      "event": "把支持条件下的 Android 应用内外呼记录，与会议库和 CRM 工作流整合。",
+      "signal": "PH 11/18 日榜第 2；官方发布与支持文档可查。"
+    }
+  ]
+}
